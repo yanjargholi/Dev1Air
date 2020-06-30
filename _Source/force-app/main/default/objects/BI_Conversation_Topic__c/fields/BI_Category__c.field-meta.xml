@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Aligned Objective Type Selector</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account management</fullName>
+                <default>false</default>
+                <label>Account management</label>
+            </value>
+            <value>
+                <fullName>Business Results</fullName>
+                <default>false</default>
+                <label>Business Results</label>
+            </value>
+            <value>
+                <fullName>Industry</fullName>
+                <default>false</default>
+                <label>Industry</label>
+            </value>
+            <value>
+                <fullName>Airport / Civic / Internal Company</fullName>
+                <default>false</default>
+                <label>Airport / Civic / Internal Company</label>
+            </value>
+            <value>
+                <fullName>Customer Satisfaction</fullName>
+                <default>false</default>
+                <label>Customer Satisfaction</label>
+            </value>
+            <value>
+                <fullName>Sales Planning</fullName>
+                <default>false</default>
+                <label>Sales Planning</label>
+            </value>
+            <value>
+                <fullName>Lead Conversion</fullName>
+                <default>false</default>
+                <label>Lead Conversion</label>
+            </value>
+            <value>
+                <fullName>Jetstream Adoption</fullName>
+                <default>false</default>
+                <label>Jetstream Adoption</label>
+            </value>
+            <value>
+                <fullName>BI Adoption</fullName>
+                <default>false</default>
+                <label>BI Adoption</label>
+            </value>
+            <value>
+                <fullName>BI Coaching / Ambassador</fullName>
+                <default>false</default>
+                <label>BI Coaching / Ambassador</label>
+            </value>
+            <value>
+                <fullName>Work Cross-Functionally</fullName>
+                <default>false</default>
+                <label>Work Cross-Functionally</label>
+            </value>
+            <value>
+                <fullName>Develop and Share Best Practices</fullName>
+                <default>false</default>
+                <label>Develop and Share Best Practices</label>
+            </value>
+            <value>
+                <fullName>Mentoring and Talent Development</fullName>
+                <default>false</default>
+                <label>Mentoring and Talent Development</label>
+            </value>
+            <value>
+                <fullName>Training / Professional Development</fullName>
+                <default>false</default>
+                <label>Training / Professional Development</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Unsuccessful_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(IsClosed,ISCHANGED(StageName), ISBLANK ( BI_Closed_Reason__c ))</errorConditionFormula>
+    <errorMessage>To Close an Opportunity, click the &apos;Close Opportunity&apos; button (located towards the top right of your opportunity record), update the stage and specify the required closing comments.</errorMessage>
+</ValidationRule>

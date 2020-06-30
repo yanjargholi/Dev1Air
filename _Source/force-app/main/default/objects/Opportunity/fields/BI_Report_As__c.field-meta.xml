@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Report_As__c</fullName>
+    <externalId>false</externalId>
+    <label>Report As</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General / Noteworthy Win / Tactical</fullName>
+                <default>false</default>
+                <label>General / Noteworthy Win / Tactical</label>
+            </value>
+            <value>
+                <fullName>Moved to Higher Preferred Position</fullName>
+                <default>false</default>
+                <label>Moved to Higher Preferred Position</label>
+            </value>
+            <value>
+                <fullName>Maintained Current Preferred Position</fullName>
+                <default>false</default>
+                <label>Maintained Current Preferred Position</label>
+            </value>
+            <value>
+                <fullName>Moved to Lower Preferred Position</fullName>
+                <default>false</default>
+                <label>Moved to Lower Preferred Position</label>
+            </value>
+            <value>
+                <fullName>Competitive Loss</fullName>
+                <default>false</default>
+                <label>Competitive Loss</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Successful</controllingFieldValue>
+            <controllingFieldValue>Enroll PerksPlus</controllingFieldValue>
+            <controllingFieldValue>Enroll SME</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Partially Successful</controllingFieldValue>
+            <valueName>General / Noteworthy Win / Tactical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Moved to Higher Preferred Position</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Successful</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Partially Successful</controllingFieldValue>
+            <valueName>Maintained Current Preferred Position</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Completed</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <valueName>Moved to Lower Preferred Position</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enroll SME</controllingFieldValue>
+            <controllingFieldValue>Unsuccessful</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Competitive Loss</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Objective_Types_Auto_Create</fullName>
+    <columns>BI_Objective_Name__c</columns>
+    <columns>BI_Description__c</columns>
+    <columns>BI_Measure__c</columns>
+    <columns>BI_Target_Value__c</columns>
+    <columns>BI_Objective_Category__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Active__c</columns>
+    <columns>BI_Focus_Accounts__c</columns>
+    <columns>BI_Auto_Create_Objective__c</columns>
+    <columns>BI_Available_for_Conversation_Topics__c</columns>
+    <columns>BI_Relevant_Plans__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BI_Auto_Create_Objective__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Objective Types (Auto Create)</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_JV_Flown_Revenue_Share_12_ME__c</fullName>
+    <description>Deprecated in BI Release 2019 - 11</description>
+    <externalId>false</externalId>
+    <label>xJV Flown Revenue Share % (12 ME)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

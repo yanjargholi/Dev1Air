@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Objective_Type__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Aligned Objective Type</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>BI_Objective_Type__c.BI_Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>BI_Objective_Type__c.BI_Available_for_Conversation_Topics__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>BI_Objective_Type__c</referenceTo>
+    <relationshipLabel>Conversation Topics</relationshipLabel>
+    <relationshipName>Conversation_Topics</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

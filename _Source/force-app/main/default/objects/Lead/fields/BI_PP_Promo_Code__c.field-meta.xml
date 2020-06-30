@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_PP_Promo_Code__c</fullName>
+    <description>2019-08: field label updated from &apos;PassPlus Promo Code&apos; to &apos;Promo Code&apos; as part of BI August release. Field name was not changed</description>
+    <externalId>false</externalId>
+    <label>Promo Code</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

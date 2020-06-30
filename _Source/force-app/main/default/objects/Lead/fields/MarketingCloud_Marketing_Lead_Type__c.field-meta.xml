@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MarketingCloud_Marketing_Lead_Type__c</fullName>
+    <description>Field added as an attribute to be controlled by Marketing Cloud. Setting the Marketing Lead Type within Marketing Cloud will change the value in Salesforce CRM. Depending on the value change, a Salesforce Workflow will trigger and update the record type. If the Marketing Lead Type is Marketing Qualified Lead or Sales Qualified Lead, a sales rep in Salesforce should see the Lead record, otherwise, it should be hidden.</description>
+    <externalId>false</externalId>
+    <label>Marketing Lead Type</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

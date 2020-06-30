@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Tactical_Incentive_Proposal_Request_Form</fullName>
+    <active>true</active>
+    <label>Tactical Incentive (Corporate) Proposal Request Form</label>
+    <picklistValues>
+        <picklist>BI_Contacts_updated_in_UCS_for_Signature__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Customer_Accepts_DocuSign__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_DRA_Acknowledged_by_Customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Evergreen_Legal__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Legal_Review_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Letter_of_Airline_Intro_up_to_Date__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Loss_Codes__c</picklist>
+        <values>
+            <fullName>Acquired By Corp%2E w%2F OA Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acquired By Corp%2E w%2F UA Deal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - AA %28CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - AA %28No Deal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - AA %28PERKS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - AA %28Pass Plus%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - DL %28CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - DL %28No Deal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - DL %28PERKS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - DL %28Pass Plus%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - OA %28CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - OA %28No Deal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - OA %28PERKS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA Higher - OA %28Pass Plus%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Walkaway %28CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Walkaway %28No Deal%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Walkaway %28PERKS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Walkaway %28Pass Plus%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Preferred_Contact_Method__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Prism_Data_Valid__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Stage__c</picklist>
+        <values>
+            <fullName>CAA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAAIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract built</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corrections Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DOCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IMPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NRC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTFR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QCF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QCR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TCC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn%2FCancelled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_TMC_List_Attached__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_UCS_Data_Flow__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PassPlus_Product_Type__c</picklist>
+        <values>
+            <fullName>United PassPlus Exec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Flex Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Flex Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Flex Subscription</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Secure Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Secure Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus Secure Subscription</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIP_Contract_Initial_Type__c</picklist>
+        <values>
+            <fullName>Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIP_Contract_Type__c</picklist>
+        <values>
+            <fullName>PassPlus Exec</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus Exec 2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus Flex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus Flex 2%2E0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus Secure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

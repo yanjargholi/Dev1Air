@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Report_As__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Key Activity  - any action or info to help leaders know what’s going on in your market and what’s driving successes/challenges with our accounts, or advances the sales process.  Accomplishment - an outcome or achievement to report to leadership</inlineHelpText>
+    <label>Report As</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Key Activity</fullName>
+                <default>false</default>
+                <label>Key Activity</label>
+            </value>
+            <value>
+                <fullName>Accomplishment</fullName>
+                <default>false</default>
+                <label>Accomplishment</label>
+            </value>
+            <value>
+                <fullName>Market Place / Competitive Intelligence</fullName>
+                <default>false</default>
+                <label>Market Place / Competitive Intelligence</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

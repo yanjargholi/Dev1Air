@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Contracted_Annual_Amenity_Dollars__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter value based on your selection in &apos;Opportunity Values Reflect&apos; field.</inlineHelpText>
+    <label>Contracted Amenity Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

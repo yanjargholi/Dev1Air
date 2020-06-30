@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The sub-category the policy tracking record falls into</inlineHelpText>
+    <label>Sub-Category</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Refunds</fullName>
+                <default>false</default>
+                <label>Refunds</label>
+            </value>
+            <value>
+                <fullName>Chargebacks</fullName>
+                <default>false</default>
+                <label>Chargebacks</label>
+            </value>
+            <value>
+                <fullName>Debit Memos</fullName>
+                <default>false</default>
+                <label>Debit Memos</label>
+            </value>
+            <value>
+                <fullName>Fare Rules</fullName>
+                <default>false</default>
+                <label>Fare Rules</label>
+            </value>
+            <value>
+                <fullName>Ticket Validity</fullName>
+                <default>false</default>
+                <label>Ticket Validity</label>
+            </value>
+            <value>
+                <fullName>Waiver</fullName>
+                <default>false</default>
+                <label>Waiver</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>Agency policy (MCO, no-show, etc.)</fullName>
+                <default>false</default>
+                <label>Agency policy (MCO, no-show, etc.)</label>
+            </value>
+            <value>
+                <fullName>Customer Support</fullName>
+                <default>false</default>
+                <label>Customer Support</label>
+            </value>
+            <value>
+                <fullName>Status</fullName>
+                <default>false</default>
+                <label>Status</label>
+            </value>
+            <value>
+                <fullName>Promotions / Offers</fullName>
+                <default>false</default>
+                <label>Promotions / Offers</label>
+            </value>
+            <value>
+                <fullName>Partnerships</fullName>
+                <default>false</default>
+                <label>Partnerships</label>
+            </value>
+            <value>
+                <fullName>Ancillary - Airport</fullName>
+                <default>false</default>
+                <label>Ancillary - Airport</label>
+            </value>
+            <value>
+                <fullName>Ancillary - Onboard (non-seats)</fullName>
+                <default>false</default>
+                <label>Ancillary - Onboard (non-seats)</label>
+            </value>
+            <value>
+                <fullName>Ancillary - Onboard (seats)</fullName>
+                <default>false</default>
+                <label>Ancillary - Onboard (seats)</label>
+            </value>
+            <value>
+                <fullName>Ancillary - Travel Services (ex. car/hotel etc.)</fullName>
+                <default>false</default>
+                <label>Ancillary - Travel Services (ex. car/hotel etc.)</label>
+            </value>
+            <value>
+                <fullName>Product Exceptions - Pre-Paid</fullName>
+                <default>false</default>
+                <label>Product Exceptions - Pre-Paid</label>
+            </value>
+            <value>
+                <fullName>Product Exceptions - Points-Based</fullName>
+                <default>false</default>
+                <label>Product Exceptions - Points-Based</label>
+            </value>
+            <value>
+                <fullName>Product Exceptions - Corporate</fullName>
+                <default>false</default>
+                <label>Product Exceptions - Corporate</label>
+            </value>
+            <value>
+                <fullName>Self-Serve Tools</fullName>
+                <default>false</default>
+                <label>Self-Serve Tools</label>
+            </value>
+            <value>
+                <fullName>Amenities</fullName>
+                <default>false</default>
+                <label>Amenities</label>
+            </value>
+            <value>
+                <fullName>Preferred / Priority</fullName>
+                <default>false</default>
+                <label>Preferred / Priority</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_CheckSetPPIIWhenSubscriptionIsCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>(!ISNULL( BI_PP_Initial_Investment__c ) &amp;&amp; SIP_Subscription__c = false) &amp;&amp; RecordType.DeveloperName = &apos;BI_PassPlus_Proposal_Request_Form&apos;</errorConditionFormula>
+    <errorDisplayField>SIP_Subscription__c</errorDisplayField>
+    <errorMessage>Please check Subscription when if you enter PassPlus Initial Investment.</errorMessage>
+</ValidationRule>

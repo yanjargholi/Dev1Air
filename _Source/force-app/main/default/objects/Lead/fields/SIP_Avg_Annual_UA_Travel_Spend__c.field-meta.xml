@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Avg_Annual_UA_Travel_Spend__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate pre-tax amount</inlineHelpText>
+    <label>Avg Annual UA Travel Spend</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Less than $300,000 USD</fullName>
+                <default>false</default>
+                <label>Less than $300,000 USD</label>
+            </value>
+            <value>
+                <fullName>$300,001 - $500,000 USD</fullName>
+                <default>false</default>
+                <label>$300,001 - $500,000 USD</label>
+            </value>
+            <value>
+                <fullName>$500,001 - $1 Million USD</fullName>
+                <default>false</default>
+                <label>$500,001 - $1 Million USD</label>
+            </value>
+            <value>
+                <fullName>Above $1 Million USD</fullName>
+                <default>false</default>
+                <label>Above $1 Million USD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

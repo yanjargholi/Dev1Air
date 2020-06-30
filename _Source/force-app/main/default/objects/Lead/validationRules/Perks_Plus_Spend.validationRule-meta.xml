@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perks_Plus_Spend</fullName>
+    <active>true</active>
+    <description>If Perks Plus ID is specified, the Est. Annual UA Travel Spend is required</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(BI_Perks_Plus_ID__c)), ISBLANK( TEXT(SIP_Avg_Annual_UA_Travel_Spend__c )))</errorConditionFormula>
+    <errorDisplayField>SIP_Avg_Annual_UA_Travel_Spend__c</errorDisplayField>
+    <errorMessage>Please enter the Avg Annual UA Travel Spend for the Perks Plus Lead.</errorMessage>
+</ValidationRule>

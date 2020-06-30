@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Related_Records_Owner_Alert__c</fullName>
+    <description>Used in Lightning Page to show a warning if the Account Plan and the Objective for the Focus Account record is owned by 2 different people</description>
+    <externalId>false</externalId>
+    <formula>IF( BI_Account_Plan__r.OwnerId  &lt;&gt;  BI_Objective__r.OwnerId,
+true,
+false
+)</formula>
+    <label>Related Records Owner Alert</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

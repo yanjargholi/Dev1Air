@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Implemented_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>($RecordType.Name = &quot;BI Release Request&quot; || 
+$RecordType.Name = &quot;BI Support Request&quot;)
+
+&amp;&amp;
+CONTAINS(TEXT(Status), &apos;Implemented&apos;) &amp;&amp; 
+(ISBLANK(BI_Planned_Release_Date__c) ||
+ISBLANK(BI_Close_Comments__c))</errorConditionFormula>
+    <errorMessage>If you specify the Status as &apos;Closed - Implemented&apos;, the (planned) Release Date, and Closing Comments are required. TIP - use the &apos;Close Case&apos; action on the &apos;Activities &amp; Chatter&apos; tab to close the case.</errorMessage>
+</ValidationRule>

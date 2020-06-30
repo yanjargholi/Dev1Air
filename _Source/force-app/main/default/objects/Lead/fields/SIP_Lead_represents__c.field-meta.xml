@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Lead_represents__c</fullName>
+    <description>It is used to map Jetstream Account corporate type on Account level</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+  OR(ISPICKVAL(LeadSource, &quot;United for Business (website - individual)&quot;),
+    ISPICKVAL(Sip_Lead_Reprents_PL__c, &quot;Individual&quot;)), 
+  &quot;Individual&quot;, 
+  &quot;Corporate&quot;)</formula>
+    <label>Lead represents (Internal Logic))</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_CAA_stage_control</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;BI_Corporate_Proposal_Request_Form&apos;,
+ISCHANGED(BI_Stage__c ),  
+TEXT(BI_Stage__c )  = &quot;CAA&quot;,  
+!ISCHANGED(BI_Stage_Last_Modified_Date_CAA_Button__c) )</errorConditionFormula>
+    <errorMessage>Please use the &apos;Customer Acceptance&apos; button to move to CAA stage</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TMC_Data_Available_for_Sizing</fullName>
+    <active>false</active>
+    <description>A validation rule that requires the &quot;Pricing Contact&quot; field to be populated</description>
+    <errorConditionFormula>AND(ISPICKVAL( StageName , &quot;Analysis &amp; Strategy&quot;), 
+( RecordType.DeveloperName  = &quot;BI_TMC_Contract&quot;))</errorConditionFormula>
+    <errorDisplayField>BI_TMC_Data_Available__c</errorDisplayField>
+    <errorMessage>In order for you to move to the next stage, please ensure that TMC Information Available field is checked</errorMessage>
+</ValidationRule>

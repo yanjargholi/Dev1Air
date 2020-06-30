@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Submit_Proposal_Request_Form</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(BI_Stage__c) = &apos;Submitted&apos; &amp;&amp;  
+NOT(TEXT(PRIORVALUE(BI_Stage__c)) = &apos;Draft&apos;) &amp;&amp;ISCHANGED(BI_Stage__c)
+&amp;&amp;  RecordType.DeveloperName  &lt;&gt; &apos;BI_PassPlus_Proposal_Request_Form&apos;</errorConditionFormula>
+    <errorDisplayField>BI_Stage__c</errorDisplayField>
+    <errorMessage>The Proposal Request has already been successfully submitted to the Pricing Team.  If you have any additional feedback for the Pricing Team, please use Chatter to send your message to them</errorMessage>
+</ValidationRule>

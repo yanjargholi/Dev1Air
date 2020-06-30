@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Portal_Feedback</fullName>
+    <active>true</active>
+    <businessProcess>Beverage Coupon Process</businessProcess>
+    <label>Jetstream Case</label>
+    <picklistValues>
+        <picklist>BI_Area_of_Support__c</picklist>
+        <values>
+            <fullName>Business Insight</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Auto_Notification_Closed__c</picklist>
+        <values>
+            <fullName>Do Not Send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Employee %28Internal Only%29</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Auto_Notification_In_Progress__c</picklist>
+        <values>
+            <fullName>Do Not Send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Employee %28Internal Only%29</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Auto_Notification_New__c</picklist>
+        <values>
+            <fullName>Do Not Send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Employee %28Internal Only%29</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Program_Product_Type__c</picklist>
+        <values>
+            <fullName>Government Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Corporate Direct %28UCD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Meetings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Subject_Category__c</picklist>
+        <values>
+            <fullName>Accounts and Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memberships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outlook Synchronization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports and Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setup and Security</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Target_Release_Period__c</picklist>
+        <values>
+            <fullName>3 to 6 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 to 12 Months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Browser__c</picklist>
+        <values>
+            <fullName>Firefox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Chrome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microsoft Internet Explorer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safari</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Case</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PotentialLiability__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>GC1020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC1040</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC1060</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC3020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC3040</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC3060</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC5020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC5040</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GC5060</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Error %2F Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Help %2F How Do I%3F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suggestions and Enhancement Requests</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIP_Browser_Used__c</picklist>
+        <values>
+            <fullName>Firefox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Chrome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Microsoft Internet Explorer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safari</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SLAViolation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Accounts and Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outlook Synchronization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Release Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports and Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setup and Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Meetings Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

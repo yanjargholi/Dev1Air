@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Account_Plans</fullName>
+    <columns>BI_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BI_Plan_Year__c</field>
+        <operation>notEqual</operation>
+        <value>2021,2022,2023,2024,2025,2026,2027</value>
+    </filters>
+    <label>All Account Plans</label>
+    <language>en_US</language>
+</ListView>

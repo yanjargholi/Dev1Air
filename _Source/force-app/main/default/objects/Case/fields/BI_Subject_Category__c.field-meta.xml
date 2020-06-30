@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Subject_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts and Contacts</fullName>
+                <default>false</default>
+                <label>Accounts and Contacts</label>
+            </value>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+            <value>
+                <fullName>Amenities</fullName>
+                <default>false</default>
+                <label>Amenities</label>
+            </value>
+            <value>
+                <fullName>AO Support (Airport Support)</fullName>
+                <default>false</default>
+                <label>AO Support (Airport Support)</label>
+            </value>
+            <value>
+                <fullName>Baggage – Delayed</fullName>
+                <default>false</default>
+                <label>Baggage – Delayed</label>
+            </value>
+            <value>
+                <fullName>Baggage – General / Other</fullName>
+                <default>false</default>
+                <label>Baggage – General / Other</label>
+            </value>
+            <value>
+                <fullName>Baggage – LOB (Lost on Board)</fullName>
+                <default>false</default>
+                <label>Baggage – LOB (Lost on Board)</label>
+            </value>
+            <value>
+                <fullName>Baggage – Prepaid</fullName>
+                <default>false</default>
+                <label>Baggage – Prepaid</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Corporate Security</fullName>
+                <default>false</default>
+                <label>Corporate Security</label>
+            </value>
+            <value>
+                <fullName>Customer Care</fullName>
+                <default>false</default>
+                <label>Customer Care</label>
+            </value>
+            <value>
+                <fullName>Data</fullName>
+                <default>false</default>
+                <label>Data</label>
+            </value>
+            <value>
+                <fullName>Debit Memo</fullName>
+                <default>false</default>
+                <label>Debit Memo</label>
+            </value>
+            <value>
+                <fullName>ER</fullName>
+                <default>false</default>
+                <label>ER</label>
+            </value>
+            <value>
+                <fullName>Jetstream Banking</fullName>
+                <default>false</default>
+                <label>Jetstream Banking</label>
+            </value>
+            <value>
+                <fullName>Login / Password</fullName>
+                <default>false</default>
+                <label>Login / Password</label>
+            </value>
+            <value>
+                <fullName>Memberships</fullName>
+                <default>false</default>
+                <label>Memberships</label>
+            </value>
+            <value>
+                <fullName>MileagePlus</fullName>
+                <default>false</default>
+                <label>MileagePlus</label>
+            </value>
+            <value>
+                <fullName>Mobile Application</fullName>
+                <default>false</default>
+                <label>Mobile Application</label>
+            </value>
+            <value>
+                <fullName>NDC – Link</fullName>
+                <default>false</default>
+                <label>NDC – Link</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outlook Synchronization</fullName>
+                <default>false</default>
+                <label>Outlook Synchronization</label>
+            </value>
+            <value>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+                <label>Pipeline</label>
+            </value>
+            <value>
+                <fullName>PNR – General / Other</fullName>
+                <default>false</default>
+                <label>PNR – General / Other</label>
+            </value>
+            <value>
+                <fullName>PNR – Seats</fullName>
+                <default>false</default>
+                <label>PNR – Seats</label>
+            </value>
+            <value>
+                <fullName>PNR – Ticketing</fullName>
+                <default>false</default>
+                <label>PNR – Ticketing</label>
+            </value>
+            <value>
+                <fullName>PNR – Upgrades</fullName>
+                <default>false</default>
+                <label>PNR – Upgrades</label>
+            </value>
+            <value>
+                <fullName>Policy and Procedure</fullName>
+                <default>false</default>
+                <label>Policy and Procedure</label>
+            </value>
+            <value>
+                <fullName>Portal help</fullName>
+                <default>false</default>
+                <label>Portal help</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Product Inquiry</fullName>
+                <default>false</default>
+                <label>Product Inquiry</label>
+            </value>
+            <value>
+                <fullName>Refunds – Expired tickets</fullName>
+                <default>false</default>
+                <label>Refunds – Expired tickets</label>
+            </value>
+            <value>
+                <fullName>Refunds – General / Other</fullName>
+                <default>false</default>
+                <label>Refunds – General / Other</label>
+            </value>
+            <value>
+                <fullName>Refunds – OA Escalation</fullName>
+                <default>false</default>
+                <label>Refunds – OA Escalation</label>
+            </value>
+            <value>
+                <fullName>Refunds – TAEX</fullName>
+                <default>false</default>
+                <label>Refunds – TAEX</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>Reservation Help</fullName>
+                <default>false</default>
+                <label>Reservation Help</label>
+            </value>
+            <value>
+                <fullName>Sales Planning</fullName>
+                <default>false</default>
+                <label>Sales Planning</label>
+            </value>
+            <value>
+                <fullName>Setup and Security</fullName>
+                <default>false</default>
+                <label>Setup and Security</label>
+            </value>
+            <value>
+                <fullName>United Meetings – Agreement</fullName>
+                <default>false</default>
+                <label>United Meetings – Agreement</label>
+            </value>
+            <value>
+                <fullName>United PassPlus – Contract</fullName>
+                <default>false</default>
+                <label>United PassPlus – Contract</label>
+            </value>
+            <value>
+                <fullName>United PassPlus – JP Morgan/PayConnexion</fullName>
+                <default>false</default>
+                <label>United PassPlus – JP Morgan/PayConnexion</label>
+            </value>
+            <value>
+                <fullName>United PassPlus – UATP (contacts)</fullName>
+                <default>false</default>
+                <label>United PassPlus – UATP (contacts)</label>
+            </value>
+            <value>
+                <fullName>United PassPlus – UATP (low on funds)</fullName>
+                <default>false</default>
+                <label>United PassPlus – UATP (low on funds)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

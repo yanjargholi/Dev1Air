@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Auto_Complete_From_Prior_Year_Changes</fullName>
+    <active>true</active>
+    <description>Prevent changes to field after the record is created as auto-complete logic only happens on before insert</description>
+    <errorConditionFormula>!ISNEW()  &amp;&amp;  ISCHANGED( BI_Auto_Complete_From_Prior_Year_Plan__c )</errorConditionFormula>
+    <errorMessage>The Auto Complete option can only be set  or changed when creating a new account plan. Once your account plan is saved, this option can no longer be modified</errorMessage>
+</ValidationRule>

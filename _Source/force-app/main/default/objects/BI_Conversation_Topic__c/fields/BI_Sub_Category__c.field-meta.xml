@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Events</fullName>
+                <default>false</default>
+                <label>Customer Events</label>
+            </value>
+            <value>
+                <fullName>Traveler Support</fullName>
+                <default>false</default>
+                <label>Traveler Support</label>
+            </value>
+            <value>
+                <fullName>Tools and Education</fullName>
+                <default>false</default>
+                <label>Tools and Education</label>
+            </value>
+            <value>
+                <fullName>Executive Engagement</fullName>
+                <default>false</default>
+                <label>Executive Engagement</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Inaugural</fullName>
+                <default>false</default>
+                <label>Inaugural</label>
+            </value>
+            <value>
+                <fullName>Community Events</fullName>
+                <default>false</default>
+                <label>Community Events</label>
+            </value>
+            <value>
+                <fullName>Unites Sales Events</fullName>
+                <default>false</default>
+                <label>Unites Sales Events</label>
+            </value>
+            <value>
+                <fullName>Company Events</fullName>
+                <default>false</default>
+                <label>Company Events</label>
+            </value>
+            <value>
+                <fullName>Network/Route Support</fullName>
+                <default>false</default>
+                <label>Network/Route Support</label>
+            </value>
+            <value>
+                <fullName>TMC Performance</fullName>
+                <default>false</default>
+                <label>TMC Performance</label>
+            </value>
+            <value>
+                <fullName>Corporate Performance</fullName>
+                <default>false</default>
+                <label>Corporate Performance</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

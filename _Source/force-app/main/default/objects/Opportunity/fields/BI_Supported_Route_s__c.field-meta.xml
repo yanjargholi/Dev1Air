@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Supported_Route_s__c</fullName>
+    <externalId>false</externalId>
+    <formula>BI_Routes_Added__c</formula>
+    <inlineHelpText>Denotes one or multiple specific routes that this tactical supports. Use the &apos;Add Routes that this Tactical Supports&apos; button to add a route. Routes can only be added while the opportunity is open.</inlineHelpText>
+    <label>Supported Route(s)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

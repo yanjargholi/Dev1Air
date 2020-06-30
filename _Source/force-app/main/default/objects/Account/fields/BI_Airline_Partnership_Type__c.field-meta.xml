@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Airline_Partnership_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Airline Partnership Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Star Corp Plus</fullName>
+                <default>false</default>
+                <label>Star Corp Plus</label>
+            </value>
+            <value>
+                <fullName>Star Regional</fullName>
+                <default>false</default>
+                <label>Star Regional</label>
+            </value>
+            <value>
+                <fullName>Full Network</fullName>
+                <default>false</default>
+                <label>Full Network</label>
+            </value>
+            <value>
+                <fullName>A++ JV</fullName>
+                <default>false</default>
+                <label>A++ JV</label>
+            </value>
+            <value>
+                <fullName>Trans-PAC JV</fullName>
+                <default>false</default>
+                <label>Trans-PAC JV</label>
+            </value>
+            <value>
+                <fullName>US-CAN JV</fullName>
+                <default>false</default>
+                <label>US-CAN JV</label>
+            </value>
+            <value>
+                <fullName>US-NZ JV</fullName>
+                <default>false</default>
+                <label>US-NZ JV</label>
+            </value>
+            <value>
+                <fullName>UA PAC</fullName>
+                <default>false</default>
+                <label>UA PAC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

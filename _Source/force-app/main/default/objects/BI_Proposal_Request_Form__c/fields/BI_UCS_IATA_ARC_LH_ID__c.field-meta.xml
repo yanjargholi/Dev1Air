@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_UCS_IATA_ARC_LH_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  BI_Opportunity__r.Account.SIP_ARC_Number__c  != &apos;&apos;, BI_Opportunity__r.Account.SIP_ARC_Number__c ,
+   If(BI_Opportunity__r.Account.SIP_Corp_UCS_ID__c  !=&apos;&apos;,BI_Opportunity__r.Account.SIP_Corp_UCS_ID__c ,
+     If(BI_Opportunity__r.Account.BI_LH_UCID__c  !=&apos;&apos;,BI_Opportunity__r.Account.BI_LH_UCID__c ,
+        IF(BI_Opportunity__r.Account.BI_NH_Corporate_Code__c !=&apos;&apos;,BI_Opportunity__r.Account.BI_NH_Corporate_Code__c ,&apos;&apos;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>UCS/IATA/ARC #/LH ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

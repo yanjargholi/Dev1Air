@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X02_My_Team_s_One_on_Ones_ALL</fullName>
+    <columns>NAME</columns>
+    <columns>BI_Date__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>BI_Participant__c</columns>
+    <columns>Agenda__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BI_Part_of_My_Team__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>02 - My Team&apos;s One-on-Ones - ALL</label>
+</ListView>

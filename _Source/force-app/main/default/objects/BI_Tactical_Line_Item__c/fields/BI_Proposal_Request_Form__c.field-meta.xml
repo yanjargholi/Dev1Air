@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Proposal_Request_Form__c</fullName>
+    <externalId>false</externalId>
+    <label>Proposal Request Form</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Tactical Line Items can only be created for Corporate Tacticals as part of the Approved Deal snapshot</errorMessage>
+        <filterItems>
+            <field>BI_Proposal_Request_Form__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>BI_Tactical_Incentive_Proposal_Request_Form</value>
+        </filterItems>
+        <infoMessage>The Corporate Tactical Incentive that the line item will be associated with</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>BI_Proposal_Request_Form__c</referenceTo>
+    <relationshipLabel>Tactical Details - Line Items</relationshipLabel>
+    <relationshipName>BI_Tactical_Line_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

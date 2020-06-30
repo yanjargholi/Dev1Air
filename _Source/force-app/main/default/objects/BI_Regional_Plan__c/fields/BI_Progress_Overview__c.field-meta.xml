@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Progress_Overview__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/one/one.app#/sObject/00O1T000006QuqgUAC/view?fv0=&quot; &amp; TEXT(BI_Regional_Plan_Year__c ),&quot;View My Team Planning Progress Report&quot;)</formula>
+    <label>Progress Overview</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

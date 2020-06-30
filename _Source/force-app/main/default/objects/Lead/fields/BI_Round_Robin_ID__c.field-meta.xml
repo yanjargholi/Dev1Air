@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Round_Robin_ID__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Auto Generated number to route / assign selected leads in a round robin manner</inlineHelpText>
+    <label>Round Robin ID</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

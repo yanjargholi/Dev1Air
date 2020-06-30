@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Valid_Stage_Check_for_New_PRF</fullName>
+    <active>true</active>
+    <description>Only Draft and Submitted is valid stages when a new PRF is created</description>
+    <errorConditionFormula>AND(ISNEW(),  NOT(ISBLANK(TEXT(BI_Stage__c))),
+(TEXT(BI_Stage__c) &lt;&gt; &apos;Draft&apos;), (TEXT(BI_Stage__c) &lt;&gt; &apos;Submitted&apos;),(RecordType.DeveloperName = &apos;BI_Corporate_Proposal_Request_Form&apos;))</errorConditionFormula>
+    <errorMessage>When first creating a new Corporate PRF, valid options for stage is &apos;Draft&apos; or &apos;Submitted&apos;.  Please update the stage field to either &apos;Draft&apos; or &apos;Submitted&apos;.  TIP - if you do select &apos;Draft&apos;, don&apos;t forget to update the stage to submitted.</errorMessage>
+</ValidationRule>

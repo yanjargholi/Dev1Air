@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_PP_Mailing_Address__c</fullName>
+    <externalId>false</externalId>
+    <formula>BI_Opportunity__r.Account.BillingStreet &amp; BR() &amp; 
+BI_Opportunity__r.Account.BillingCity &amp; &quot;, &quot; &amp; 
+BI_Opportunity__r.Account.BillingState &amp; &quot; &quot; &amp;
+BI_Opportunity__r.Account.BillingPostalCode &amp; BR() &amp;
+BI_Opportunity__r.Account.BillingCountry</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mailing Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

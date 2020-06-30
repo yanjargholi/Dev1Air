@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>BI_Duration__c</columns>
+    <columns>BI_Lead__c</columns>
+    <columns>BI_Lead_Status_From__c</columns>
+    <columns>BI_Lead_Status_To__c</columns>
+    <columns>BI_Opportunity__c</columns>
+    <columns>BI_Opportunity_Status_From__c</columns>
+    <columns>BI_Opportunity_Status_To__c</columns>
+    <columns>BI_Proposal_Request_Form__c</columns>
+    <columns>BI_Proposal_Request_Form_Status_From__c</columns>
+    <columns>BI_Proposal_Request_Form_Status_To__c</columns>
+    <columns>BI_Stage_Or_Status_Changed_By__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

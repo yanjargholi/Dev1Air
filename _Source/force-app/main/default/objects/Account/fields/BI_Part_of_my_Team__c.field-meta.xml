@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Part_of_my_Team__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( OR($User.Id = Owner.Id, $User.Id = Owner.ManagerId, $User.Id = Owner.Manager.ManagerId,$User.Id = Owner.Manager.Manager.ManagerId, $User.Id = Owner.Manager.Manager.Manager.ManagerId ,$User.Id = Owner.Manager.Manager.Manager.Manager.ManagerId ,$User.Id = Owner.Manager.Manager.Manager.Manager.Manager.ManagerId ,$User.Id = SIP_Sales_Service_Manager__c ) , TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Part of my Team</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

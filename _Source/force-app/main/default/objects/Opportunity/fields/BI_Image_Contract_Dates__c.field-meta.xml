@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Image_Contract_Dates__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName  = &apos;BI_Corporate&apos; || RecordType.DeveloperName  = &apos;BI_TMC_Contract&apos;, 
+IMAGE(&quot;/resource/1560366702000/BI_Opportunity_Contract_Dates1?&quot;,&quot;perf info&quot;),
+IMAGE(&quot;/resource/1560366702000/BI_Opportunity_Tactical_Dates1?&quot;,&quot;perf info&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>This is a good time to</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

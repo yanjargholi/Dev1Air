@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Traveler_Amenities__c</fullName>
+    <externalId>false</externalId>
+    <label>Traveler Amenities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Drink Coupons</fullName>
+                <default>false</default>
+                <label>Drink Coupons</label>
+            </value>
+            <value>
+                <fullName>Economy Plus</fullName>
+                <default>false</default>
+                <label>Economy Plus</label>
+            </value>
+            <value>
+                <fullName>ER Certificates</fullName>
+                <default>false</default>
+                <label>ER Certificates</label>
+            </value>
+            <value>
+                <fullName>Event Tickets</fullName>
+                <default>false</default>
+                <label>Event Tickets</label>
+            </value>
+            <value>
+                <fullName>MileagePlus – Bonus Miles</fullName>
+                <default>false</default>
+                <label>MileagePlus – Bonus Miles</label>
+            </value>
+            <value>
+                <fullName>MileagePlus – Global Services status</fullName>
+                <default>false</default>
+                <label>MileagePlus – Global Services status</label>
+            </value>
+            <value>
+                <fullName>MileagePlus – Status (except GS)</fullName>
+                <default>false</default>
+                <label>MileagePlus – Status (except GS)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus – Target Demand Generation (TDG)</fullName>
+                <default>false</default>
+                <label>MileagePlus – Target Demand Generation (TDG)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Service Funds</fullName>
+                <default>false</default>
+                <label>Service Funds</label>
+            </value>
+            <value>
+                <fullName>United Club Membership</fullName>
+                <default>false</default>
+                <label>United Club Membership</label>
+            </value>
+            <value>
+                <fullName>United Club Passes</fullName>
+                <default>false</default>
+                <label>United Club Passes</label>
+            </value>
+            <value>
+                <fullName>Upgrades</fullName>
+                <default>false</default>
+                <label>Upgrades</label>
+            </value>
+            <value>
+                <fullName>Global Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Global Services</label>
+            </value>
+            <value>
+                <fullName>Mileage Status</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mileage Status</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Measurement_Period_12_Months_Ending__c</fullName>
+    <description>Deprecated in BI Release 2019 - 11</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Denotes the  12 month period ending date for plan data in fields ending in (12 ME)</inlineHelpText>
+    <label>xMeasurement Period - 12 Months Ending</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

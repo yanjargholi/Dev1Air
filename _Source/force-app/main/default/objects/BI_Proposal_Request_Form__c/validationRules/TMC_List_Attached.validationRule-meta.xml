@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TMC_List_Attached</fullName>
+    <active>false</active>
+    <errorConditionFormula>RecordType.DeveloperName = &apos;BI_Corporate_Proposal_Request_Form&apos;  &amp;&amp; TEXT( BI_Stage__c ) = &apos;Submitted&apos; &amp;&amp; TEXT(BI_TMC_List_Attached__c)  &lt;&gt; &apos;Yes&apos; &amp;&amp; (
+INCLUDES( BI_Program_Type__c, &apos;CPA&apos;) || INCLUDES( BI_Program_Type__c, &apos;Mid-Market Tier 1&apos;) || INCLUDES( BI_Program_Type__c, &apos;Mid-Market Tier 2&apos;) || INCLUDES( BI_Program_Type__c, &apos;Mid-Market Tier 3&apos;) || INCLUDES( BI_Program_Type__c, &apos;Mid-Market Tier 4&apos;) || INCLUDES( BI_Program_Type__c, &apos;Mid-Market Tier 5&apos;))</errorConditionFormula>
+    <errorDisplayField>BI_TMC_List_Attached__c</errorDisplayField>
+    <errorMessage>Opportunity / PRF that includes CPA or any Mid-Market Tier Program, must have the TMC List attached before submit. 
+1 -Create &amp; Save PRF with stage set to &apos;Draft&apos;
+2- Attach the TMC List
+3 - Update &apos;TMC List Attached&apos; field to Yes
+4 - Submit PRF</errorMessage>
+</ValidationRule>

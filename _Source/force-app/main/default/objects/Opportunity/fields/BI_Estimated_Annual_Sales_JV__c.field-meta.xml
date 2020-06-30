@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Estimated_Annual_Sales_JV__c</fullName>
+    <description>If UA only opportunity, enter the same estimated value as in the UA only field  For North America, enter contracted value when closing opportunity
+If flowing UCS data, Qualification Report 12ME JV Sales; otherwise appropriate source for your region</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter estimated amount in line with your &apos;Opportunity Values Reflect&apos; selection. If UA only, enter the same estimated value as the UA Only field.  For North America, enter contracted value when closing opportunity</inlineHelpText>
+    <label>Est. Sales/Revenue (UA + JV)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

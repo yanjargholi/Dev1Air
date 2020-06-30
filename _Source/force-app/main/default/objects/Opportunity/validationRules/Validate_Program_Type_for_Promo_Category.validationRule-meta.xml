@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Program_Type_for_Promo_Category</fullName>
+    <active>true</active>
+    <description>Promo Category should only be selected if Interested Program Type includes Marketing and Promotions as a selected option</description>
+    <errorConditionFormula>NOT(ISBLANK(BI_Promo_Category__c)) &amp;&amp; 
+
+
+NOT(INCLUDES(BI_Interested_Program_Type_s__c, &apos;Marketing &amp; Promotions&apos;))</errorConditionFormula>
+    <errorMessage>A Promo Category can only be specified if &apos;Marketing &amp; Promotions&apos; is a selected option for Interested Program Types</errorMessage>
+</ValidationRule>

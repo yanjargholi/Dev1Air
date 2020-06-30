@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Auto_Notification_New__c</fullName>
+    <defaultValue>If( $RecordType.DeveloperName  = &apos;Post_Travel&apos; || $RecordType.DeveloperName  = &apos;Product&apos;, 
+&apos;UA Employee &amp; Customer Contact&apos;,
+If($RecordType.DeveloperName = &apos;Pre_Travel&apos; ,
+&apos;Customer Contact (External Only)&apos;,
+If($RecordType.DeveloperName  = &apos;Business_Insight_Case&apos; || $RecordType.DeveloperName  = &apos;Business_Insight_Case_Release&apos;,
+&apos;UA Employee (Internal Only)&apos;,
+&apos;None&apos;
+)
+)
+)</defaultValue>
+    <externalId>false</externalId>
+    <label>Auto Notification - New</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Do Not Send</fullName>
+                <default>false</default>
+                <label>Do Not Send</label>
+            </value>
+            <value>
+                <fullName>UA Employee (Internal Only)</fullName>
+                <default>false</default>
+                <label>UA Employee (Internal Only)</label>
+            </value>
+            <value>
+                <fullName>Customer Contact (External Only)</fullName>
+                <default>false</default>
+                <label>Customer Contact (External Only)</label>
+            </value>
+            <value>
+                <fullName>UA Employee &amp; Customer Contact</fullName>
+                <default>false</default>
+                <label>UA Employee &amp; Customer Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_International_Roll_Up__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(Owner:User.Manager.Title, &apos;Mexico&apos;) || CONTAINS(Owner:User.Manager.Manager.Title, &apos;Mexico&apos;), &apos;MEXICO&apos;, 
+
+IF((CONTAINS(BI_Owner_Sales_Division__c, &apos;LATIN&apos;) || CONTAINS(BI_Owner_Sales_Division__c, &apos;BRAZIL&apos;)) &amp;&amp; (CONTAINS(BI_Owner_Sales_Region__c, &apos;RIO&apos;) || CONTAINS(Owner:User.Manager.Title, &apos;BRA&apos;) || CONTAINS(Owner:User.Manager.Manager.Title, &apos;BRA&apos;)), &apos;BRAZIL&apos;, 
+
+IF(CONTAINS(BI_Owner_Sales_Division__c, &apos;LATIN&apos;) &amp;&amp; (CONTAINS(Owner:User.Manager.Title, &apos;Andean&apos;) || CONTAINS(Owner:User.Manager.Manager.Title, &apos;Andean&apos;)), &apos;ANDEAN REGION&apos;, 
+
+IF(CONTAINS(BI_Owner_Sales_Division__c, &apos;LATIN&apos;) &amp;&amp; (CONTAINS(BI_Owner_Sales_Region__c, &apos;TEGUCIGALPA SALES&apos;) || CONTAINS(BI_Owner_Sales_Region__c, &apos;SAN PEDRO SALES&apos;) || CONTAINS(BI_Owner_Sales_Region__c, &apos;GUATEMALA&apos;) 
+|| CONTAINS(Owner:User.Manager.Title, &apos;Caribbean&apos;) || CONTAINS(Owner:User.Manager.Manager.Title, &apos;Caribbean&apos;)), &apos;CARIBBEAN &amp; CENTRAL AMERICA&apos;, 
+
+IF((TEXT(Owner:User.SIP_Country__c) = &apos;SINGAPORE&apos; || TEXT(Owner:User.SIP_Country__c) = &apos;THAILAND&apos; || TEXT(Owner:User.SIP_Country__c) = &apos;MALAYSIA&apos; || TEXT(Owner:User.SIP_Country__c) = &apos;VIETNAM&apos; || TEXT(Owner:User.SIP_Country__c) = &apos;PHILIPPINES&apos; || 
+
+TEXT(Owner:User.Manager.SIP_Country__c) = &apos;SINGAPORE&apos; || TEXT(Owner:User.Manager.SIP_Country__c) = &apos;THAILAND&apos; || TEXT(Owner:User.Manager.SIP_Country__c) = &apos;MALAYSIA&apos; || TEXT(Owner:User.Manager.SIP_Country__c) = &apos;VIETNAM&apos; || TEXT(Owner:User.Manager.SIP_Country__c) = &apos;PHILIPPINES&apos;), &apos;SINGAPORE, THAILAND, MALAYSIA, INDONESIA, VIETNAM, PHILIPPINES&apos;, 
+IF(CONTAINS(BI_Owner_Sales_Division__c, &apos;LATIN&apos;) &amp;&amp; (CONTAINS(Owner:User.Title, &apos;City&apos;) || CONTAINS(Owner:User.Title, &apos;CT&apos;) || CONTAINS(Owner:User.Manager.Title, &apos;City&apos;) || CONTAINS(Owner:User.Manager.Title, &apos;CT&apos;)), &apos;CITY TICKET OFFICES&apos;, IF(CONTAINS(BI_Owner_Sales_Division__c, &apos;ISRAEL&apos;) || CONTAINS( TEXT(Owner:User.Manager.BI_Objective_Division__c) , &apos;ISRAEL&apos;),&apos;ISRAEL&apos; ,TEXT(Owner:User.Manager.BI_Objective_Division__c))
+) 
+) 
+
+) 
+
+) 
+
+) 
+)</formula>
+    <label>International Roll-Up</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

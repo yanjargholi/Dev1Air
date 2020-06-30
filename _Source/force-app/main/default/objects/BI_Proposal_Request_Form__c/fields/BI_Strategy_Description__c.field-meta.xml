@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Strategy_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>BI_Opportunity__r.BI_Strategy_Description__c</formula>
+    <inlineHelpText>Strategy Description on the PRF is automatically set from the Opportunity. To change the strategy description, update the &apos;Strategy Description&apos; field on the Opportunity.</inlineHelpText>
+    <label>Strategy Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

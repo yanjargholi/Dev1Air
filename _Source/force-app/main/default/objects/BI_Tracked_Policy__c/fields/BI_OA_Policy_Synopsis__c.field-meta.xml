@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_OA_Policy_Synopsis__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>A concise summary that includes what policy was introduced/changed/cancelled, and any known reasons why the policy was introduced (ex. new, changed or enhancement policy, competitive re-action, response to regulation etc.)</inlineHelpText>
+    <label>OA Policy Synopsis</label>
+    <length>400</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

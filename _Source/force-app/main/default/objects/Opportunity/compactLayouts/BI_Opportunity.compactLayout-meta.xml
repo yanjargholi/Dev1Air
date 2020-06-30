@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Opportunity</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>CloseDate</fields>
+    <fields>BI_Estimated_Annual_Sales_JV__c</fields>
+    <fields>OwnerId</fields>
+    <label>BI Opportunity</label>
+</CompactLayout>

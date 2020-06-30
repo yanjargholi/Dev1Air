@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Industry_Flown_Revenue_12_ME__c</fullName>
+    <description>Deprecated in BI Release 2019 - 11 (field is added to / moved to  the Account Object: Industry Flown Revenue)</description>
+    <externalId>false</externalId>
+    <label>xIndustry Flown Revenue (12 ME)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

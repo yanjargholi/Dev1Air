@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Sandbox_Access__c</fullName>
+    <externalId>false</externalId>
+    <label>Sandbox Access</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Requested</fullName>
+                <default>false</default>
+                <label>Access Requested</label>
+            </value>
+            <value>
+                <fullName>Access Given</fullName>
+                <default>false</default>
+                <label>Access Given</label>
+            </value>
+            <value>
+                <fullName>Access not Given</fullName>
+                <default>false</default>
+                <label>Access not Given</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

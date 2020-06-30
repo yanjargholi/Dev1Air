@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Related_To_Object_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+LEFT(WhatId, 3),
+&apos;001&apos;, &quot;Account&quot;,
+&apos;a1b&apos;, &quot;Objective&quot;,
+&apos;006&apos;, &quot;Opportunity&quot;,
+&apos;a0U&apos;, &quot;Account Plan&quot;,
+&apos;a1f&apos;, &quot;Territory Plan&quot;,
+&apos;00Q&apos;, &quot;Lead&quot;,
+&apos;a2T&apos;, &quot;One-On-One&quot;,
+&apos;a1d&apos;, &quot;Regional Plan&quot;,
+&apos;a1X&apos;, &quot;Divisional Plan&quot;,
+&apos;a2U&apos;, &quot;Project&quot;,
+NULL, &quot;&quot;,
+&quot;Other&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Related To: Object Type</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

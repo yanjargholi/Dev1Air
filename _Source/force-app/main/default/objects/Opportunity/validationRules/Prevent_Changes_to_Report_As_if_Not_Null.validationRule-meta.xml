@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Changes_to_Report_As_if_Not_Null</fullName>
+    <active>true</active>
+    <description>If the report as value has already been set, the corresponding task was created, and and the report as value cannot be changed</description>
+    <errorConditionFormula>IsClosed = True &amp;&amp; 
+(PRIORVALUE(IsClosed) &lt;&gt; False) &amp;&amp; 
+
+((PRIORVALUE(BI_Report_As__c)) &lt;&gt; &apos;&apos; || 
+
+(PRIORVALUE(BI_Report_As__c)) &lt;&gt; NULL) &amp;&amp; 
+( 
+ISCHANGED( BI_Closed_Reason__c ) || 
+ISCHANGED( BI_Include_in_Executive_Weekly__c ) || 
+ISCHANGED(BI_Report_As__c) 
+)</errorConditionFormula>
+    <errorMessage>For closed opportunities with a &apos;Report As&apos; value already specified, the following fields can&apos;t be changed: Report As, Comments, Include in Executive Weekly&apos;. If changes are required, log a case by emailing businessInsight@united.com</errorMessage>
+</ValidationRule>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Membership_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Membership Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CIC</fullName>
+                <default>false</default>
+                <label>CIC</label>
+            </value>
+            <value>
+                <fullName>EP</fullName>
+                <default>false</default>
+                <label>EP</label>
+            </value>
+            <value>
+                <fullName>EPL</fullName>
+                <default>false</default>
+                <label>EPL</label>
+            </value>
+            <value>
+                <fullName>EPP</fullName>
+                <default>false</default>
+                <label>EPP</label>
+            </value>
+            <value>
+                <fullName>MEXICO</fullName>
+                <default>false</default>
+                <label>MEXICO</label>
+            </value>
+            <value>
+                <fullName>Q3ODD</fullName>
+                <default>false</default>
+                <label>Q3ODD</label>
+            </value>
+            <value>
+                <fullName>BI APAC LOCAL PROGRAMS - SRG</fullName>
+                <default>false</default>
+                <label>BI APAC LOCAL PROGRAMS - SRG</label>
+            </value>
+            <value>
+                <fullName>BI APAC JPMIC PROGRAMS - JPM</fullName>
+                <default>false</default>
+                <label>BI APAC JPMIC PROGRAMS - JPM</label>
+            </value>
+            <value>
+                <fullName>BI APAC Global Accounts</fullName>
+                <default>false</default>
+                <label>BI APAC Global Accounts</label>
+            </value>
+            <value>
+                <fullName>BI APAC Regional Programs - EPABI</fullName>
+                <default>false</default>
+                <label>BI APAC Regional Programs - EPABI</label>
+            </value>
+            <value>
+                <fullName>BI APAC - Jetstream</fullName>
+                <default>false</default>
+                <label>BI APAC - Jetstream</label>
+            </value>
+            <value>
+                <fullName>BI EMEAI Local Programs - Local</fullName>
+                <default>false</default>
+                <label>BI EMEAI Local Programs - Local</label>
+            </value>
+            <value>
+                <fullName>BI EMEAI Regional Programs - BIR</fullName>
+                <default>false</default>
+                <label>BI EMEAI Regional Programs - BIR</label>
+            </value>
+            <value>
+                <fullName>EARNINGSPLUS - EPP</fullName>
+                <default>false</default>
+                <label>EARNINGSPLUS - EPP</label>
+            </value>
+            <value>
+                <fullName>GLOBAL ACCOUNTS - UNITED - CIC</fullName>
+                <default>false</default>
+                <label>GLOBAL ACCOUNTS - UNITED - CIC</label>
+            </value>
+            <value>
+                <fullName>MEMBERSHIPS - ARGENT</fullName>
+                <default>false</default>
+                <label>MEMBERSHIPS - ARGENT</label>
+            </value>
+            <value>
+                <fullName>MEMBERSHIPS - BRAZIL</fullName>
+                <default>false</default>
+                <label>MEMBERSHIPS - BRAZIL</label>
+            </value>
+            <value>
+                <fullName>MEMBERSHIPS-ANDEAN - LOFF</fullName>
+                <default>false</default>
+                <label>MEMBERSHIPS-ANDEAN - LOFF</label>
+            </value>
+            <value>
+                <fullName>MEMBERSHIPS - CENAM</fullName>
+                <default>false</default>
+                <label>MEMBERSHIPS - CENAM</label>
+            </value>
+            <value>
+                <fullName>MEMBERSHIPS - MEXICO</fullName>
+                <default>false</default>
+                <label>MEMBERSHIPS - MEXICO</label>
+            </value>
+            <value>
+                <fullName>BI Memberships</fullName>
+                <default>false</default>
+                <label>BI Memberships</label>
+            </value>
+            <value>
+                <fullName>BI – CANADA – Jetstream</fullName>
+                <default>false</default>
+                <label>BI – CANADA – Jetstream</label>
+            </value>
+            <value>
+                <fullName>BI Memberships - Corporate</fullName>
+                <default>false</default>
+                <label>BI Memberships - Corporate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

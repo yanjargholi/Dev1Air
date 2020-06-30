@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_reopening_a_closed_case</fullName>
+    <active>true</active>
+    <errorConditionFormula>($RecordType.Name = &quot;BI Case (Release Request)&quot; || 
+$RecordType.Name = &quot;BI Case (Support Request)&quot;)
+&amp;&amp;
+
+IsClosed = True &amp;&amp; 
+
+NOT(CONTAINS(TEXT(Status), &apos;Closed&apos;))</errorConditionFormula>
+    <errorMessage>You are not able to re-open a closed case. Please create a new case, and specify this case that you wanted to re-open, in the Parent Case field</errorMessage>
+</ValidationRule>

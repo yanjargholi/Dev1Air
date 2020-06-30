@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Organizational_Plans_International</fullName>
+    <columns>BI_Organizational_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>BI_Organization__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BI_Organization__c</field>
+        <operation>equals</operation>
+        <value>APAC,EMEAI,Latin America,International</value>
+    </filters>
+    <label>All Organizational Plans - International</label>
+</ListView>

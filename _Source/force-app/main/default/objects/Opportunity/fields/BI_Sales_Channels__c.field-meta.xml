@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Sales_Channels__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sales Channel is to be selected for all APAC, EMEAI and LATIN agency actions only</inlineHelpText>
+    <label>Sales Channel(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Cross Channel</fullName>
+                <default>false</default>
+                <label>Cross Channel</label>
+            </value>
+            <value>
+                <fullName>Global TMC</fullName>
+                <default>false</default>
+                <label>Global TMC</label>
+            </value>
+            <value>
+                <fullName>Leisure / Specialty</fullName>
+                <default>false</default>
+                <label>Leisure / Specialty</label>
+            </value>
+            <value>
+                <fullName>Local TMC</fullName>
+                <default>false</default>
+                <label>Local TMC</label>
+            </value>
+            <value>
+                <fullName>OTA</fullName>
+                <default>false</default>
+                <label>OTA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

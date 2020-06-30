@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Part_of_My_Division__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( OR(($User.Id = OwnerId), (TEXT($User.BI_Objective_Division__c) = Text(Owner.BI_Objective_Division__c)),($User.Id = Account.SIP_Sales_Service_Manager__r.Id ),($User.Sales_Region__c = Owner.Sales_Region__c) ), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Part of My Division</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

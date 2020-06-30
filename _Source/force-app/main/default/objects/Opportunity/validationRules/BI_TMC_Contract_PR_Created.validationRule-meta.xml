@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_TMC_Contract_PR_Created</fullName>
+    <active>true</active>
+    <description>TMC Contract Proposal Request has been created and stopping the user to not to check it again.</description>
+    <errorConditionFormula>NOT(BI_Travel_Agency_Request_Form_Attached__c) &amp;&amp; PRIORVALUE(BI_Travel_Agency_Request_Form_Attached__c) &amp;&amp;  RecordType.DeveloperName = &apos;BI_TMC_Contract&apos;</errorConditionFormula>
+    <errorDisplayField>BI_Travel_Agency_Request_Form_Attached__c</errorDisplayField>
+    <errorMessage>You are not able to uncheck the &apos;Travel Agency Request Form Attached&apos; checkbox. If you need to submit a different Form, or make changes, please work with your relevant pricing team member.</errorMessage>
+</ValidationRule>

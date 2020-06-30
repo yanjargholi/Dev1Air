@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Required_Customer_Type_For_Convert</fullName>
+    <active>true</active>
+    <description>With Leads being created from Hoovers, the customer type field may remain blank. We will prevent lead conversion if the Customer Type field was not set.</description>
+    <errorConditionFormula>AND(ISPICKVAL( SIP_Interested_Customer_Program__c, &quot;&quot;), 
+( IsConverted   = True))</errorConditionFormula>
+    <errorMessage>You must select a Customer Type value before you can convert the lead.Click Cancel if needed to return to the lead record. Select an appropriate value for Customer Type, and then convert the lead</errorMessage>
+</ValidationRule>

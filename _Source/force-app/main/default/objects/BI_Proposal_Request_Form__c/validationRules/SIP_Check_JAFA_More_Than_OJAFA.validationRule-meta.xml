@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Check_JAFA_More_Than_OJAFA</fullName>
+    <active>true</active>
+    <errorConditionFormula>((!ISNULL(SIP_Jetstream_Amenity_Fund_Amount__c ) || !ISNULL( SIP_Override_Jetstream_AmenityFundAmount__c )) &amp;&amp; SIP_Override_Jetstream_AmenityFundAmount__c &gt; SIP_Jetstream_Amenity_Fund_Amount__c) &amp;&amp; RecordType.DeveloperName = &apos;BI_PassPlus_Proposal_Request_Form&apos;</errorConditionFormula>
+    <errorDisplayField>SIP_Override_Jetstream_AmenityFundAmount__c</errorDisplayField>
+    <errorMessage>The Override Jetstream Amenity Fund amount you entered cannot be greater than the Jetstream amenity fund amount.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Destination_Airport__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter city name to search for airport</inlineHelpText>
+    <label>Destination Airport</label>
+    <referenceTo>SIP_Airport__c</referenceTo>
+    <relationshipLabel>Supported Routes (Destination Airport)</relationshipLabel>
+    <relationshipName>Supported_Routes_Destinations</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

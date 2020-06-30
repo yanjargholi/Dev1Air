@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Check_20_More_Than_CA</fullName>
+    <active>true</active>
+    <errorConditionFormula>(!ISNULL(BI_PP_Set_Allocation_for_Amenities__c) &amp;&amp; BI_PP_Set_Allocation_for_Amenities__c &gt; 0.3) &amp;&amp; RecordType.DeveloperName = &apos;BI_PassPlus_Proposal_Request_Form&apos;</errorConditionFormula>
+    <errorDisplayField>BI_PP_Set_Allocation_for_Amenities__c</errorDisplayField>
+    <errorMessage>The Contracted Amenity % entered must not exceed 30%.</errorMessage>
+</ValidationRule>

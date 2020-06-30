@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Cases_Queue_Membership__c</fullName>
+    <externalId>false</externalId>
+    <label>Cases Queue Membership</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMEX Queue</fullName>
+                <default>false</default>
+                <label>AMEX Queue</label>
+            </value>
+            <value>
+                <fullName>Beverage Coupons Queue</fullName>
+                <default>false</default>
+                <label>Beverage Coupons Queue</label>
+            </value>
+            <value>
+                <fullName>BI Release Queue</fullName>
+                <default>false</default>
+                <label>BI Release Queue</label>
+            </value>
+            <value>
+                <fullName>BI Support Queue</fullName>
+                <default>false</default>
+                <label>BI Support Queue</label>
+            </value>
+            <value>
+                <fullName>Corporate Direct (UCD) Queue</fullName>
+                <default>false</default>
+                <label>Corporate Direct (UCD) Queue</label>
+            </value>
+            <value>
+                <fullName>Corporate Reports Queue</fullName>
+                <default>false</default>
+                <label>Corporate Reports Queue</label>
+            </value>
+            <value>
+                <fullName>CSST Queue</fullName>
+                <default>false</default>
+                <label>CSST Queue</label>
+            </value>
+            <value>
+                <fullName>Entertainment Queue</fullName>
+                <default>false</default>
+                <label>Entertainment Queue</label>
+            </value>
+            <value>
+                <fullName>Feedback Queue</fullName>
+                <default>false</default>
+                <label>Feedback Queue</label>
+            </value>
+            <value>
+                <fullName>Government Queue</fullName>
+                <default>false</default>
+                <label>Government Queue</label>
+            </value>
+            <value>
+                <fullName>Meetings Queue</fullName>
+                <default>false</default>
+                <label>Meetings Queue</label>
+            </value>
+            <value>
+                <fullName>PassPlus Queue</fullName>
+                <default>false</default>
+                <label>PassPlus Queue</label>
+            </value>
+            <value>
+                <fullName>Policy &amp; Procedure Queue</fullName>
+                <default>false</default>
+                <label>Policy &amp; Procedure Queue</label>
+            </value>
+            <value>
+                <fullName>Portal Queue</fullName>
+                <default>false</default>
+                <label>Portal Queue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

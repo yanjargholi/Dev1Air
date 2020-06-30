@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Closed_Lost_Reason__c</fullName>
+    <description>2019 - 08: BI Release update. Field API name remain as is, however, label is updated to use this field to always denote a status reason, not only when the lead is closed. 
+
+NOTE: changes to any values will require validating / updating Lead Status flows</description>
+    <externalId>false</externalId>
+    <label>Status Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>01 PreWork - Researching  (BI / Hoovers / LinkedIn/ Google etc.)</fullName>
+                <default>false</default>
+                <label>Researching  (BI / Hoovers / LinkedIn/ Google etc.)</label>
+            </value>
+            <value>
+                <fullName>02 PreWork - Establishing Contact  (Reached out / Initial Email sent)</fullName>
+                <default>false</default>
+                <label>Establishing Contact  (Reached out / Initial Email sent)</label>
+            </value>
+            <value>
+                <fullName>03 PreWork - Establishing Contact (Follow-up Cadence)</fullName>
+                <default>false</default>
+                <label>Establishing Contact (Follow-up Cadence)</label>
+            </value>
+            <value>
+                <fullName>01 Engaged - Communication Established (Response Received)</fullName>
+                <default>false</default>
+                <label>Communication Established (Response Received)</label>
+            </value>
+            <value>
+                <fullName>02 Engaged - Person-to-Person meeting / call scheduled</fullName>
+                <default>false</default>
+                <label>Person-to-Person meeting / call scheduled</label>
+            </value>
+            <value>
+                <fullName>03 Engaged - Nurturing (Additional Interactions to qualify &amp; convert)</fullName>
+                <default>false</default>
+                <label>Nurturing (Additional Interactions to qualify &amp; convert)</label>
+            </value>
+            <value>
+                <fullName>Closed - Authority</fullName>
+                <default>false</default>
+                <label>Closed - Authority</label>
+            </value>
+            <value>
+                <fullName>Closed - Competition</fullName>
+                <default>false</default>
+                <label>Closed - Competition</label>
+            </value>
+            <value>
+                <fullName>Closed - Competition - Loyal to AA/Oneworld</fullName>
+                <default>false</default>
+                <label>Closed - Competition - Loyal to AA/Oneworld</label>
+            </value>
+            <value>
+                <fullName>Closed - Competition - Loyal to DL/Skyteam</fullName>
+                <default>false</default>
+                <label>Closed - Competition - Loyal to DL/Skyteam</label>
+            </value>
+            <value>
+                <fullName>Closed - Competition - Loyal to Southwest</fullName>
+                <default>false</default>
+                <label>Closed - Competition - Loyal to Southwest</label>
+            </value>
+            <value>
+                <fullName>Closed - Does not Qualify</fullName>
+                <default>false</default>
+                <label>Closed - Does not Qualify</label>
+            </value>
+            <value>
+                <fullName>Closed - Duplicate Record</fullName>
+                <default>false</default>
+                <label>Closed - Duplicate Record</label>
+            </value>
+            <value>
+                <fullName>Closed - Doesn&apos;t spend enough for PassPlus</fullName>
+                <default>false</default>
+                <label>Closed - Doesn&apos;t spend enough for PassPlus</label>
+            </value>
+            <value>
+                <fullName>Closed - Fit</fullName>
+                <default>false</default>
+                <label>Closed - Fit</label>
+            </value>
+            <value>
+                <fullName>Closed - Non-Responsive</fullName>
+                <default>false</default>
+                <label>Closed - Non-Responsive</label>
+            </value>
+            <value>
+                <fullName>Closed - Prefers to stay on PerksPlus</fullName>
+                <default>false</default>
+                <label>Closed - Prefers to stay on PerksPlus</label>
+            </value>
+            <value>
+                <fullName>Closed - Qualifies for PassPlus, not Propel, but unwilling to prepay</fullName>
+                <default>false</default>
+                <label>Closed - Qualifies for PassPlus, not Propel, but unwilling to prepay</label>
+            </value>
+            <value>
+                <fullName>Closed - Timing</fullName>
+                <default>false</default>
+                <label>Closed - Timing</label>
+            </value>
+            <value>
+                <fullName>01 PreWork - Researching (BI / Hoovers / LinkedIn/ Google etc.)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>01 PreWork - Researching (BI / Hoovers / LinkedIn/ Google etc.)</label>
+            </value>
+            <value>
+                <fullName>02 PreWork - Establishing Contact (Reached out / Initial Email sent)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>02 PreWork - Establishing Contact (Reached out / Initial Email sent)</label>
+            </value>
+            <value>
+                <fullName>AA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AA</label>
+            </value>
+            <value>
+                <fullName>Closed - Price</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closed - Price</label>
+            </value>
+            <value>
+                <fullName>Closed - Product</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closed - Product</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Converted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Converted</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Not Started</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-Work</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>01 PreWork - Researching  (BI / Hoovers / LinkedIn/ Google etc.)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-Work</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>02 PreWork - Establishing Contact  (Reached out / Initial Email sent)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pre-Work</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>03 PreWork - Establishing Contact (Follow-up Cadence)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engaged</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>01 Engaged - Communication Established (Response Received)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engaged</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>02 Engaged - Person-to-Person meeting / call scheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Engaged</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>03 Engaged - Nurturing (Additional Interactions to qualify &amp; convert)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Competition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Competition - Loyal to AA/Oneworld</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Competition - Loyal to DL/Skyteam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Competition - Loyal to Southwest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Does not Qualify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Duplicate Record</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Doesn&apos;t spend enough for PassPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Non-Responsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Prefers to stay on PerksPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Qualifies for PassPlus, not Propel, but unwilling to prepay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed (Not Converted)</controllingFieldValue>
+            <controllingFieldValue>Converted</controllingFieldValue>
+            <valueName>Closed - Timing</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

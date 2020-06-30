@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Loss_Code_is_required</fullName>
+    <active>true</active>
+    <description>Reason/Loss Code is required when Loss of Acquisition , Lost and Non-Renewed Contract is selected.</description>
+    <errorConditionFormula>AND(ISPICKVAL( BI_Stage__c , &apos;LOS&apos;),
+ ISBLANK(TEXT(BI_Loss_Codes__c )))</errorConditionFormula>
+    <errorDisplayField>BI_Loss_Codes__c</errorDisplayField>
+    <errorMessage>Loss Code is required when Stage is set to &apos;LOS&apos;. Update the &apos;Loss Codes&apos; field in the &apos;Pricing Team Inputs&apos; section of the PRF before setting the stage to &apos;LOS&apos;</errorMessage>
+</ValidationRule>

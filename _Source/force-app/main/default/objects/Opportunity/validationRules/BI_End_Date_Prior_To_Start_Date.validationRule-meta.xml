@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_End_Date_Prior_To_Start_Date</fullName>
+    <active>true</active>
+    <description>End Date cannot be prior to Start Date</description>
+    <errorConditionFormula>BI_End_Date__c  &lt;  BI_Start_Date__c</errorConditionFormula>
+    <errorDisplayField>BI_End_Date__c</errorDisplayField>
+    <errorMessage>End Date cannot be prior to Start Date</errorMessage>
+</ValidationRule>

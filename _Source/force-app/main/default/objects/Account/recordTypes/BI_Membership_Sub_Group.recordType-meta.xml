@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Membership_Sub_Group</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>BI_Membership_Sub_Group</compactLayoutAssignment>
+    <label>Membership Sub-Group</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Acquired List - ZS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Calling%2FTelemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Referral %28Non-TMC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo%2FSeminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google %28organic%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JV Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jetstream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Search Engines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth %28Non-Customers%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Active__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Account_Plan_Required__c</picklist>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2029</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2030</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Account_Plan_Year__c</picklist>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2029</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2030</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2031</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2032</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2033</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2034</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2035</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2036</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2037</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2038</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2039</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2040</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2041</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2042</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2043</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2044</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2045</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2046</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2047</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2048</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2049</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2050</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Account_Type__c</picklist>
+        <values>
+            <fullName>Airline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Airport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MileagePlus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UCS Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-UCS Corporate Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perks Plus Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SME Account</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Airline_Partnership_Type__c</picklist>
+        <values>
+            <fullName>A%2B%2B JV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Full Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Corp Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Regional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trans-PAC JV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA PAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-CAN JV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US-NZ JV</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Corporate_Preferred__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - Preferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - Preferred Elite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - Preferred Plus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Current_Contract_Type__c</picklist>
+        <values>
+            <fullName>APAC - APF Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - INTL - Revenue - UA only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - INTL Market Share - Alliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - JV BEI Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - JV BEI Share</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - JVPAC - MCTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - JVPAC - Marketshare Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - JVPAC - Revenue Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - PAC MCTA UA Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA BEI Pax Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA BEI Regional%2FPan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA BEI Revenue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA BEI Share</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA SME Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA SME Asia CN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APAC - UA-NH SME Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access %28Canada POS%2C AC Led%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COOP - Marketing Dollars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consolidator%2FStudent Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cruise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - BEI - AIP Local JV Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - BEI - AIP Local UA Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - BEI - AIP Push Action JV Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - BEI - AIP Push Action UA Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - BEI - Regional %2F PAN UA Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - CIP - Atlantic Joint Venture Upfront Discounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - CIP - Back End Incentive BEI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - CIP - Partner Plus Progress %28DE Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - CIP - iCon Network Discounts NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - Partner Plus Benefit %28PPB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - TOT - JV Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EMEAI - TOT - UA Managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - Market share %28Ticket%2FSales%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - PAN Latin Deals %28Marketing Funds%2FBD Funds%2FTicketing Fee%2FTravel Funds%29 %E2%80%93 Global TMCs %28GBT%2C CWT%2C BCD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - PAX YOY growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - Sales growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - back end cash incentive program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - no TOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP - soft travel fund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLIP - front line incentive program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government City Pair Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAT - JV ATL %28Mexico and Central America%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAT - MCTA UA Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAT - Star Regional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MCTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOT - Consolidation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOT - Humanitarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOT - Marine %2F Cruise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOT - Student %2F Student Air</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tour %2F United Vacations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tour Operator%2FWholesale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tour Operator%2FWholesale %28United Vacations%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tour Operator%2FWholesale%2FSki</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tour Operator%2FWholesale%2FStudent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Amenities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Meetings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PassPlus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United PerksPlus</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Direct_Booking__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Executation_Status__c</picklist>
+        <values>
+            <fullName>Finished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Form_of_Payment__c</picklist>
+        <values>
+            <fullName>Airplus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alipay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apple Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diner%E2%80%99s Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JCB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mastercard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UnionPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United UATP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_GDS_Catalog__c</picklist>
+        <values>
+            <fullName>Abacus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amadeus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apollo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farelogix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Galileo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sabre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travelsky</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Worldspan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Internal_Social_Site__c</picklist>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skype</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WeChat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yammer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Primary_Alliance__c</picklist>
+        <values>
+            <fullName>MiddleEast Carriers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneWorld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkyTeam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Alliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Secondary_Alliance__c</picklist>
+        <values>
+            <fullName>MiddleEast Carriers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneWorld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkyTeam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Alliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Strength_of_Travel_Policy__c</picklist>
+        <values>
+            <fullName>0 - Open Traveler Preference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 -Lowest Logical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Prefered Carrier Mandated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Tertiary_Alliance__c</picklist>
+        <values>
+            <fullName>MiddleEast Carriers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OneWorld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SkyTeam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Star Alliance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CustomerPriority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIP_Active__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InActive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SIP_Membership_Type__c</picklist>
+        <values>
+            <fullName>CIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EPP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEXICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q3ODD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SLA__c</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silver</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Agency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canadian Incentive %28CIPI%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corp Tvl Dept</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate TeleSales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Service Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intl Incentive Prg %28IIP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LH Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PassPlus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reservation Service Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail TIPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel Service Intermediaries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Go Business %28UGB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verified Travel Consultant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UpsellOpportunity__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

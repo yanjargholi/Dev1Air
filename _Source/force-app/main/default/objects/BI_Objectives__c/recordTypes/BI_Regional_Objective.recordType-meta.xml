@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Regional_Objective</fullName>
+    <active>true</active>
+    <description>Objective record type used to track Regional Objectives.</description>
+    <label>Regional Objective</label>
+    <picklistValues>
+        <picklist>BI_Measure__c</picklist>
+        <values>
+            <fullName>Actions %2F Activities Accomplished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Annualized Revenue - UA %2B JV %28Dollar Value%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Contribution %28%25 Points%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Score %2F Baseline Improvement %28Number or Percentage%29 and%2For Activities Accomplished</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Share Premium Points %28Number%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scheduled</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Unsuccessful</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

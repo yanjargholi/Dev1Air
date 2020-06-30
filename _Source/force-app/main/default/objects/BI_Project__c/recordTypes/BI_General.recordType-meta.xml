@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_General</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <label>General</label>
+    <picklistValues>
+        <picklist>BI_Customer_uses_bundles__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Project_Stage__c</picklist>
+        <values>
+            <fullName>Commercial Acceptance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Discussion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education%2FDiscovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verbal Commitment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Project_Status__c</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold %2F Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Sandbox_Access__c</picklist>
+        <values>
+            <fullName>Access Given</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Access not Given</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BI_Segmentation_Group__c</picklist>
+        <values>
+            <fullName>Direct Channel Self Serviceable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Channel TMC Serviceable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDC OBT Self Serviceable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDC OBT TMC Serviceable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NDC Proprietary System</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

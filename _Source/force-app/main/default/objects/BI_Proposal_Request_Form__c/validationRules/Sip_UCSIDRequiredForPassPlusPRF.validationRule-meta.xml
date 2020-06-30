@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sip_UCSIDRequiredForPassPlusPRF</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+  RecordType.DeveloperName = &apos;BI_PassPlus_Proposal_Request_Form&apos;,
+  OR (
+      ISBLANK(BI_Opportunity__r.Account.SIP_Corp_UCS_ID__c),
+      ISBLANK (BI_Opportunity__r.BI_Contact__c),
+      ISBLANK (BI_Opportunity__r.BI_Contact__r.Email)
+    )
+)</errorConditionFormula>
+    <errorMessage>To create a PassPlus PRF, you must have all of the following fields filled in: Interested Program Type (choose United PassPlus), Primary Contact (and email on this Contact), UCS ID (on Account).</errorMessage>
+</ValidationRule>

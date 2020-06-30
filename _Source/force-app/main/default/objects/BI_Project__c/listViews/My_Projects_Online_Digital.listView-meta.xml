@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Projects_Online_Digital</fullName>
+    <columns>NAME</columns>
+    <columns>BI_Account__c</columns>
+    <columns>BI_Project_Type__c</columns>
+    <columns>BI_Project_Status__c</columns>
+    <columns>BI_Project_Stage__c</columns>
+    <columns>BI_Start_Date__c</columns>
+    <columns>BI_End_Date__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>BI_Project__c.BI_Online_Digital_Project</value>
+    </filters>
+    <label>03  My Projects - Online Digital</label>
+</ListView>

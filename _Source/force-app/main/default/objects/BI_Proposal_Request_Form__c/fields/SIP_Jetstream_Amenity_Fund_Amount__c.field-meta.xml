@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Jetstream_Amenity_Fund_Amount__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( !ISNULL(SIP_Internal_Global_Service_Value__c) ,BI_PP_Total_Contracted_Investment__c * BI_PP_Set_Allocation_for_Amenities__c - SIP_Internal_Global_Service_Value__c ,BI_PP_Total_Contracted_Investment__c * BI_PP_Set_Allocation_for_Amenities__c )</formula>
+    <label>Jetstream Amenity Fund Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

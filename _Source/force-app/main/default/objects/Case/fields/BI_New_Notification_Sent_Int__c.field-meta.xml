@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_New_Notification_Sent_Int__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If a user gets an email notification that a new case is logged, this field is set to true in order to prevent subsequent new case notifications for the same case.</description>
+    <externalId>false</externalId>
+    <label>New Notification Sent Internal</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

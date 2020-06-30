@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_No_Convert_Status_Should_Be_Selected</fullName>
+    <active>true</active>
+    <description>No Convert Status Should be selected by user directly until the lead get converted</description>
+    <errorConditionFormula>ISPICKVAL( Status , &apos;Converted&apos;) &amp;&amp; NOT(IsConverted)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Lead record can not Converted directly. Please choose Convert button to Convert the lead.</errorMessage>
+</ValidationRule>

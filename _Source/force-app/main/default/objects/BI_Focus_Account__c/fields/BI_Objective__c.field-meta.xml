@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Objective__c</fullName>
+    <externalId>false</externalId>
+    <label>Objective</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must select an objective that supports Focus Accounts. To determine if an objective support focus account records, navigate to your objective and look for the Focus Account section. If it is not visible, Focus Accounts are not supported.</errorMessage>
+        <filterItems>
+            <field>BI_Objectives__c.BI_Focus_Accounts__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>BI_Objectives__c</referenceTo>
+    <relationshipLabel>Focus Accounts</relationshipLabel>
+    <relationshipName>BI_Focus_Accounts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

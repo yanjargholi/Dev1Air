@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Travel_Agency_Request_Form__c</fullName>
+    <defaultValue>&quot;https://team.ual.com/collab/sis_helpdesk/FTDownloads/Information Systems/BusinessInsight&quot;</defaultValue>
+    <description>&quot;https:\\team.ual.com\collab\sis_helpdesk\FTDownloads\Information%20Systems\BusinessInsight&quot;</description>
+    <externalId>false</externalId>
+    <label>Travel Agency Request Form</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

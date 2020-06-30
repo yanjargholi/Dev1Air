@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Logged_By__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(ISBLANK(ContactId)  &amp;&amp; ISBLANK(BI_User__c) &amp;&amp; !ISBLANK(SuppliedName)  ,
+SuppliedName,
+if(ISBLANK(ContactId)  &amp;&amp; !ISBLANK(BI_User__c),
+ BI_User__r.FirstName  &amp; &quot; &quot; &amp; BI_User__r.LastName,
+if(!ISBLANK(ContactId)  &amp;&amp; ISBLANK(BI_User__c),
+Contact.FirstName &amp; &quot; &quot; &amp; Contact.LastName ,
+if(!ISBLANK(ContactId)  &amp;&amp; !ISBLANK(BI_User__c) &amp;&amp; !ISBLANK(SuppliedName),
+SuppliedName,
+if(!ISBLANK(ContactId)  &amp;&amp; !ISBLANK(BI_User__c) &amp;&amp; ISBLANK(SuppliedName),
+Contact.FirstName &amp; &quot; &quot; &amp; Contact.LastName &amp; &quot; (UA:&quot; &amp; BI_User__r.FirstName &amp; &quot; &quot; &amp; BI_User__r.LastName &amp; &quot;)&quot;,
+&quot;UNKNOWN&quot;
+)
+)
+)
+)
+)</formula>
+    <label>Logged By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_UA_Customer_Comparison_Assessment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>From a customer&apos;s perspective, how does United&apos;s policy compare to the OA policy</inlineHelpText>
+    <label>UA Customer Comparison Assessment</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-2: far inferior</fullName>
+                <default>false</default>
+                <label>-2: far inferior</label>
+            </value>
+            <value>
+                <fullName>-1: slightly inferior</fullName>
+                <default>false</default>
+                <label>-1: slightly inferior</label>
+            </value>
+            <value>
+                <fullName>0: similar / same</fullName>
+                <default>false</default>
+                <label>0: similar / same</label>
+            </value>
+            <value>
+                <fullName>1: slightly superior</fullName>
+                <default>false</default>
+                <label>1: slightly superior</label>
+            </value>
+            <value>
+                <fullName>2: far superior </fullName>
+                <default>false</default>
+                <label>2: far superior </label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

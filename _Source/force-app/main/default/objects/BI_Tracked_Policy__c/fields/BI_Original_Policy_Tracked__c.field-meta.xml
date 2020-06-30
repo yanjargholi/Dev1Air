@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Original_Policy_Tracked__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>When a policy is recorded, and subsequently modified by either UA or OA, you can create a new record with the updated information and use this field to associate your newly captured policy change to its predecessor</inlineHelpText>
+    <label>Original Policy Tracked</label>
+    <referenceTo>BI_Tracked_Policy__c</referenceTo>
+    <relationshipName>BI_Parent_Policy_Tracking</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

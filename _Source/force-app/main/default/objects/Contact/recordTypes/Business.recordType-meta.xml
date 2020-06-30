@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business</fullName>
+    <active>true</active>
+    <label>Business</label>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Acquired List - ZS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>City Ticket Office %28CTO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cold Calling%2FTelemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Referral %28Non-TMC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Referral %28TMC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D%26B Hoovers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expo%2FSeminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google %28organic%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry Specific Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JV Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jetstream</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Search Engines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perks Plus Navigator%2FAdmin Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media %28Facebook%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media %28LinkedIn%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media %28Other%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media %28Twitter%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke Market Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Triplink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UA Colleague Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United for Business %28website - academia%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United for Business %28website - company%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United for Business %28website - group%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United for Business %28website - individual%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth %28Non-Customers%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level__c</picklist>
+        <values>
+            <fullName>Primary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secondary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tertiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

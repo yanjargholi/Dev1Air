@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Exec_Weekly_Without_Report_As</fullName>
+    <active>true</active>
+    <description>In order to check this opportunity for inclusion in the executive weekly, a report as value must be selected.</description>
+    <errorConditionFormula>(TEXT(BI_Report_As__c) = &apos;&apos; || TEXT(BI_Report_As__c) = NULL) &amp;&amp;
+
+
+ BI_Include_in_Executive_Weekly__c = True</errorConditionFormula>
+    <errorMessage>Report As Must be specified in order to Include your opportunity in the Executive Weekly.</errorMessage>
+</ValidationRule>

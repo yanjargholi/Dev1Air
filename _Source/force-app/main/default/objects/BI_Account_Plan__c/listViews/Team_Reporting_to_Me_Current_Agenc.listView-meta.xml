@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Reporting_to_Me_Current_Agenc</fullName>
+    <columns>BI_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Account__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>BI_Primary_Strategic_Focus__c</columns>
+    <columns>BI_Current_Customer_Assessment__c</columns>
+    <columns>BI_JV_Revenue_Target__c</columns>
+    <columns>BI_UA_Revenue_Target__c</columns>
+    <columns>BI_Dollarized_Share_Premium_Target__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>BI_Status__c</columns>
+    <columns>BI_ManagerRSD_Review_Completed_On__c</columns>
+    <columns>BI_RSDMD_Review_Completed_On__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BI_Part_of_my_Team__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>BI_Plan_Year__c</field>
+        <operation>equals</operation>
+        <value>2019,2020</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>BI_Account_Plan__c.BI_Agency_Account_Plan</value>
+    </filters>
+    <label>Team (Reporting to Me) - Current (Agenc)</label>
+</ListView>

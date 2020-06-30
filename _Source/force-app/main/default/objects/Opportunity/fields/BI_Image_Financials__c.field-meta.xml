@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Image_Financials__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName  = &apos;BI_Corporate&apos;, 
+IMAGE(&quot;/resource/1560366702000/BI_Opportunity_Financials1?&quot;,&quot;perf info&quot;),
+IMAGE(&quot;/resource/1560366702000/BI_Opportunity_Financials2?&quot;,&quot;perf info&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Next - be sure to</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

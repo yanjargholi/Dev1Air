@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Particpating_JV_Carriers__c</fullName>
+    <externalId>false</externalId>
+    <label>Particpating JV Carriers</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pacific JV  (UA, NH)</fullName>
+                <default>false</default>
+                <label>Pacific JV  (UA, NH)</label>
+            </value>
+            <value>
+                <fullName>A++ JV (UA, AC, LH, LX, OS, SN)</fullName>
+                <default>false</default>
+                <label>A++ JV (UA, AC, LH, LX, OS, SN)</label>
+            </value>
+            <value>
+                <fullName>LH Group (LH,LX,OS, SN)</fullName>
+                <default>false</default>
+                <label>LH Group (LH,LX,OS, SN)</label>
+            </value>
+            <value>
+                <fullName>AC</fullName>
+                <default>false</default>
+                <label>AC</label>
+            </value>
+            <value>
+                <fullName>LH</fullName>
+                <default>false</default>
+                <label>LH</label>
+            </value>
+            <value>
+                <fullName>LX</fullName>
+                <default>false</default>
+                <label>LX</label>
+            </value>
+            <value>
+                <fullName>NH</fullName>
+                <default>false</default>
+                <label>NH</label>
+            </value>
+            <value>
+                <fullName>NZ</fullName>
+                <default>false</default>
+                <label>NZ</label>
+            </value>
+            <value>
+                <fullName>OS</fullName>
+                <default>false</default>
+                <label>OS</label>
+            </value>
+            <value>
+                <fullName>SN</fullName>
+                <default>false</default>
+                <label>SN</label>
+            </value>
+            <value>
+                <fullName>UA</fullName>
+                <default>false</default>
+                <label>UA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

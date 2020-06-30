@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Divisional_Plans_International</fullName>
+    <columns>BI_Divisional_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>BI_Division__c</columns>
+    <columns>BI_Organizational_Plan__c</columns>
+    <columns>Sales_Organization__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Organization__c</field>
+        <operation>contains</operation>
+        <value>APAC,EMEAI,Latin,International</value>
+    </filters>
+    <label>All Divisional Plans - International</label>
+</ListView>

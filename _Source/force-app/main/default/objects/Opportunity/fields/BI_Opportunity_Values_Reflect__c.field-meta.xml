@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Opportunity_Values_Reflect__c</fullName>
+    <defaultValue>IF( ISBLANK( $User.Location__c ), null, 
+
+IF( CONTAINS(&quot;TYOSS:SINSS:SELSS:TPESS:BKKSS:HKGSZ:TYOSO:SINSZ:TYOVW:AKLSS:TYOSV:NGOSS:HKGVW:FUKSS:SYDSS:OSASO:RORCS:HIJSA:OSASS:GUMUZ:JKTSS:MNLGA:KULGA:GUMSS:KWACS:TYOSZ:MAJCS:SDJSS:PEKSS:GUMSZ:HKGSV:SELSZ:CANSS:SHASS:SDJSA:TPESZ:PEKSV:CTUSS:SHASV:HGHSS:MNLSS:SGNSS:TYORR:MNLRR:DELGA:DELIS:DELSS&quot;,  $User.Location__c ), &quot;Total Contract / Tactical Duration Value&quot;, 
+
+IF( 
+CONTAINS(&quot;LHRSS:KWIGA:LONSS:FRASS:LONVU:MOWGA:DXBGA:BAHGA:CDGSS:DUBSS:PARSS:TLVSS:FRAVU:AMSSS:LONSN:BRUSS:LISSS:MXPSS:ARNSS:LONVG:FRASC:EDISS:ZRHSS:ROMSS:BHXSS:MANSS:BFSSS:FRASZ:LHRSC:LHRSN:AMSVU:GLASS:MADSS:BCNSS:BRUSZ:FCOSS:GVASS&quot;,  $User.Location__c ), &quot;Total Contract / Tactical Duration Value&quot;, 
+
+IF( 
+CONTAINS(&quot;SDQTO:MEXTO:SLPTO:MTYUZ:SAORO:CUUTO:PTYUZ:SAOUZ:GUATO:SJUSS:BJXSS:GIGSS:LIMUZ:UIOTO:LIMTO:BZESS:SJOTO:GDLTO:GUASS:UIOUZ:POSSS:MGASS:MTYTO:GIGTO:AGUTO:EZETO:MGATO:PTYTO:BOGTO:BUEUZ:SJOUZ:SAOSS:SCLTO:BUESS:BUETO:BOGSS:SAPSS:MEXSS:RIOSS:CCSSS:TGUTO:MEXVG:TAMTO:SAPTO:BZETO:SALTO:SDQSS:GRURO:SALSS:MEXUZ:CCSTO:EZEUZ:TGUUZ:SCLSS:SCLUZ:GRUUZ:VERTO:QROTO:MIDTO:EZE00:QROSS:GIGUZ:VERSS:BJXTO:BOGUZ&quot;,  $User.Location__c ), &quot;Total Contract / Tactical Duration Value&quot;, &quot;Annualized Value&quot;))))</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>For APAC / EMEAI / Latin, the value of the opportunity should be based on period of the Contract / Tactical, so please select &apos;Total Contract / Tactical Duration Value&apos; if you are in any of these 3 Sales Organizations</inlineHelpText>
+    <label>Opportunity Values Reflect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annualized Value</fullName>
+                <default>false</default>
+                <label>Annualized Value</label>
+            </value>
+            <value>
+                <fullName>Total Contract / Tactical Duration Value</fullName>
+                <default>false</default>
+                <label>Total Contract / Tactical Duration Value</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

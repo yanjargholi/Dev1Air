@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Account_Plans_Current_Agency</fullName>
+    <columns>BI_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Account__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>BI_Status__c</columns>
+    <columns>BI_Primary_Strategic_Focus__c</columns>
+    <columns>BI_Current_Customer_Assessment__c</columns>
+    <columns>BI_JV_Revenue_Target__c</columns>
+    <columns>BI_UA_Revenue_Target__c</columns>
+    <columns>BI_ManagerRSD_Review_Completed_On__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>BI_Account_Plan__c.BI_Agency_Account_Plan</value>
+    </filters>
+    <filters>
+        <field>BI_Plan_Year__c</field>
+        <operation>equals</operation>
+        <value>2019,2020</value>
+    </filters>
+    <label>01 My Account Plans - Current (Agency)</label>
+</ListView>

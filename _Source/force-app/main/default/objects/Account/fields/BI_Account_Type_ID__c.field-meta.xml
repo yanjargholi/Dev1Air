@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Account_Type_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case(RecordType.Name,
+&apos;Corporate&apos;, &quot;Corp - &quot; &amp; SIP_Corp_UCS_ID__c,
+&apos;Agency Branch&apos;, &quot;Branch - &quot; &amp; SIP_ARC_Number__c,
+&apos;Agency HOL&apos;, &quot;HOL - &quot; &amp; SIP_ARC_Number__c, 
+&apos;Membership Group&apos;,&quot;Mem Grp - &quot; &amp; Text(SIP_Membership_Type__c),
+&apos;Membership Sub-Group&apos;, &quot;Mem Subgrp - &quot; &amp;   Parent.Name ,
+&apos;Custom Account&apos;, 
+Case(TEXT(BI_Account_Type__c),
+&apos;Airline&apos;, &quot;Cust Acct (Airline)&quot;,
+&apos;Airport&apos;, &quot;Cust Acct (Airpt)&quot;,
+&apos;&apos;, &quot;Cust Acct (Gvt/Assoc/Other)&quot; ,
+&apos;Perks Plus Account&apos;, &quot;Cust Acct (Perks) &quot; &amp; &quot; - &quot;&amp; &quot;PP ID: &quot; &amp; BI_Perks_Plus_ID__c,
+&apos;Non-UCS Corporate Account&apos;, if(BI_LH_UCID__c &lt;&gt; &quot;&quot;, &quot;Cust Acct (Non-UCS Corp) - LH UCID: &quot; &amp;  BI_LH_UCID__c,&quot;Cust Acc (Non-UCS Corp)&quot;),
+&quot;&quot;
+),
+RecordType.Name &amp; &quot; - [NOT SET / NA]&quot;
+)</formula>
+    <label>Account Type &amp; ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

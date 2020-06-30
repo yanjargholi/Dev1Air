@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI - Tactical Incentive %28Corporate%29</fullName>
+    <description>Sales Process used to manage Tacticals</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Active</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Partially Successful</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prework %26 Qualification</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pricing %26 Deal Modeling</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Proposal %26 Negotiation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Successful</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Unsuccessful</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

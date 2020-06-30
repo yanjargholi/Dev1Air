@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_JV_Flown_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <formula>BI_AC_Flown_Revenue__c +  BI_LH_Group_Flown_Revenue__c  +  BI_NH_Flown_Revenue__c +  BI_UA_Flown_Revenue__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Auto Calculated - Sum of AC Flown Revenue, LH Group Flown Revenue, NH Flown Revenue, and UA Flown Revenue</inlineHelpText>
+    <label>JV Flown Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

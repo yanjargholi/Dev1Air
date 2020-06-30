@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sip_PassPlus_Contract_Owner__c</fullName>
+    <description>PassPlus Contract owner</description>
+    <externalId>false</externalId>
+    <formula>BI_Opportunity__r.BI_Contact__r.FirstName +  BI_Opportunity__r.BI_Contact__r.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>PassPlus conract owner is Primary Contact on Opportunity</inlineHelpText>
+    <label>PassPlus Contract Owner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

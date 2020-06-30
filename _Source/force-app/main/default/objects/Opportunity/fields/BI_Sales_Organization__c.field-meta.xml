@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Sales_Organization__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the Sales Organization (i.e. North America, Latin America, APAC, EMEAI)  of the Opportunity owner. This field will be automatically completed once the opportunity is saved. You have the option to edit value if needed</inlineHelpText>
+    <label>Sales Organization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>BI_Organization</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Online_Digital_Project</fullName>
+    <fields>Name</fields>
+    <fields>BI_Project_Type__c</fields>
+    <fields>BI_Account__c</fields>
+    <fields>BI_Start_Date__c</fields>
+    <fields>BI_End_Date__c</fields>
+    <fields>OwnerId</fields>
+    <label>Online Digital Project</label>
+</CompactLayout>

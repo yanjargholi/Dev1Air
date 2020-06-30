@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Destination__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(TEXT( BI_Destination_Entity__c ))) &amp;&amp; ISBLANK(TEXT(BI_Destination_Country__c )) &amp;&amp; ISBLANK( BI_Destination_Airport__c ),
+TEXT( BI_Destination_Entity__c  ),
+IF(NOT(ISBLANK(TEXT( BI_Destination_Country__c  ))) &amp;&amp; ISBLANK(TEXT( BI_Destination_Entity__c  )) &amp;&amp; ISBLANK( BI_Destination_Airport__c ),
+TEXT(BI_Destination_Country__c),
+IF(NOT(ISBLANK(BI_Destination_Airport__c)) &amp;&amp; ISBLANK(TEXT(BI_Destination_Entity__c )) &amp;&amp; ISBLANK(TEXT( BI_Destination_Country__c )),
+BI_Destination_Airport__r.Name ,
+null
+)
+)
+)</formula>
+    <label>Destination</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

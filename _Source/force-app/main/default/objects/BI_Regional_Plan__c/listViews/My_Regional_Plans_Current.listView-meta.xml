@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Regional_Plans_Current</fullName>
+    <columns>BI_Regional_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Progress_Overview__c</columns>
+    <columns>BI_Overarching_Focus_Strategy_Desc__c</columns>
+    <columns>BI_Divisional_Plan__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>BI_Regional_Plan_Year__c</field>
+        <operation>equals</operation>
+        <value>2019,2020</value>
+    </filters>
+    <label>My Regional Plans - Current</label>
+</ListView>

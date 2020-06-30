@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Ultimate_Parent__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&apos;/&apos; + 
+IF(NOT(ISBLANK(BI_Regional_Plan__r.BI_Divisional_Plan__r.Name)), BI_Regional_Plan__r.BI_Divisional_Plan__r.Id, 
+IF(NOT(ISBLANK(BI_Regional_Plan__r.Name)), BI_Regional_Plan__r.Id,
+Id)), 
+
+IF(NOT(ISBLANK(BI_Regional_Plan__r.BI_Divisional_Plan__r.Name)), BI_Regional_Plan__r.BI_Divisional_Plan__r.Name, 
+IF(NOT(ISBLANK(BI_Regional_Plan__r.Name)),BI_Regional_Plan__r.Name, 
+Name)),&quot; &quot;)</formula>
+    <label>Ultimate Parent</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

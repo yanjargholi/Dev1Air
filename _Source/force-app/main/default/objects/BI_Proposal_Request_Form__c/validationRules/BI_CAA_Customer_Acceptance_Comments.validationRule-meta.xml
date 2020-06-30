@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_CAA_Customer_Acceptance_Comments</fullName>
+    <active>false</active>
+    <description>Rule Disabled in BI Release 06/2019 with introduction of CAA button. Customer Contract Feedback/Acceptance is required when CAA stage is selected for Corporate Contract</description>
+    <errorConditionFormula>AND((TEXT(BI_Stage__c) = &apos;CAA&apos;), (ISBLANK(BI_Customer_Contract_FeedbackAcceptance__c)), (RecordType.DeveloperName = &apos;BI_Corporate_Proposal_Request_Form&apos;))</errorConditionFormula>
+    <errorDisplayField>BI_Customer_Contract_FeedbackAcceptance__c</errorDisplayField>
+    <errorMessage>Customer Contract Acceptance / Feedback is required when changing the stage to &apos;CAA&apos; on a Corporate Proposal Request Form</errorMessage>
+</ValidationRule>

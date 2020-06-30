@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Percentage_of_APM2__c</fullName>
+    <description>Deprecated in BI Release 2019 - 11 (field moved / added to account object)</description>
+    <externalId>false</externalId>
+    <formula>IF( ((BI_APM_12_ME__c  &lt;&gt; null) || (BI_APM_12_ME__c  &lt;&gt; 0)),(BI_Share_12_ME__c / BI_APM_12_ME__c), null)</formula>
+    <inlineHelpText>Formula:  Share % (12ME) / APM % (12 ME)</inlineHelpText>
+    <label>xJV % of APM</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

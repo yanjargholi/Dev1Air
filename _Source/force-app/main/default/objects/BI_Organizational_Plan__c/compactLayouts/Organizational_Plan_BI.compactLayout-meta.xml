@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organizational_Plan_BI</fullName>
+    <fields>Name</fields>
+    <fields>BI_Organizational_Plan_Year__c</fields>
+    <label>Organizational Plan</label>
+</CompactLayout>

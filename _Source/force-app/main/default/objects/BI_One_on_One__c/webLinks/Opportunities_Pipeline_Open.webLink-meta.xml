@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_Pipeline_Open</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Opportunities - Pipeline (Open)</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/one/one.app#/sObject/00O0d0000052Nn6EAE/view?fv0={!BI_One_on_One__c.BI_ParticipantId__c}&amp;fv1={!BI_One_on_One__c.BI_ParticipantId__c}&amp;fv2={!BI_One_on_One__c.BI_ParticipantId__c}&amp;fv3={!BI_One_on_One__c.BI_ParticipantId__c}</url>
+</WebLink>

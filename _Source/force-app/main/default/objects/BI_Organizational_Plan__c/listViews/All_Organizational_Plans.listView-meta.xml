@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Organizational_Plans</fullName>
+    <columns>BI_Organizational_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Organization__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Organizational Plans</label>
+</ListView>

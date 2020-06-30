@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SIP_Check_Passplus_Initial_Is_Empty</fullName>
+    <active>true</active>
+    <errorConditionFormula>(SIP_Subscription__c = true &amp;&amp; ISNULL(BI_PP_Initial_Investment__c)) &amp;&amp; RecordType.DeveloperName = &apos;BI_PassPlus_Proposal_Request_Form&apos;</errorConditionFormula>
+    <errorDisplayField>BI_PP_Initial_Investment__c</errorDisplayField>
+    <errorMessage>Please enter Passplus Initial Investment.</errorMessage>
+</ValidationRule>

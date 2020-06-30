@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Strategy_Action_Plan_Est_Complete__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>It is recommended to update your progress on executing your strategy &amp; action plan, by updating the estimated completion percentage as you work on this strategy throughout the year. This helps your leadership quickly assess your progress</inlineHelpText>
+    <label>Strategy &amp; Action Plan - Est. % Complete</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

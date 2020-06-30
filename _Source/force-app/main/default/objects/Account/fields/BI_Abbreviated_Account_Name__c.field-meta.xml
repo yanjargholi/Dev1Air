@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Abbreviated_Account_Name__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <externalId>false</externalId>
+    <inlineHelpText>If the &apos;Account Name&apos; field on its own is not sufficiently descriptive or unique, you can use this field to enter an Account Name that helps you to more easily reference and find the account. Limit 15 Characters.</inlineHelpText>
+    <label>Abbreviated Account Name</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

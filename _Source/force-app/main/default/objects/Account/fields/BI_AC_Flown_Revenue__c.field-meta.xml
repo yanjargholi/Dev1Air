@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_AC_Flown_Revenue__c</fullName>
+    <description>Introduced in BI Release 2019 - 11 (Field previously resided on the Account Plan object)</description>
+    <externalId>false</externalId>
+    <label>AC Flown Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Current_Contract_Compliance__c</fullName>
+    <externalId>false</externalId>
+    <formula>BI_Account__r.SIP_Current_Contract_Performance__c</formula>
+    <inlineHelpText>Field is auto populated from the &apos;Current Contract Performance&apos; value on the Account record</inlineHelpText>
+    <label>Current Contract Compliance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

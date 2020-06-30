@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Num_of_Days_for_Contract_Completion__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+((ISNULL(BI_Stage_Last_Modified_Date_TCC_Only__c) = FALSE) &amp;&amp; (ISNULL(BI_Stage_Last_Modified_Date_Submit_Only__c) = FALSE)),
+
+
+IF((DateValue(BI_Stage_Last_Modified_Date_TCC_Only__c) == DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c)), 1, (DateValue(BI_Stage_Last_Modified_Date_TCC_Only__c) -  DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c))) , 
+ 
+ 
+ (If((ISNULL(BI_Stage_Last_Modified_Date_INA_Only__c ) = FALSE) &amp;&amp; (ISNULL(BI_Stage_Last_Modified_Date_Submit_Only__c) = FALSE),
+ 
+ IF((DateValue(BI_Stage_Last_Modified_Date_INA_Only__c) == DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c)), 1, (DateValue(BI_Stage_Last_Modified_Date_INA_Only__c) -  DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c))), 
+ 
+ (If(((ISNULL(BI_Stage_Last_Modified_Date_LOS_Only__c) = FALSE) &amp;&amp; (ISNULL(BI_Stage_Last_Modified_Date_Submit_Only__c) = FALSE)), 
+ 
+ IF((DateValue(BI_Stage_Last_Modified_Date_LOS_Only__c) == DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c)), 1, (DateValue(BI_Stage_Last_Modified_Date_LOS_Only__c) -  DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c))), 
+ 
+ 
+ (if(((ISNULL(BI_Stage_Last_Modified_Date_NRC_Only__c) = FALSE) &amp;&amp; (ISNULL(BI_Stage_Last_Modified_Date_Submit_Only__c) = FALSE)), 
+ IF((DateValue(BI_Stage_Last_Modified_Date_NRC_Only__c) == DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c)), 1, (DateValue(BI_Stage_Last_Modified_Date_NRC_Only__c) -  DateValue(BI_Stage_Last_Modified_Date_Submit_Only__c))), 
+ null)))
+ 
+ ))
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ))</formula>
+    <inlineHelpText>Number of days between the submitted date, and the date the proposal request reached either the TCC, INA, LOS, or NRC stage.</inlineHelpText>
+    <label>Number of Days for Contract Completion</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_oboAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>If this case was logged by an Agency on behalf of a corporate customer, select the Corporate Account record that the Agency logged the case for</inlineHelpText>
+    <label>Logged on Behalf Of</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Cases (Logged by someone else on Behalf Of this Account)</relationshipLabel>
+    <relationshipName>oboCases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

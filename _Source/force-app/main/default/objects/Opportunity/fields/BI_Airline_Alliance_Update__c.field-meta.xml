@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Airline_Alliance_Update__c</fullName>
+    <externalId>false</externalId>
+    <label>Airline Alliance Update</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Displaced OA - Became Primary</fullName>
+                <default>false</default>
+                <label>Displaced OA - Became Primary</label>
+            </value>
+            <value>
+                <fullName>Displaced OA - Became Co-Primary</fullName>
+                <default>false</default>
+                <label>Displaced OA - Became Co-Primary</label>
+            </value>
+            <value>
+                <fullName>Displaced OA - Became Secondary</fullName>
+                <default>false</default>
+                <label>Displaced OA - Became Secondary</label>
+            </value>
+            <value>
+                <fullName>New to Program - Primary</fullName>
+                <default>false</default>
+                <label>New to Program - Primary</label>
+            </value>
+            <value>
+                <fullName>New to Program - Secondary</fullName>
+                <default>false</default>
+                <label>New to Program - Secondary</label>
+            </value>
+            <value>
+                <fullName>New to Program - Tertiary</fullName>
+                <default>false</default>
+                <label>New to Program - Tertiary</label>
+            </value>
+            <value>
+                <fullName>No Change</fullName>
+                <default>false</default>
+                <label>No Change</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

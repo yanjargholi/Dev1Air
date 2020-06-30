@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft ($ amount)</fullName>
+                <default>false</default>
+                <label>Draft ($ amount)</label>
+            </value>
+            <value>
+                <fullName>EFT* ($ amount)</fullName>
+                <default>false</default>
+                <label>EFT* ($ amount)</label>
+            </value>
+            <value>
+                <fullName>ETC* ($ amount)</fullName>
+                <default>false</default>
+                <label>ETC* ($ amount)</label>
+            </value>
+            <value>
+                <fullName>Gift card ($ amount)</fullName>
+                <default>false</default>
+                <label>Gift card ($ amount)</label>
+            </value>
+            <value>
+                <fullName>Miles (# of)</fullName>
+                <default>false</default>
+                <label>Miles (# of)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus GS (# of)</fullName>
+                <default>false</default>
+                <label>MileagePlus GS (# of)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus 1K (# of)</fullName>
+                <default>false</default>
+                <label>MileagePlus 1K (# of)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus Platinum (# of)</fullName>
+                <default>false</default>
+                <label>MileagePlus Platinum (# of)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus Gold (# of)</fullName>
+                <default>false</default>
+                <label>MileagePlus Gold (# of)</label>
+            </value>
+            <value>
+                <fullName>MileagePlus Silver (# of)</fullName>
+                <default>false</default>
+                <label>MileagePlus Silver (# of)</label>
+            </value>
+            <value>
+                <fullName>OFOP ($ amount)</fullName>
+                <default>false</default>
+                <label>OFOP ($ amount)</label>
+            </value>
+            <value>
+                <fullName>Service Funds ($ amount)</fullName>
+                <default>false</default>
+                <label>Service Funds ($ amount)</label>
+            </value>
+            <value>
+                <fullName>United Club Pass (# of)</fullName>
+                <default>false</default>
+                <label>United Club Pass (# of)</label>
+            </value>
+            <value>
+                <fullName>United Club Membership (# of)</fullName>
+                <default>false</default>
+                <label>United Club Membership (# of)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_RelatedPlan_Plan_Year__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK(BI_Territory_Plan__c), 
+TEXT(BI_Territory_Plan__r.BI_Territory_Plan_Year__c), 
+
+IF(!ISBLANK(BI_Regional_Plan__c), 
+TEXT(BI_Regional_Plan__r.BI_Regional_Plan_Year__c), 
+
+
+
+if(!ISBLANK(BI_Divisional_Plan__c), 
+TEXT(BI_Divisional_Plan__r.BI_Divisional_Plan_Year__c), 
+&apos;&apos;)
+
+)
+
+)</formula>
+    <label>Related Plan&apos;s Plan Year</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

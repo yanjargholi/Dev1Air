@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Territory_Plans_Current</fullName>
+    <columns>BI_Territory_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Progress_Overview__c</columns>
+    <columns>BI_Overarching_Focus_Strategy_Desc__c</columns>
+    <columns>BI_Regional_Plan__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>BI_Territory_Plan_Year__c</field>
+        <operation>equals</operation>
+        <value>2019,2020</value>
+    </filters>
+    <label>My Territory Plans - Current</label>
+</ListView>

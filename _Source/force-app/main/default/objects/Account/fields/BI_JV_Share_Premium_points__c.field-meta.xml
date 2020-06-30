@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_JV_Share_Premium_points__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+
+
+(BI_JV_Share__c &lt;&gt; null || BI_JV_Share__c &lt;&gt; 0) &amp;&amp;  (BI_JV_APM_Share__c &lt;&gt; null || BI_JV_APM_Share__c &lt;&gt; 0),  (BI_JV_Share__c  - BI_JV_APM_Share__c), null
+
+
+)</formula>
+    <inlineHelpText>Value is auto calculated based on JV Share % and JV APM Share %. (both fields must have values for calculation to take place)</inlineHelpText>
+    <label>JV Share Premium (points)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

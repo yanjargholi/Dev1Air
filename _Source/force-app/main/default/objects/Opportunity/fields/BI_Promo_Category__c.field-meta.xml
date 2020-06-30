@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Promo_Category__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Only applicable if you selected &apos;Marketing &amp; Promotions&apos; as the Interested Program Type&apos;</inlineHelpText>
+    <label>Promo Category (Mktg &amp; Promo prog type)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corporate &amp; Business Development Promotions (CP)</fullName>
+                <default>false</default>
+                <label>Corporate &amp; Business Development Promotions (CP)</label>
+            </value>
+            <value>
+                <fullName>TA Promotions (TA)</fullName>
+                <default>false</default>
+                <label>TA Promotions (TA)</label>
+            </value>
+            <value>
+                <fullName>General Promotions (GP)</fullName>
+                <default>false</default>
+                <label>General Promotions (GP)</label>
+            </value>
+            <value>
+                <fullName>Digital Acquisition (DA)</fullName>
+                <default>false</default>
+                <label>Digital Acquisition (DA)</label>
+            </value>
+            <value>
+                <fullName>Sales Support Tool Box (TB)</fullName>
+                <default>false</default>
+                <label>Sales Support Tool Box (TB)</label>
+            </value>
+            <value>
+                <fullName>Communication / Education (CE)</fullName>
+                <default>false</default>
+                <label>Communication / Education (CE)</label>
+            </value>
+            <value>
+                <fullName>Misc. (MI)</fullName>
+                <default>false</default>
+                <label>Misc. (MI)</label>
+            </value>
+            <value>
+                <fullName>Star Marketing (SM)</fullName>
+                <default>false</default>
+                <label>Star Marketing (SM)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

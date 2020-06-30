@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_Latin_Colombia_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Latin - Colombia</label>
+    <queue>Leads_Latin_Colombia</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

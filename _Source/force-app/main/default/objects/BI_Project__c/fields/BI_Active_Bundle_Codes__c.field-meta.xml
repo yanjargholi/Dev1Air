@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Active_Bundle_Codes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If the customer is currently using any bundles today, enter the active bundle codes. Enter codes in a comma seperated manner when including more than one bundle code</inlineHelpText>
+    <label>Active Bundle Code(s)</label>
+    <length>200</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

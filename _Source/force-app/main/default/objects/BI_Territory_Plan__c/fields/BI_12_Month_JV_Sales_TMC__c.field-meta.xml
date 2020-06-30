@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_12_Month_JV_Sales_TMC__c</fullName>
+    <description>Field deprecated in BI Release 2019-11</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Deprecated field - no longer in use. 12ME JV sales for all agency accounts in territory from PI, otherwise appropriate source for your region including YQ</inlineHelpText>
+    <label>x12 Month JV Sales (TMC)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

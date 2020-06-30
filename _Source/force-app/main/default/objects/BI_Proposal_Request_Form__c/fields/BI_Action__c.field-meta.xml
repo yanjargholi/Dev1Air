@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Action__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT( BI_Opportunity__r.BI_Contract_Action__c)</formula>
+    <inlineHelpText>Action on the PRF is automatically set from the &apos;Contract Action&apos; field on the Opportunity. To change the action for the PRF, update the &apos;Contract Action&apos; on the opportunity</inlineHelpText>
+    <label>Action</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

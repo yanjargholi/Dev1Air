@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Objectives_Current_Division</fullName>
+    <columns>BI_RelatedPlan_Plan_Year__c</columns>
+    <columns>NAME</columns>
+    <columns>BI_Lookup_Identifier__c</columns>
+    <columns>BI_Measure__c</columns>
+    <columns>BI_Target_Value__c</columns>
+    <columns>BI_End_Date__c</columns>
+    <columns>BI_Objective_Description__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>BI_Objectives__c.BI_Divisional_Objective</value>
+    </filters>
+    <filters>
+        <field>BI_RelatedPlan_Plan_Year__c</field>
+        <operation>equals</operation>
+        <value>2019,2020</value>
+    </filters>
+    <label>My Objectives - Current (Division)</label>
+</ListView>

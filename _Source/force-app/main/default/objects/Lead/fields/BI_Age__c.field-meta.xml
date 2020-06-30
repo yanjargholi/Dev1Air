@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Age__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(IsConverted, 
+IF( ConvertedDate - DATEVALUE(CreatedDate) &lt;= 0 ,1, ConvertedDate - DATEVALUE(CreatedDate)),
+if( ISPICKVAL(Status , &apos;Closed/Lost&apos;) ,
+IF( DATEVALUE(BI_Status_Last_Modified_Date__c) - DATEVALUE(CreatedDate) &lt;= 0 ,1, DATEVALUE(BI_Status_Last_Modified_Date__c) - DATEVALUE(CreatedDate)),
+TODAY() - DATEVALUE(CreatedDate))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>For an open lead, the #days since the lead was created. 
+For a converted (qualified) lead, the #days between creation date and converted date. 
+For a lost (unqualified) lead, the #days between creation date and lost(status last modified) date</inlineHelpText>
+    <label>Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
