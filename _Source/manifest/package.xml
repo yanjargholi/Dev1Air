@@ -868,5 +868,9 @@
 		<members>WorkTypeGroupMember</members>
 		<name>CustomObject</name>
 	</types>
+	<types>
+		<members>*</members>
+		<name>Flow</name>
+	</types>
 	<version>48.0</version>
 </Package>
