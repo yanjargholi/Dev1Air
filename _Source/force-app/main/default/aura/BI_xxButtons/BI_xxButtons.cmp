@@ -1,3 +1,4 @@
+<!--test git-->
 <aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global"> 
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     

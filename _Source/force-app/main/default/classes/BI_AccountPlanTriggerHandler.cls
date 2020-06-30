@@ -1,6 +1,6 @@
 /**************************************************************************************************
 * Name           : BI_AccountPlanTriggerHandler
-
+* author         : Yolande Anjargholi
 * Objective      : 1) When a new account plan is created with auto complete from prior year set to yes,
 look for the prior year account plan for the account, and pre-populate certain fields with prior 
 year values. Happens before insert only. Method is AutoComplete.
@@ -15,7 +15,7 @@ if none found, use the first prior year plan found
 V1.0       |  Sept/05/2018  |   Yolande Anjargholi  |    Created 
 V1.1       | 2019-11        |  Yolande Anjargholi   |    Updated        | many fields auto completed from prior year plans moved to account object instead
                                                                           logic changed to populate account object fields from a prior year plan if the account fields are empty
-V1.2       | testing update 123                                                                         
+test 123                                                                       
 
 
 ********************************************************************************************/
