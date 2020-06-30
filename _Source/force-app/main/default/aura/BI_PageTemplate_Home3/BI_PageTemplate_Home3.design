@@ -1,0 +1,12 @@
+<design:component label="BI Sales Support">
+    <flexipage:template>
+        <flexipage:region name="header" label="header" defaultWidth="SMALL" />
+        <flexipage:region name="subheader" label="subheader" defaultWidth="MEDIUM" />
+		<flexipage:region name="body" label="body" defaultWidth="MEDIUM" />
+        <flexipage:region name="sidebar" label="sidebar" defaultWidth="SMALL" />        
+        <flexipage:region name="footer" label="footer" defaultWidth="SMALL" />
+    </flexipage:template>
+    <design:supportedFormFactors>
+        <design:supportedFormFactor type="Large"/>
+    </design:supportedFormFactors>
+</design:component>

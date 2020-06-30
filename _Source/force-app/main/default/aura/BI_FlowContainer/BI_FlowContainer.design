@@ -1,0 +1,7 @@
+<design:component label="BI_FlowContainer">
+
+    <design:attribute label="Flow API Name"
+                      name="flowName"
+                      description="The API name for flow you want to display."/>
+
+</design:component>

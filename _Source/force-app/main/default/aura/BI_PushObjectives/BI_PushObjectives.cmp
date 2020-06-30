@@ -1,0 +1,33 @@
+<aura:component controller="BI_PushObjectives" implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="Successvalue" type="String"/>
+    <aura:attribute name="statusMessage" type="String" default=""/>
+    <aura:attribute name="ValidObjectiveYearList" type="List" />
+    <div class="slds-text-heading--small slds-text-color--default slds-align--absolute-center slds-p-vertical--medium">{!v.statusMessage}</div>
+    <div class="slds-form-element slds-size--1-of-1">
+        <label class="slds-form-element__label" for="input-01">Valid Objective Year</label>
+        <div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <select id="vObjType" class="slds-select">
+                    <option value="none">--None--</option>
+                    <aura:iteration items="{!v.ValidObjectiveYearList}" var="vObjType">
+                        <option>{!vObjType}</option>
+                    </aura:iteration>
+                </select>
+            </div>
+        </div>
+        <br/>
+	<div class="btn-wrapper"> 
+         <button class="slds-button slds-button--neutral slds-align--absolute-Center slds-p-vertical--xx-small" type="button"
+    onclick="{!c.pushobjectives}">
+               OK
+           </button>
+    <button class="slds-button slds-button--neutral slds-align--absolute-right slds-p-vertical--xx-small" type="button" onclick="{!c.close}">
+               Cancel
+           </button>
+    </div>
+    
+  
+ 
+   </div>
+</aura:component>

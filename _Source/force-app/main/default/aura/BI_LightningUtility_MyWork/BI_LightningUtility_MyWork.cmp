@@ -1,0 +1,146 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" access="global" >
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="url" type="String"/>
+    <article class="slds-card slds-left_small" style="border-color:#FFFFFF;background-color:#FFFFFF;">
+        <header class="slds-page-header" role="banner" style="border-color:#6244bb;background-color:#6244bb;">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <!-- HEADING AREA -->
+                    <p class="slds-text-title--caps slds-line-height--reset slds-text-color_inverse">Centralized navigation for popular application functionality</p>
+                    <h1 class="slds-page-header__title slds-truncate slds-text-color_inverse" title="United Sales Planning">Plan your Day, Collaborate, and Gain Insight</h1>
+                    <!-- / HEADING AREA -->
+                </div>           
+            </div> 
+        </header>
+        <div class="slds-card__body slds-p-left_small slds-p-right_small">
+            <div class=" slds-p-bottom_small">
+                <div class="slds-box"  style="background-color:#FFFFFF;">
+                    <p class="slds-text-title--caps slds-line-height--reset slds-p-bottom_small">ACTIVITIES</p>
+                    
+                    <div class="Tasks">
+                        <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade">
+                            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                                <span class="slds-icon_container slds-icon-custom-78" title="Tasks">
+                                    <lightning:icon iconName="standard:task" size="large" alternativeText="symbol Objectives"/>
+                                </span>
+                            </div>
+                            <div class="slds-media__body slds-p-top_small">
+                                <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navTasks}"><a href="javascript:void(0);">Tasks</a></h1>
+                                <div class="slds-tile__detail slds-text-body_medium">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">A Task represents an assigned action that must be completed by yourself or someone else </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="Events">
+                        <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade" >
+                            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                                <span class="slds-icon_container slds-icon-custom-78" title="Calendar">
+                                    <lightning:icon iconName="standard:event" size="large" alternativeText="symbol Objectives"/>
+                                </span>
+                            </div>
+                            <div class="slds-media__body slds-p-top_medium">
+                                <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navEvents}"><a href="javascript:void(0);">Calendar</a></h1>
+                                <div class="slds-tile__detail slds-text-body_medium">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Your calendar contains events scheduled for a specific day and time. If you enabled Yoxel Sync, it corresponds to your Outlook Calendar</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class=" slds-p-bottom_small">
+                <div class="slds-box"  style="background-color:#FFFFFF;">
+                    <p class="slds-text-title--caps slds-line-height--reset slds-p-bottom_small">REPORTING</p>
+                    
+                    <div class="Tasks">
+                        <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade">
+                            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                                <span class="slds-icon_container slds-icon-custom-78" title="Reports">
+                                    <lightning:icon iconName="standard:report" size="large" alternativeText="symbol Objectives"/>
+                                </span>
+                            </div>
+                            <div class="slds-media__body slds-p-top_medium">
+                                <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navReports}"><a href="javascript:void(0);">Reports</a></h1>
+                                <div class="slds-tile__detail slds-text-body_medium">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">A Report represents organized data prepared in a specific graphical or tabular format, and generated based on filter criteria defined</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="Events">
+                        <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade" >
+                            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                                <span class="slds-icon_container slds-icon-custom-78" title="Dashboards">
+                                    <lightning:icon iconName="standard:dashboard" size="large" alternativeText="symbol Objectives"/>
+                                </span>
+                            </div>
+                            <div class="slds-media__body slds-p-top_medium">
+                                <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navDashboards}"><a href="javascript:void(0);">Dashboards</a></h1>
+                                <div class="slds-tile__detail slds-text-body_medium">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">A Dashboard shows data from multiple source reports as visual components, which can be charts, gauges, tables or other metrics</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-box"  style="background-color:#FFFFFF;">
+                <p class="slds-text-title--caps slds-line-height--reset slds-p-bottom_small">COLLABORATION</p>
+                
+                <div class="Tasks">
+                    <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade">
+                        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                            <span class="slds-icon_container slds-icon-custom-78" title="Chatter">
+                                <lightning:icon iconName="standard:groups" size="large" alternativeText="symbol Objectives"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body slds-p-top_medium">
+                            <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navChatter}"><a href="javascript:void(0);">Chatter</a></h1>
+                            <div class="slds-tile__detail slds-text-body_medium">
+                                <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                    <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Chatter is a collaboration tool that allows for sharing status updates in the context of a record or purposed group</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="Events">
+                    <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade" >
+                        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                            <span class="slds-icon_container slds-icon-custom-78" title="One-on-Ones">
+                                <lightning:icon iconName="custom:custom84" size="large" alternativeText="symbol Objectives"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body slds-p-top_medium">
+                            <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.navOnes}"><a href="javascript:void(0);">One-on-Ones</a></h1>
+                            <div class="slds-tile__detail slds-text-body_medium">
+                                <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                    <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">One-on-Ones represent a scheduled touch-base with your manager that allows for tracking conversation topics and projects, in context of your goals for the year</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        
+    </article>
+    
+    
+</aura:component>

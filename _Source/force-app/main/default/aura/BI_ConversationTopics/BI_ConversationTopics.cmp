@@ -1,0 +1,139 @@
+<aura:component controller="BI_ConversationTopicsHandler" implements="force:hasRecordId,force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes">
+    
+    <ltng:require styles="{!$Resource.SLDS221 + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+    <ltng:require styles="{!$Resource.BI_GlobalStyle}" />  
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}"/> -->
+    <ltng:require scripts="{!$Resource.Jquery}" afterScriptsLoaded="{! c.doInit }" />
+    
+    <aura:attribute name="fieldVisibleList" type="List" default="[]"></aura:attribute>
+    <aura:attribute name="test" type="List" default="[]"></aura:attribute>
+    <aura:attribute name="currentList" type="List" default="[]"></aura:attribute>
+    <aura:attribute name="isReLoadSuccess" type="Boolean" default="false" />
+    <aura:attribute name="hasParticipant" type="boolean" default="false"/>
+    <aura:attribute name="participantID" type="String" default="000"></aura:attribute>
+    <aura:attribute name="errMessage" type="String" default=""></aura:attribute>
+    <aura:registerEvent name="toggleSpinner" type="c:BIToggleSpinnerEvent" />
+    <aura:attribute name="showSpinner" default="false" type="Boolean" />
+    <aura:attribute name="counter" type="Integer" default="0" />
+    <aura:attribute name ="closeWindowFlag" type="Integer" default="0" />
+    <aura:handler name="change" value="{!v.showSpinner}" action="{!c.toggleSpinner}" />
+    <aura:handler name="change" value="{!v.isReLoadSuccess}" action="{!c.onHandleLoaded}" />
+    
+    
+    <article class="slds-card slds-scrollable slds-card_boundary"> 
+        <div class="slds-card__header slds-grid">
+            <c:BISpinner />
+            <lightning:spinner class="slds-hide spinner22" aura:id="spinner22" />
+            
+            <header class="slds-media slds-media_center slds-has-flexi-truncate"> 
+                
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-custom-85" title="Conversation Topics for the One-on-One">           
+                        <lightning:icon iconName="custom:custom35" size="small" alternativeText="symbol Objectives"/>
+                        <div style="color: rgb(194, 57, 52)">                            
+                        </div>
+                    </span>
+                </div>
+                <div class="slds-media__body ">
+                    <h2 class="slds-card__header-title">
+                        <span class="slds-text-heading_small slds-p-right_xx-large">Conversation Topics      </span>          
+                    </h2>      
+                    
+                </div>
+                <div class="slds-media__body ">
+                    <h2 class="slds-card__header-title">
+                        <span class="slds-text-heading_small slds-text-color_error slds-p-right_xx-large">{!v.errMessage}      </span>          
+                    </h2>      
+                    
+                </div>
+                 
+                <aura:if isTrue="{!v.hasParticipant}">
+                    <div class="slds-col_bump-left">
+                        <div class="btn-wrapper">
+                            <button class="slds-button slds-button--brand button-add button-cancel button-test" onclick="{!c.AddOneRow}">Add 1 Row
+                            </button>
+                            <button class="slds-button slds-button--brand button-add button-cancel button-test" onclick="{!c.AddFiveRows}">Add 5 Rows
+                            </button>
+                            <button class="slds-m-left_large slds-button slds-button--brand" onclick="{!c.OnSave}">Save 
+                            </button>
+                            <button class="slds-m-left_large slds-button slds-button--brand" onclick="{!c.onSaveandClose}">Save and Close 
+                            </button>
+                            <button class="slds-button slds-button--brand button-cancel" onclick="{! c.onCancel}">Cancel
+                            </button>
+                            
+                        </div>
+                    </div>
+                </aura:if>                
+            </header>
+        </div>
+        
+        <div class="slds-card__body ">
+            
+            <aura:if isTrue="{! !v.hasParticipant}">
+                <div class="slds-p-around_large slds-text-color_error slds-text-align_left slds-text-body_large"><strong>OOPS</strong> - Your One-on-One must have a participant before you can add/update conversation topics. Click the 'X' on the top right of the screen to close this window, and update the details tab with the Participant</div>
+            </aura:if>
+            
+            
+            
+            <aura:if isTrue="{!v.hasParticipant}">
+                <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer table-scroll-x table-scroll-y">
+                    <thead>
+                        <tr class="slds-text-heading--label">                        
+                            <aura:iteration items="{!v.fieldVisibleList}" var="item" indexVar="cIndex">
+                                <aura:if isTrue="{! item.fieldLabel == 'Topic Name'}">
+                                    <th scope="col" colspan="1">
+                                        <div class="slds-truncate" title="Enter a short topic name">{! item.fieldLabel}
+                                        </div>                                    
+                                    </th>
+                                </aura:if>
+                                <aura:if isTrue="{! item.fieldLabel == 'Aligned Objective Type Selector'}">
+                                    <th scope="col" colspan="1">
+                                        <div class="slds-truncate" title="Use your best judgement to select an objective type that aligns to the discussion topic. Example 1: Select Business Results if your topic is about TMC or Corporate Performance. Example 2: Select Industry if your topic is about industry events like GBTA">Aligned Objective Type
+                                        </div>
+                                    </th>
+                                </aura:if>
+                                <!--<aura:if isTrue="{! item.fieldLabel == 'Sub-Category'}">
+                                <th scope="col" colspan="1">
+                                    <div class="slds-truncate" title="ID">{! item.fieldLabel}
+                                        </div>
+                                </th>
+                            </aura:if> -->
+                                <aura:if isTrue="{! item.fieldLabel == 'Comments'}">
+                                    <th scope="col" colspan="2">
+                                        <div class="slds-truncate" title="Capture important notes / highlights of the conversation. You can click on the bottom right corner to drag and expand the size of the comments box">{! item.fieldLabel}
+                                        </div>
+                                    </th>
+                                </aura:if>
+                                
+                            </aura:iteration>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <aura:iteration items="{!v.currentList}" var="item" indexVar="cIndex">
+                            <aura:if isTrue="{! item.fieldLabel != 'Aligned Objective Type'}">
+                                <tr class="tableRow">                            
+                                    <aura:iteration items="{!v.fieldVisibleList}" var="item1">                              
+                                        <c:BIMassTableItem priceItem="{! item}" itemKey="{!item1}" />                               
+                                    </aura:iteration>
+                                </tr> 
+                            </aura:if>
+                        </aura:iteration>
+                        <br/>
+                    </tbody>
+                </table>
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!v.hasParticipant}">
+            <div class="slds-card__footer slds-theme_shade">
+                <span class="view-all-label">
+                    <div class="slds-text-body_medium">* To get Started, click 'Add 1 Row'. You can hover over column headings for additional guidance / details on how to complete. If you are not the one-on-one owner or participant, your changes will not be saved.  *
+                    </div>                   
+                </span>
+            </div>
+		</aura:if>
+        
+    </article>   
+
+</aura:component>

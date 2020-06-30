@@ -1,0 +1,110 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global" controller="BI_TerritoryPlanWithAccountAndObjective">
+    
+     <ltng:require styles="{!$Resource.SLDS + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+     <ltng:require styles="{!$Resource.BI_GlobalStyle}" />
+    
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:attribute name="listLiew" type="Account[]" ></aura:attribute>
+     <aura:attribute name="arrowDirection" type="string" default="arrowup" description="Use for change arrow sign direction on header based on click"/>
+     <aura:attribute name="isAsc" type="boolean" default="true" description="boolean flag for pass sorting condition to apex class"/> 
+     <aura:attribute name="selectedTabsoft" type="string" default="Name" description="Use for show/hide arraow sign on header based on conditions"/>
+
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-account" title="All Accounts that I own that make up my Territory">
+           <lightning:icon iconName="standard:account" size="large" alternativeText="symbol Objectives"/>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+           <aura:if isTrue="{!v.listLiew.length == 25}">
+            <span class="slds-text-heading_small">Accounts ({!v.listLiew.length}+)</span>
+           </aura:if>
+           <aura:if isTrue="{!v.listLiew.length != 25}">
+            <span class="slds-text-heading_small">Accounts ({!v.listLiew.length})</span>
+           </aura:if>
+        </h2>
+      </div>
+    </header>
+  </div>
+  <div class="slds-card__body">
+    <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+      <thead>
+        <tr class="slds-text-title_caps">
+          <th class="slds-is-sortable" scope="col" onclick="{!c.sortName}">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="Name">Account Name</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Name') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Name') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th>
+          <th class="slds-is-sortable" scope="col" onclick="{!c.sortAbbvName}">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="Name">Abbreviated Acc Name</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'BI_Abbreviated_Account_Name__c') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'BI_Abbreviated_Account_Name__c') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th>
+          <th class="slds-is-sortable" scope="col" onclick="{!c.sortRecordType}">              
+              <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="RecordType.Name">Record Type</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th>
+         <th class="slds-is-sortable" scope="col" onclick="{!c.sortPhone}">              
+              <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="Phone">Phone</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Phone') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Phone') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th> 
+          <th class="slds-is-sortable" scope="col" onclick="{!c.sortCity}">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="BillingCity">City</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'BillingCity') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'BillingCity') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <aura:iteration items="{!v.listLiew}" var="account" indexVar="index">
+          <tr class="slds-hint-parent">
+            <td role="gridcell">
+              <a>
+                <div class="slds-truncate" id='{!account.Id}' onclick = "{!c.navigateToObjective}" title="{!account.Id}">{!account.Name}</div>
+              </a>
+            </td>
+           <td role="gridcell">
+               <div class="slds-truncate"  title="{!account.BI_Abbreviated_Account_Name__c}">{!account.BI_Abbreviated_Account_Name__c}</div>
+           </td>
+          <td role="gridcell">
+              <div class="slds-truncate"  title="{!account.RecordType.Name}">{!account.RecordType.Name}</div>
+          </td>
+          <td role="gridcell">
+              <div class="slds-truncate"  title="{!account.Phone}">{!account.Phone}</div>
+          </td>
+          <td role="gridcell">
+              <div class="slds-truncate"  title="{!account.BillingStreet}">{!account.BillingCity}</div>
+          </td>
+        </tr>
+      </aura:iteration>
+      </tbody>
+    </table>
+  </div>
+  <footer class="slds-card__footer">
+    <a  onclick = "{!c.navigateToViewAll}">View All
+      <span class="slds-assistive-text">entity type</span>
+    </a>
+  </footer>
+</article>
+</aura:component>

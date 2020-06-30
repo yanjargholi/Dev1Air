@@ -1,0 +1,9 @@
+<design:component label="Home1">
+    <flexipage:template>
+        <flexipage:region name="header" defaultWidth="MEDIUM" />
+        <flexipage:region name="subheader" defaultWidth="MEDIUM" />
+		<flexipage:region name="body" defaultWidth="MEDIUM" />
+        <flexipage:region name="sidebar" defaultWidth="SMALL" />        
+        <flexipage:region name="footer" defaultWidth="LARGE" />
+    </flexipage:template>
+</design:component>

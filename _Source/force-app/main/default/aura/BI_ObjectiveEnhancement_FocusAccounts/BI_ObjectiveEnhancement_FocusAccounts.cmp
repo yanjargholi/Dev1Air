@@ -1,0 +1,291 @@
+<aura:component implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId" access="global" controller="BI_ObjectiveEnhancements">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="showAccountList" type="Boolean" default="false" description="controls showing or hiding the account list" />
+    <aura:attribute name="showNoAccountsFound" type="Boolean" default="false" description="controls showing or hiding the message that account list was empty" />
+    <aura:attribute name="showFocusList" type="Boolean" default="false" description="controls showing or hiding the existing focus records" />
+    <aura:attribute name="headerCheckBox" default="" type="String" description="used in table header row checkbox to denote if box is checked"/>
+    <aura:attribute name="salesteamCheckBox" default="false" type="String" description="used to also return accounts where user is in UA sales team but not acc owner"/>
+    <aura:attribute name="controlSelectAll" default="not set" type="String" description="used in table header row checkbox to denote if box is checked"/>
+    <aura:attribute name="accountList" type="List"/>
+    <aura:attribute name = "focusList" type="List"/>
+    <aura:attribute name="selectedAccountList" type="List" />
+    <aura:attribute name="disableCreateButton" type="boolean" default="true" description="use to disable or enable create button when accounts are selected"/>
+    
+    <aura:attribute name="arrowDirection" type="string" default="arrowdown" description="Use for change arrow sign direction on header based on click"/>
+    <aura:attribute name="sortColumn" type="string" default="Name" description="Use for show/hide arrow sign on header based on conditions"/>
+    <aura:attribute name="isAsc" type="boolean" default="false" description="boolean flag for pass sorting condition to apex class"/>
+    
+    <article class="slds-card slds-card_boundary">
+        
+        <div class="slds-card__header slds-section__title slds-border_bottom slds-top slds-theme_shade slds-grid" style="padding:0.5rem;background:#f3f2f2">                
+            Focus Accounts - Identify Accounts you will focus on for this Objective   
+            <aura:if isTrue="{! !v.showAccountList}">
+                <div class="slds-col_bump-left slds-p-right_medium slds-p-top_medium">
+                    <div class="btn-wrapper">                        
+                        <button class="slds-button slds-button_brand" onclick="{! c.accountListDisplay}">Select Accounts</button>
+                        
+                    </div>
+                </div>
+            </aura:if>
+        </div>
+        
+        <div class="slds-card__body slds-card_inner">
+            
+            <aura:if isTrue="{! and(!v.showAccountList,!v.showFocusList) }">
+                <div class="slds-p-left_x-small">
+                    <p class="headingText"> GETTING STARTED - CREATE FOCUS ACCOUNT RECORDS</p>
+                    <p class="describeText">In the context of objective, Focus Accounts represent selected accounts you will concentrate on when working to achieve this objective. A 'Focus Account' record in BI pairs your account with your objective, and provides a place for you to outline your strategy, specific routes, programs, etc. for your customer, in lieu of the objective / goal </p>
+                    <br></br>
+                    <p>a) Click the 'Select Accounts' button to view a list of your accounts in BI</p>
+                    <label class="slds-checkbox">
+                        <input type="checkbox" name="salesteam" onclick="{!c.includeSalesTeam}"
+                               checked="{!v.salesteamCheckBox}"/>
+                        <span class="slds-checkbox--faux"></span>
+                        <span class="slds-form-element__label slds-p-left_small">Check to include Accounts where you are a member of the Sales Team, but not the owner</span>
+                    </label>                          
+                    <p>b) Check the box for each account you want to add as a Focus Account for this objective</p>
+                    <p>c) Click the 'Add Focus Account' button to create a Focus Account record for each of the Accounts you selected </p>
+                    <br></br>                        
+                </div>
+            </aura:if>
+            
+            
+            <aura:if isTrue="{!v.showAccountList}">
+                <div class="slds-scrollable" style="height:25rem">
+                    
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate slds-p-left_small slds-p-bottom_small slds-p-top_small">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-account" title="All Accounts Plans for Membership Sub-Groups that this account belongs to">
+                                <lightning:icon iconName="standard:account" size="small" alternativeText="symbol Objectives"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2>
+                                <span class="slds-text-heading_small"><b>Accounts</b></span>
+                            </h2>
+                        </div>
+                    </header>
+                    
+                    <aura:if isTrue="{!v.showNoAccountsFound}">
+                        <div class="slds-p-left_x-small">
+                            <p class="headingText"> NO ACCOUNTS ARE AVAILABLE TO SELECT AS FOCUS ACCOUNTS FOR THIS OBJECTIVE - HERE'S WHY: </p>
+                            <br></br>
+                            <ul class="slds-list--dotted">
+                                <li>Assuming you are the Objective Owner - do you own accounts in BI?</li>
+                                <ul class="slds-list">
+                                    <li>- Only accounts owned by the objective owner (you) will be included in the list for selection</li>
+                                </ul>
+                                <li>If you don't own accounts but work / collaborate on them, did you check the box to include Accounts where you are a member of the UA Sales Team?</li>
+                                <ul class="slds-list">
+                                    <li>- Accounts you don't own but do belong to the sales team are only returned if you check the box in the guidance section </li>
+                                </ul>
+                                <li>If you do own this objective and you own accounts in BI, validate what type of accounts they are?</li>
+                                <ul class="slds-list">
+                                    <li>- Only Corporate, Agency, Custom, and Membership Group / Sub-Group Accounts are included in the list for selection</li>
+                                </ul>
+                                <li>Have you already created focus records for all accounts you own?</li>
+                                <ul class="slds-list">
+                                    <li>- Accounts that are already added as Focus Accounts for this objective, are not included in the list for selection</li>
+                                </ul>
+                            </ul>
+                            <br></br> 
+                            <p class="describeText">Still need help - log a support request with the BI Team (navigate to the Home tab, click 'New Support Request' under the 'Get Help With BI' section )  </p>
+                            
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{! !v.showNoAccountsFound}">
+                        <table id="accountTable" class="slds-table slds-table--bordered" role="grid">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-text-align_right" scope="col" style="width:3.25rem">
+                                        <label class="slds-checkbox">
+                                            <input type="checkbox" name="option-all" onclick="{!c.selectAll}"
+                                                   checked="{!v.headerCheckBox}"/>
+                                            <span class="slds-checkbox--faux"></span>
+                                            <span class="slds-assistive-text">Select All</span>
+                                        </label>
+                                        
+                                    </th>
+                                    <th aria-label="Account Name" id="Name" aria-sort="descending" class="slds-is-sortable" socpe="col" onclick="{!c.sortColumn}">
+                                        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                            <div class="slds-truncate" data-index="Name" id="Name" title="Account Name">ACCOUNT</div>
+                                            <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.sortColumn == 'Name') }">
+                                                <lightning:icon iconName="utility:arrowdown" size="xx-small"/>
+                                            </aura:if>  
+                                            <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.sortColumn == 'Name') }"> 
+                                                <lightning:icon iconName="utility:arrowup" size = "xx-small"/>                                            
+                                            </aura:if>  
+                                        </a>
+                                        
+                                    </th>
+                                    <th aria-label="Account Identifier" id="BI_Account_Type_ID__c" aria-sort="descending" class="slds-is-sortable" socpe="col" onclick="{!c.sortColumn}">    
+                                        <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                            <div class="slds-truncate" title="Column 2">IDENTIFIER</div>
+                                            <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.sortColumn == 'BI_Account_Type_ID__c') }">
+                                                <lightning:icon iconName="utility:arrowdown" size="xx-small"/>
+                                            </aura:if>  
+                                            <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.sortColumn == 'BI_Account_Type_ID__c') }"> 
+                                                <lightning:icon iconName="utility:arrowup" size = "xx-small"/>                                            
+                                            </aura:if>  
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-resizable " scope="col">
+                                        <div class="slds-truncate" title="Column 3">CITY</div>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <aura:If isTrue="{!v.accountList.length > 0}">
+                                <tbody id="accountList">
+                                    <aura:iteration items="{!v.accountList}" var="acc">
+                                        <tr class="slds-hint-parent row-hover">
+                                            <td role="gridcell" class="slds-cell-shrink">
+                                                <label class="slds-checkbox">
+                                                    <ui:inputCheckbox name="a" value="{!acc.isSelected}" change="{!c.setSelectedAccounts}"/>
+                                                    <span class="slds-checkbox--faux"></span>
+                                                    <span class="slds-assistive-text">Select</span>
+                                                </label>
+                                            </td>
+                                            <td role="gridcell">
+                                                <a>
+                                                    <div class="slds-truncate" data-index="{!acc.Id}" id='{!acc.Id}' onclick = "{!c.navigateToAccount}" title="{!acc.Id}">{!acc.Name}</div>
+                                                </a>
+                                            </td>
+                                            <td role="gridcell">
+                                                <a>
+                                                    <div class="slds-truncate" id='{!acc.BI_Account_Type_ID__c}' title="{!acc.BI_Account_Type_ID__c}">{!acc.BI_Account_Type_ID__c}</div>
+                                                </a>
+                                            </td>
+                                            <td role="gridcell">
+                                                <a>
+                                                    <div class="slds-truncate" id='{!acc.BillingCity}' title="{!acc.BillingCity}">{!acc.BillingCity}</div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>                            
+                                </tbody>
+                            </aura:If>
+                        </table>
+                    </aura:if>
+                </div>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.showFocusList}">
+                <div class="slds-p-left_x-small">
+                    <p class="headingText"> COMPLETE FOCUS ACCOUNT RECORD DETAILS</p>
+                    <br/>
+                    <p>a) Click the 'Focus Record Id' to open the record</p>
+                    <p>b) Enter your objective strategy, action plan and other details as relevant for the Account, and Click Save</p>
+                    <p>c) Click on the Objective name to easily navigate back to your objective record</p>
+                    <br/>
+                    <p class="describeText">TIP: You can always add additional accounts you will focus on for this objective by clicking the 'Select Accounts' button</p>
+                    <label class="slds-checkbox">
+                        <input type="checkbox" name="salesteam" onclick="{!c.includeSalesTeam}"
+                               checked="{!v.salesteamCheckBox}"/>
+                        <span class="slds-checkbox--faux"></span>
+                        <span class="slds-form-element__label slds-p-left_small">Check to include Accounts where you are a member of the Sales Team, but not the owner</span>
+                    </label>    
+                    <br/>
+                </div>
+                
+                <div class="slds-scrollable_y" style="height:30rem">
+                    
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate slds-p-left_small slds-p-bottom_small slds-p-top_small">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-custom-47" title="All Accounts Plans for Membership Sub-Groups that this account belongs to">
+                                <lightning:icon iconName="custom:custom47" size="small" alternativeText="symbol Objectives"/>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2>
+                                <span class="slds-text-heading_small"><b>Focus Accounts</b></span>
+                            </h2>
+                        </div>
+                    </header>
+                    
+                    <table id="focusAccountsTable" class="slds-table slds-table_bordered 
+                                                          slds-max-medium-table_stacked-horizontal slds-table_fixed-layout" role="grid">
+                        <thead>
+                            <tr class="slds-line-height_reset slds-text-title">                                
+                                <th aria-label="Focus Customer Record Id" aria-sort="descending" class="slds-is-sortable" socpe="col" onclick="{!c.sortColumn1}">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <span class="slds-assistive-text">Sort</span>
+                                        <span class="slds-truncate" title="Id">FOCUS RECORD ID</span>                
+                                    </a>
+                                </th>
+                                <th aria-label="Account Name" id="BI_Account__r.Name" aria-sort="descending" class="slds-is-sortable" socpe="col" onclick="{!c.sortColumn}">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                                        <div class="slds-truncate" data-index="Name" id="BI_Account__r.Name" title="Account Name">ACCOUNT</div>
+                                        <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.sortColumn == 'BI_Account__r.Name') }">
+                                            <lightning:icon iconName="utility:arrowdown" size="xx-small"/>
+                                        </aura:if>  
+                                        <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.sortColumn == 'BI_Account__r.Name') }"> 
+                                            <lightning:icon iconName="utility:arrowup" size = "xx-small"/>                                            
+                                        </aura:if>  
+                                    </a>
+                                    
+                                </th>
+                                <th class="slds-is-resizable " scope="col">
+                                    <div class="slds-truncate" title="Strategy">STRATEGY</div>
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <aura:renderIf isTrue="{!v.focusList.length > 0}">
+                            <tbody id="focusList">
+                                <aura:iteration items="{!v.focusList}" var="fr">
+                                    <tr class="slds-hint-parent row-hover">                                        
+                                        <td role="gridcell">
+                                            <a>
+                                                <div class="slds-wrap" data-index="{!fr.Name}" id='{!fr.Id}' onclick = "{!c.navigateToFocusRecord}" title="{!fr.Name}">{!fr.Name}</div>
+                                            </a>
+                                        </td>
+                                        <td role="gridcell">
+                                            <a>
+                                                <div class="slds-truncate" id='{!fr.BI_Account__c}' title="{!fr.BI_Account__c}">{!fr.BI_Account__r.Name}</div>
+                                            </a>
+                                        </td>
+                                        <td role="gridcell">  
+                                            <div class="slds-wrap">
+                                                <span style="white-space: normal; word-wrap: break-word;">
+                                                    <div class="slds-hyphenate" id='{!fr.BI_Objective_Strategy__c}' title="{!fr.BI_Objective_Strategy__c}">{!fr.BI_Objective_Strategy__c}</div>
+                                                </span>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                </aura:iteration>                            
+                            </tbody>
+                        </aura:renderIf>
+                    </table>
+                </div>
+            </aura:if>
+        </div>
+        
+        
+        <div class="slds-card__footer slds-theme_shade slds-grid">
+            
+            <aura:if isTrue="{!v.showAccountList}">
+                <div class="slds-col_bump-left">
+                    <div class="btn-wrapper">
+                        <button class="slds-button slds-button_brand" onclick="{! c.accountListClose}">Close / Cancel</button>
+                        <aura:if isTrue="{!v.disableCreateButton}">
+                            <button class="slds-button slds-button_brand" disabled="{v.disableCreateButton}">Add Focus Accounts</button>
+                            <aura:set attribute="else">
+                                <button class="slds-button slds-button_brand" onclick="{! c.focusCustomersCreate}">Add Focus Accounts</button>
+                            </aura:set>
+                        </aura:if>
+                        
+                    </div>
+                </div>
+                
+            </aura:if>
+            
+        </div>
+        
+    </article>
+    
+    
+    
+</aura:component>

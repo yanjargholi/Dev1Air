@@ -1,0 +1,11 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+    <aura:handler event="c:BIToggleSpinnerEvent" action="{!c.handleToggleSpinnerEvent}"/>
+    <!-- <div class="slds-spinner_container" aura:id="bi-spinner"> -->
+    <div aura:id="bi-spinner">
+        <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+</aura:component>

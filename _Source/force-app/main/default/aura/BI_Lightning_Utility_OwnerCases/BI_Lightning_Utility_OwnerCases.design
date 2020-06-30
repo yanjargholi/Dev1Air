@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="ownerType" label="Ownership Type" 
+                      description="Valid options include m (representing my open cases), or mq (representing open cases for queues my user record is configured for)" />
+	
+</design:component>

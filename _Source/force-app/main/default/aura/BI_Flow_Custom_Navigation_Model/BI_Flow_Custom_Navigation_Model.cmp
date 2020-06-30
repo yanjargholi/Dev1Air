@@ -1,0 +1,36 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global" >
+    <!-- Get the script text from the flow -->    
+    <aura:attribute name="buttonfloat" type="String" required="false" default="slds-float_right" />
+    <aura:attribute name="toastText" type="String" required="false" />
+     <aura:attribute name="toastType" type="String" required="false" default="success" />
+    <aura:attribute name="buttonLabel" type="String" required="false"/>
+    <aura:attribute name="buttonNavigation" type="String" required="false" default="NEXT"/>
+    <aura:attribute name="buttonClickFlag" type="String" required="false"/>
+    <aura:attribute name="buttonLabel2" type="String" required="false"/>
+    <aura:attribute name="buttonNavigation2" type="String" required="false" default="NEXT"/>
+    <aura:attribute name="toastButton" type="String" required="false" default="1"/>
+    <aura:attribute name="showDescription" type="String" required="false" />
+    <!-- Pass the value of the selected option back to the flow -->
+    <aura:attribute name="value" type="String" />
+    <aura:attribute name="action" type="String" />
+    <table class="slds-table">
+        <tr>
+            {!v.showDescription}
+        </tr>
+        <tr>
+            <div aura:id="actionButtonBar" class="slds-clearfix slds-p-top_medium">
+                <div class="{!v.buttonfloat}">
+                    <aura:if isTrue="{!v.buttonLabel != null}">
+                        <lightning:button label="{!v.buttonLabel}" aura:id="button1Id" 
+                                          variant="brand" onclick="{!c.handleChange}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.buttonLabel2 != null}">
+                        <lightning:button label="{!v.buttonLabel2}" aura:id="button2Id" 
+                                          variant="brand" onclick="{!c.handleChange}"/>
+                    </aura:if>
+                </div>
+            </div>
+        </tr>
+    </table>
+    
+</aura:component>

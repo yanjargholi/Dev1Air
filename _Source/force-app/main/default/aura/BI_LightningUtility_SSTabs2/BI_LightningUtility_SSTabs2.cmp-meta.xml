@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <description>Application Use: Sales Support
+Purpose: Host BI_Lightning_Utility_OwnerCases
+Details: Used to display Cases for SSM&apos;s that do not belong to any case queue</description>
+</AuraDefinitionBundle>

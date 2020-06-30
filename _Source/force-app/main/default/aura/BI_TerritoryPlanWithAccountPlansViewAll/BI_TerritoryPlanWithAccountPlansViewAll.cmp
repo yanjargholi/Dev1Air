@@ -1,0 +1,97 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global" controller="BI_TerritoryPlanWithAccountPlans">
+    
+     <ltng:require styles="{!$Resource.SLDS221 + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+     <ltng:require styles="{!$Resource.BI_GlobalStyle}" />
+    
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:attribute name="listLiew" type="BI_Account_Plan__c[]" ></aura:attribute>    
+     <aura:attribute name="arrowDirection" type="string" default="arrowup" description="Use for change arrow sign direction on header based on click"/>
+     <aura:attribute name="isAsc" type="boolean" default="true" description="boolean flag for pass sorting condition to apex class"/> 
+     <aura:attribute name="selectedTabsoft" type="string" default="Name" description="Use for show/hide arraow sign on header based on conditions"/>
+    
+    <article class="slds-card">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-custom-85" title="All Accounts Plans I own for the relevant plan year">
+               <lightning:icon iconName="custom:custom85" size="large" alternativeText="symbol Objectives"/>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2>
+               <span class="slds-text-heading_small">Account Plans ({!v.listLiew.length})</span>
+            </h2>
+          </div>            
+             <div class="btn-wrapper"> 
+         		 <button class="slds-button slds-button--brand slds-align--absolute-right slds-p-vertical--xx-small" type="button" onclick="{!c.close}">
+               		Back To My Territory Plan
+           		</button>    
+    		</div>  
+        </header>
+      </div>
+        
+        
+      <div class="slds-card__body">
+        <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+          <thead>
+            <tr class="slds-text-title_caps">
+              <th class="slds-is-sortable" scope="col" onclick="{!c.sortName}">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                    <span class="slds-assistive-text">Sort</span>
+                    <span class="slds-truncate" title="Name">Name</span>  
+                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Name') }">&nbsp;  &#9660; </aura:if>  
+                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Name') }"> &nbsp;  &#9650; </aura:if>                        
+                </a>
+              </th>
+              <th class="slds-is-sortable" scope="col" onclick="{!c.sortIdentifier}">              
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                    <span class="slds-assistive-text">Sort</span>
+                    <span class="slds-truncate" title="BI_Account__r.BI_Account_Type_ID__c">Account Type and ID</span>  
+                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'BI_Account__r.BI_Account_Type_ID__c') }">&nbsp;  &#9660; </aura:if>  
+                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'BI_Account__r.BI_Account_Type_ID__c') }"> &nbsp;  &#9650; </aura:if>                        
+                </a>
+              </th>
+                <th class="slds-is-sortable" scope="col">              
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                    <span class="slds-assistive-text">Sort</span>
+                      <span class="slds-truncate" title="Manager or RSD Review Completed On Date">Manager/RSD Reviewed On</span>  
+                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }">&nbsp;  &#9660; </aura:if>  
+                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }"> &nbsp;  &#9650; </aura:if>                        
+                </a>
+              </th>
+                <th class="slds-is-sortable" scope="col">              
+                  <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+                    <span class="slds-assistive-text">Sort</span>
+                      <span class="slds-truncate" title="Manager or RSD Review Completed On Date">RSD/MD Reviewed On</span>  
+                    <aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }">&nbsp;  &#9660; </aura:if>  
+                    <aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'RecordType.Name') }"> &nbsp;  &#9650; </aura:if>                        
+                </a>
+              </th>
+    
+            </tr>
+          </thead>
+          <tbody>
+            <aura:iteration items="{!v.listLiew}" var="accountplan" indexVar="index">
+              <tr class="slds-hint-parent">
+                <td role="gridcell">
+                  <a>
+                    <div class="slds-truncate" id='{!accountplan.Id}' onclick = "{!c.navigateToAccountPlan}" title="{!accountplan.Id}">{!accountplan.Name}</div>
+                  </a>
+                </td>
+                <td role="gridcell">
+                   <div class="slds-truncate"  title="{!accountplan.BI_Account__r.BI_Account_Type_ID__c}">{!accountplan.BI_Account__r.BI_Account_Type_ID__c}</div>
+               </td>
+               <td role="gridcell">
+                   <div class="slds-truncate"  title="{!accountplan.BI_Account__r.BI_Account_Type_ID__c}">{!accountplan.BI_ManagerRSD_Review_Completed_On__c}</div>
+               </td>
+               <td role="gridcell">
+                   <div class="slds-truncate"  title="{!accountplan.BI_Account__r.BI_Account_Type_ID__c}">{!accountplan.BI_RSDMD_Review_Completed_On__c}</div>
+               </td>
+               
+            </tr>
+          </aura:iteration>
+          </tbody>
+        </table>
+      </div>
+	</article>
+</aura:component>

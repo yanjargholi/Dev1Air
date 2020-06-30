@@ -1,0 +1,118 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global"> 
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="showModalEdit" type="Boolean" default="false" description="controls showing or hiding the edit screen" />
+    <aura:attribute name="longText" type="String" default=""/>
+    <aura:attribute name="longTextRowId" type="String" default="" />
+    <aura:attribute name="draftValues" type="List" default="[]"/>
+    <!-- This attribute will hold the update row via rowaction from data table-->
+    <aura:attribute name="updatedRecord" type="Object[]" />
+    <!-- <aura:attribute name="rawData" type="Object" access="PRIVATE" /> -->
+    <!-- <aura:attribute name="updatedRow" type="Object[]" /> -->
+    <!--<aura:attribute name="dataList" type="List"/> -->
+    
+    <!-- This attribute will hold the update records from data table-->
+    <aura:attribute name="optionsBI" type="Boolean" default="false"/>
+    
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    
+    
+    <article class="slds-card slds-card_boundary slds-p-left_medium">
+        
+        <div class="slds-card__body">
+            
+                      
+            <div class="slds-grid slds-gutters slds-p-left_medium slds-p-right_medium">
+                
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary slds-p-top_medium">
+
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                            <div class="slds-button-group" role="group">
+                                <button class="slds-button slds-button_brand" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Business Insight</button>
+                                <div class="slds-dropdown-trigger slds-button--last">
+                                    <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                        <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                        <span class="slds-assistive-text">More Actions</span>
+                                    </button>
+                                    <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="biSup" aura:id="biSup" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Support Request</a></li>
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="biRel" aura:id="biRel" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Release Request</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#ECECEC">
+                            Create a BI <b>Support / Release Request</b> case                            
+                        </footer>
+                    </article>                    
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary slds-p-top_medium">
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                           <div class="slds-button-group" role="group">
+                                <button class="slds-button slds-button_brand" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Product</button>
+                                <div class="slds-dropdown-trigger slds-button--last">
+                                    <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                        <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                        <span class="slds-assistive-text">More Actions</span>
+                                    </button>
+                                    <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="prodMeetings" aura:id="prodMeetings" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Meetings</a></li>
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="prodPass" aura:id="prodPass" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">PassPlus</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#ECECEC">
+                            Create a <b>Meetings</b> or <b>PassPlus</b> case                            
+                        </footer>
+                    </article>                    
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary slds-p-top_medium">
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                            <!--<button class="slds-button slds-button_brand" onclick="{! c.createCase}" style="border-color:#6244bb;background-color:#6244bb;">Travel</button> -->
+                            <div class="slds-button-group" role="group">
+                                <button class="slds-button slds-button_brand" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Travel</button>
+                                <div class="slds-dropdown-trigger slds-button--last">
+                                    <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                        <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                        <span class="slds-assistive-text">More Actions</span>
+                                    </button>
+                                    <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                        <ul class="slds-dropdown__list" role="menu">
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="travPre" aura:id="travPre" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Pre-Travel</a></li>
+                                            <li href="#" class="slds-dropdown__item"><a href="#" name="travPost" aura:id="travPost" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Post-Travel</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#ECECEC">
+                            Create a <b>Pre-Travel</b> or <b>Post-Travel</b> case                            
+                        </footer>
+                    </article>                    
+                </div>                
+            </div>
+
+        </div>
+        
+    </article>
+    
+    
+    
+    
+    
+    
+    
+    
+   
+</aura:component>

@@ -1,0 +1,21 @@
+.THIS {}
+.THIS .height-text-area {
+	height: 38px;
+}
+.THIS .width-text-area {
+	width: 590px;
+}
+.THIS .uiInput--select {
+	height: 36px !important;
+}
+.THIS .slds-select {
+	height: 35px;
+}
+.THIS .slds-form-element__label {
+	display: none;
+}
+.THIS .readonly-style {
+	/*border-color: initial !important;*/
+	border: none;
+	background-color: initial !important;
+}

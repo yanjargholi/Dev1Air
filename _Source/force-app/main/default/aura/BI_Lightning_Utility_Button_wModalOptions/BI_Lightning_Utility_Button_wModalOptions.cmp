@@ -1,0 +1,81 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global"> 
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="showModalEdit" type="Boolean" default="false" description="controls showing or hiding the edit screen" />
+    <aura:attribute name="longText" type="String" default=""/>
+    <aura:attribute name="longTextRowId" type="String" default="" />
+    <aura:attribute name="draftValues" type="List" default="[]"/>
+    <!-- This attribute will hold the update row via rowaction from data table-->
+    <aura:attribute name="updatedRecord" type="Object[]" />
+    <!-- <aura:attribute name="rawData" type="Object" access="PRIVATE" /> -->
+    <!-- <aura:attribute name="updatedRow" type="Object[]" /> -->
+    <!--<aura:attribute name="dataList" type="List"/> -->
+    
+    <!-- This attribute will hold the update records from data table-->
+    
+    
+    
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    
+    
+    <article class="slds-card ">
+        <header class=" slds-border_bottom slds-card__header slds-grid slds-text-heading_medium" style="padding:0.5rem;background:#f3f2f2">
+            
+            <div class="slds-align_absolute-center">
+                <b>LOG A NEW CASE</b>
+            </div>
+        </header>
+        <div class="slds-card__body">
+            
+            
+            
+            <div class="slds-grid slds-gutters slds-p-left_medium slds-p-right_medium">
+                
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary">
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                            <button class="customBackground slds-p-top_medium slds-button " onclick="{! c.createCase}" style="background-color:red;">Business Insight</button>
+                            <lightning:button class="customBackground" onclick="{! c.createCase}" label="BI">asd</lightning:button>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#f3f2f2">
+                            Create a BI <b>Support Request</b> or a <b>Release Request</b> case                            
+                        </footer>
+                    </article>                    
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary">
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                            <button class="slds-p-top_medium slds-button slds-button_brand" onclick="{! c.createCase}">Product</button>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#f3f2f2">
+                            Create a <b>PassPlus</b> or <b>Meetings</b> case                            
+                        </footer>
+                    </article>                    
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <article class="slds-card slds-card_boundary">
+                        <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                            <button class="slds-p-top_medium slds-button slds-button_brand" onclick="{! c.createCase}">Travel</button>
+                        </div>
+                        <footer class="slds-card__footer" style="padding:0.5rem;background:#f3f2f2">
+                            Create a <b>Pre-Travel</b> or <b>Post-Travel</b> case                            
+                        </footer>
+                    </article>                    
+                </div>                
+            </div>
+
+        </div>
+        
+    </article>
+    
+    
+    
+    
+    
+    
+    
+    
+   
+</aura:component>

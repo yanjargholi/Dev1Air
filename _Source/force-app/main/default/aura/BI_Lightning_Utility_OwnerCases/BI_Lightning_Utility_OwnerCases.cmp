@@ -1,0 +1,242 @@
+<aura:component implements="lightning:isUrlAddressable,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="BI_LightningUtility_OwnerQueueCases"> 
+    <!--base attributes for lightning datatable -->
+    <aura:attribute name="data" type="Object" default="[]"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="draftValues" type="List" default="[]"/>
+    <aura:attribute name="sortedBy" type="String" default="CreatedDate"/>
+    <aura:attribute name="sortedDirection" type="String" default="DESC"/>
+    
+    <!--attributes to control modal screen displays -->
+    <aura:attribute name="showStatusEdit" type="Boolean" default="false" description="controls showing or hiding the status long text edit screen" />
+    <aura:attribute name="showCategoryEdit" type="Boolean" default="false" description="controls showing or hiding the category long text edit screen" />
+    
+    <!--attributes used on or for modal screens --> 
+    <aura:attribute name="descValue" type="String" default=""/>
+    <aura:attribute name="applyCheck" type="Boolean" default="false" description="Checkbox to denote all selected records should be updated. Used on Modal screens"/>
+    <aura:attribute name="status" type="String" default="" description="The current status value of the selected row - needed to show as the existing value when the modal screen is opened for edit status"/>
+    <aura:attribute name="category" type="String" default="" description="The current category string value of the selected row - needed to show as the existing value when the modal screen is opened for edit category"/>
+    <aura:attribute name="categoryList" type="List" default="[]" />
+    <aura:attribute name="notifyIP" type="String" default="" description="The current Auto Notification - New value of the selected row - needed to show as the existing value when the modal screen is opened for edit status"/>
+    <aura:attribute name="notifyClosed" type="String" default="" description="The current Auto Notification - In Progress value of the selected row - needed to show as the existing value when the modal screen is opened for edit status"/>
+    <aura:attribute name="impDate" type="Date" default=""/>
+    <aura:attribute name="cComments" type="String" default=""/>
+    <aura:attribute name="selectedPickVal" type="List" default=""/>
+    <aura:attribute name="selectedPickValNotifyIP" type="List" default=""/>
+    <aura:attribute name="selectedPickValNotifyClosed" type="List" default=""/>
+    
+    <!--attributes used for inline editing -->
+    <aura:attribute name="idCartList" type="List" default="[]"/>
+    <aura:attribute name="idCartListSize" type="Integer" default=""/>
+    <aura:attribute name="idCartListType" type="String" default=""/>
+    <aura:attribute name="rowActionName" type="String" default="" description="The action that was selected"/>
+    <aura:attribute name="selectedRowId" type="String" default=""/>
+    <aura:attribute name="updatedRecord" type="Object[]" />
+    <aura:attribute name="customEditList" type="List" default=""/>
+    
+     <!--validation attributes -  required fields, recordtype validation for picklists, validation rules-->
+    <aura:attribute name="validPickListValues" type="List[]" default="Red,Green,Blue" description="The list of valid returned picklist values to show based on the rowaction and record type"/>
+    <aura:attribute name="validPickListValuesNotify" type="List[]" default="Red,Green,Blue" description="The list of valid returned notification option picklist values to show based on the rowaction and record type"/>    
+    <aura:attribute name="getPickListCaseList" type="List" default="[]" description="list of cases we are sending to the controller to get valid status picklist values for"/>
+    <aura:attribute name="getStatusFlag" type="Boolean" default="true"/>
+    <aura:attribute name="getReqFieldsFlag" type="Boolean" default="true" description="in modal screens validates that required fields are populated"/>
+    <aura:attribute name="isClosedStatus" type="Boolean" default="false" description="a single attribute we can use to check if status was set to any value containing Close"/>
+    <aura:attribute name="recordType" type="String" default=""/>
+    
+    <!-- Attributes used to enable lazy loading-->
+    <aura:attribute name="enableInfiniteLoading" type="Boolean" default="true"/>
+    <aura:attribute name="rowsToLoad" type="Integer" default="50"/>
+    <aura:attribute name="totalNumberOfRows" type="Integer" default="1000"/>
+    <aura:attribute name="loadMoreStatus" type="String" default=""/>
+    <aura:attribute name="loadMoreOffset" type="Integer" default="50"/>
+    
+    <!-- Design attribute variables we will use NOT USED BUT NOT ABLE TO REMOVE-->
+    <aura:attribute name="ownerType" type="String" default=""/>
+ 	
+    <!-- Attributes used for record type filter-->
+    <aura:attribute name="keyWord" type="String" default=""/>
+    
+    <!-- Initialize-->
+    <aura:handler name="init" action="{!c.init}" value="{!this}"/>           
+    
+    <article class="slds-card "> 
+        <!--Filter Input and button-->
+        <div class="slds-p-bottom_small slds-grid slds-size_3-of-4"> 
+        	<lightning:input onchange="{!c.searchCleared}" value="{! v.keyWord }" type="search" label="Search" variant="label-hidden" placeholder="Enter keyword to Filter" aura:id="SearchBox"/>
+            <aura:renderIf isTrue="{!v.keyWord.length > 0}">
+                <div class="slds-p-left_small">
+                    <button class="slds-button slds-button_brand slds-p-right_small" onclick="{! c.searchTable}" style="border-color:#6244bb;background-color:#6244bb;">Filter</button>
+                </div>                
+            </aura:renderIf>           
+        </div>
+        
+        <!--lightning data table -->
+        <div class="slds-scrollable" style="height:25rem">    
+            <lightning:datatable
+                                 aura:id="objDataTable"
+                                 enableInfiniteLoading = "{! v.enableInfiniteLoading }"
+                                 loadMoreOffset="{! v.loadMoreOffset }"
+                                 onloadmore="{! c.loadMoreData }"
+                                 maxRowSelection = "50"
+                                 columns="{! v.columns }"
+                                 data="{! v.data }"
+                                 keyField="Id"
+                                 onsave ="{!c.onSave}"
+                                 onrowaction="{! c.handleRowAction }" 
+                                 draft-Values = "{! v.draftValues}"
+                                 sortable = "true" 
+                                 onsort="{!c.updateColumnSorting}"
+                                 sortedBy="{!v.sortedBy}" 
+                                 sortedDirection="{!v.sortedDirection}"/>
+        </div>
+        {! v.loadMoreStatus }
+        
+        <!--edit Status modal screen-->
+        <aura:if isTrue="{!v.showStatusEdit}">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-around_small" id="modal-content-id-1">
+                        <aura:if isTrue="{!v.getStatusFlag}"> <!-- ie valid records of the same record type were selected -->
+                            <lightning:select 
+                                              aura:id="select_status"
+                                              value = "{!v.status}"
+                                              name="select_status"                                                  
+                                              label="Status" 
+                                              required="false" 
+                                              onchange="{! c.onPickListChange }">
+                                <aura:iteration items="{!v.validPickListValues}" var="status">
+                                    <option value="{!status}" selected="{!status==v.status}">{!status}</option>                                     
+                                </aura:iteration>
+                            </lightning:select>
+                            <div class = "slds-p-top_x-small">
+                                <!-- PER VALIDATION RULES for any status that represents a closed case. See onPickListChange event in controller for the list -->
+                                <aura:if isTrue="{!v.isClosedStatus}" >
+                                   <lightning:textarea required="true" label="Closing Comments"  value="{!  v.cComments}" updateOn="change" />
+                                            <!-- PER VALIDATION RULES ** BI RELEASE REQUEST CASE - REQUIRE IMPLEMENTED DATE -->
+                                            <aura:if isTrue="{!and(v.status=='Closed - Implemented',v.recordType=='BI Release Request')}">
+                                            	<lightning:input type="date" name="impDate" class="slds-p-bottom_xx-small" label="(Planned) Release Date" required="true" value="{!v.impDate}" updateOn="change" />
+                                            </aura:if>
+                                        
+                                        <aura:if isTrue="{!!v.getReqFieldsFlag}">
+                                            <div class="slds-form-element__help slds-text-color_destructive" id="error-01"><b>Required field(s) must be completed to apply changes</b></div>
+                                        </aura:if>
+                                </aura:if>
+                                <aura:if isTrue="{!v.status == 'Prioritized for Next Release'}" >
+                                    <lightning:input type="date" name="impDate" class="slds-p-bottom_small" label="(Planned) Release Date" required="true" value="{!v.impDate}" updateOn="change" />
+                                </aura:if>                                
+                            </div>
+                            <aura:if isTrue="{!v.idCartListType == 'Id'}">
+                                <lightning:input type="checkbox" label="{!'Update ' + v.idCartListSize + ' selected items' }" aura:id="descApplyCheck" checked= "{! v.applyCheck}" updateOn="change"/>
+                            </aura:if>                            
+                       		<aura:if isTrue="{!v.status =='In Progress'}" >
+                                <div class = "slds-p-top_large">
+                                    <div class="slds-box slds-box_x-small slds-text-align_left slds-p-around_large slds-text-title_caps slds-text-color_inverse" style="border-color:#6244bb;background-color:#6244bb;">
+                                        <h2><b>Automatic Email Preferences for Contact / UA Employee Notifications  </b></h2>
+                                    </div>
+                                    <lightning:select 
+                                                      aura:id="select_notifyIP"
+                                                      value = "{!v.notifyIP}"
+                                                      name="select_notifyIP"                                                  
+                                                      label="Auto Notification - In Progress" 
+                                                      required="false" 
+                                                      onchange="{! c.onPickListChangeNotifyIP }">
+                                        <aura:iteration items="{!v.validPickListValuesNotify}" var="notifyIP">
+                                            <option value="{!notifyIP}" selected="{!notifyIP==v.notifyIP}">{!notifyIP}</option>                                     
+                                        </aura:iteration>
+                                    </lightning:select>  
+                                </div>
+                            </aura:if>                        
+                            <aura:if isTrue="{!v.isClosedStatus}" >
+                                <div class = "slds-p-top_large">
+                                    <div class="slds-box slds-box_x-small slds-text-align_left slds-p-around_large slds-text-title_caps slds-text-color_inverse" style="border-color:#6244bb;background-color:#6244bb;">
+                                        <h2><b>Automatic Email Preferences for Contact / UA Employee Notifications  </b></h2>
+                                    </div>
+                                    <lightning:select 
+                                                      aura:id="select_notifyClosed"
+                                                      value = "{!v.notifyClosed}"
+                                                      name="select_notifyClosed"                                                  
+                                                      label="Auto Notification - Closed" 
+                                                      required="false" 
+                                                      onchange="{! c.onPickListChangeNotifyClosed }">
+                                        <aura:iteration items="{!v.validPickListValuesNotify}" var="notifyClosed">
+                                            <option value="{!notifyClosed}" selected="{!notifyClosed==v.notifyClosed}">{!notifyClosed}</option>                                     
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                            </aura:if>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.getStatusFlag}"> 
+                            <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+
+                              <h2 class="slds-text-heading--medium" id="prompt-heading-id">Inconsistent Record Types</h2>
+                            </div>
+                            <div class="slds-modal__content slds-p-around--medium">
+                              <div>
+                                  <p>To update the Status of multiple case records, all cases that you want to update must be the same Record Type. <b>Take a look at the Rec Type column and only select cases of the same type</b></p>
+                              </div>
+                            </div>
+                        </aura:if>                        
+                         <!-- placeholder -->
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <aura:if isTrue="{!v.getStatusFlag}"> 
+                            <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.saveDescEdit}">Apply</button>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.getStatusFlag}">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Close</button>
+                        </aura:if>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+        
+        <!--edit Category modal screen-->
+        <aura:if isTrue="{!v.showCategoryEdit}">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <aura:if isTrue="{!v.getStatusFlag}"> <!-- ie valid records of the same record type were selected -->
+                            <lightning:dualListbox name="select_category"
+                                                   label= "Select Categories"
+                                                   sourceLabel="Available"
+                                                   selectedLabel="Selected"
+                                                   fieldLevelHelp="Select the relevant categories that apply to the case(s)"
+                                                   value="{!v.categoryList}"
+                                                   options="{!v.validPickListValues}"
+                                                   onchange="{! c.onPickListChange }"                                                   
+                                                   onsort="{!c.updateColumnSorting}"
+                                                   sortedBy="{!v.sortedBy}"
+                                                   sortDirection="{!v.sortedDirection}"/>
+
+                            <aura:if isTrue="{!v.idCartListType == 'Id'}">
+                                <lightning:input type="checkbox" class= "slds-p-top_small" label="{!'Update ' + v.idCartListSize + ' selected items' }" aura:id="descApplyCheck" checked= "{! v.applyCheck}" updateOn="change"/>
+                            </aura:if>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.getStatusFlag}"> 
+                            <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+
+                              <h2 class="slds-text-heading--medium" id="prompt-heading-id">Inconsistent Record Types</h2>
+                            </div>
+                            <div class="slds-modal__content slds-p-around--medium">
+                              <div>
+                                  <p>To update the Category of multiple case records, all cases that you want to update must be the same Record Type. <b>Take a look at the Rec Type column and only select cases of the same type</b></p>
+                              </div>
+                            </div>
+                        </aura:if>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <aura:if isTrue="{!v.getStatusFlag}"> 
+                            <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.saveDescEdit}">Apply</button>
+                        </aura:if>
+                        <aura:if isTrue="{!!v.getStatusFlag}">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Close</button>
+                        </aura:if>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if> 
+    </article>
+</aura:component>

@@ -1,0 +1,37 @@
+<aura:component implements="lightning:homeTemplate" description="Header,sub-header, 3 columns, footer">
+    
+    <aura:attribute name="header" type="Aura.Component[]" description="Header region"/>
+    <aura:attribute name="subheader" type="Aura.Component[]" description="Header region"/>
+    <aura:attribute name="body" type="Aura.Component[]" description="Header region"/>
+    <aura:attribute name="sidebar" type="Aura.Component[]" description="Collapsible sidebar region"/>    
+    <aura:attribute name="footer" type="Aura.Component[]" description="Header region"/>    
+    <aura:attribute name="isCollapsed" type="Boolean" access="PRIVATE" default="false" />
+    
+    <div>
+        <div class="slds-p-bottom_xxx-small">{!v.header}</div>
+        <lightning:layoutItem flexibility="no-flex">
+            <lightning:buttonIcon onclick ="{!c.toggleSection}"
+                                  class="design-allow-interaction toggle slds-p-around_xxx-small slds-m-horizontal_xx-small"
+                                  variant="border-filled"
+                                  iconName="{! v.isCollapsed ? 'utility:chevronup' : 'utility:chevrondown' }" 
+                                  alternativeText="{! v.isCollapsed ? 'Expand S' : 'Collapse S' }" />
+            </lightning:layoutItem>
+        <lightning:layoutItem class="{! v.isCollapsed ? ' slds-hide' : '' }">
+                {!v.subheader}
+            </lightning:layoutItem>
+        <lightning:layout class="slds-m-top_medium" multipleRows="true">
+            
+            <lightning:layoutItem class="slds-p-right_small" size="10">
+                {!v.body}
+		    </lightning:layoutItem>
+            
+            
+            <lightning:layoutItem size="2">
+                {!v.sidebar}
+                
+            </lightning:layoutItem>
+            
+        </lightning:layout>
+        <div class="slds-p-top_medium">{!v.footer}</div>
+    </div>
+</aura:component>

@@ -1,0 +1,22 @@
+<aura:component controller="BI_RemoteController" implements="force:hasRecordId,force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes">
+    <ltng:require styles="{!$Resource.BI_Popup}" />
+    <aura:attribute name="message" type="String" default=""></aura:attribute>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="isError" type="Boolean" default="false"></aura:attribute>
+    <aura:attribute name="parentOpportunityId" type="String" default=""></aura:attribute>
+    <aura:if isTrue="{!v.isError}">
+        <div aura:id="pop-up" class="popup-content" style="margin-bottom: 23px; text-align: center;">
+            <!-- {! v.message} -->
+            {!$Label.c.BI_Submit_PRF_Failed_Alertness}
+        </div>
+        <aura:set attribute="else">
+            <div aura:id="pop-up" class="popup-content" style="margin-bottom: 40px; text-align: center;">
+                <!-- {! v.message} -->
+                {!$Label.c.BI_Submit_PRF_Successfully}
+            </div>
+        </aura:set>
+    </aura:if>
+    <button class="slds-button slds-button--brand button-popup" 
+    style=" color: rgb(0, 112, 210); background-color: rgb(255, 255, 255); display: flex;
+    margin: auto;" onclick="{! c.onclickOkButton}">OK</button>
+</aura:component>

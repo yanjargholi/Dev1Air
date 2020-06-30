@@ -1,0 +1,100 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes" access="global"> 
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    
+    <article class="slds-card slds-card_boundary slds-p-left_xx-small slds-p-right_xx-small">
+        <div class="slds-card__body">
+            <div class="slds-section slds-is-open" aura:id="buttonSection">
+                <h3 class="slds-section__title">
+                    <button aria-controls="buttonList" class="slds-button slds-section__title-action" style="background:#e6e1f4;">
+                        <span onclick="{!c.toggleSection}" data-auraId="buttonSection">
+                            <lightning:icon iconName="utility:switch"
+                                            size="x-small"
+                                            class="slds-section__title-action-icon slds-button__icon_left"
+                                            alternativeText="button icon" 
+                                            />
+                        </span>
+                        <span class="slds-truncate" title="NewCase"><h1>CREATE A NEW CASE</h1></span>
+                    </button>
+                </h3>
+                <!--section body-->
+                <div class="slds-section__content" id="buttonList">
+                    <div class="slds-grid slds-gutters slds-p-left_x-small slds-p-right_x-small">
+                        <div class="slds-col slds-size_1-of-3">
+                            <article class="slds-card slds-card_boundary slds-p-top_xx-small">
+                                <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                                    <div class="slds-button-group" role="group">
+                                        <button class="slds-button slds-button_brand slds-button_text-neutral" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Business Insight</button>
+                                        <div class="slds-dropdown-trigger slds-button--last">
+                                            <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                                <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                                <span class="slds-assistive-text">More Actions</span>
+                                            </button>
+                                            <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                                <ul class="slds-dropdown__list" role="menu">
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="biSup" aura:id="biSup" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Support Request</a></li>
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="biRel" aura:id="biRel" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Release Request</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer class="slds-card__footer" style="padding:0.5rem;background:#f5f5f5">
+                                    Create a BI <b>Support / Release Request</b> case                            
+                                </footer>
+                            </article>                    
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <article class="slds-card slds-card_boundary slds-p-top_xx-small">
+                                <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                                    <div class="slds-button-group" role="group">
+                                        <button class="slds-button slds-button_brand" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Product</button>
+                                        <div class="slds-dropdown-trigger slds-button--last">
+                                            <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                                <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                                <span class="slds-assistive-text">More Actions</span>
+                                            </button>
+                                            <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                                <ul class="slds-dropdown__list" role="menu">
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="prodMeetings" aura:id="prodMeetings" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Meetings</a></li>
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="prodPass" aura:id="prodPass" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">PassPlus</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer class="slds-card__footer" style="padding:0.5rem;background:#f5f5f5">
+                                    Create a <b>Meetings</b> or <b>PassPlus</b> case                            
+                                </footer>
+                            </article>                    
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <article class="slds-card slds-card_boundary slds-p-top_xx-small">
+                                <div class="slds-card__body slds-card__body_inner slds-align_absolute-center slds-p-top_medium">
+                                    <!--<button class="slds-button slds-button_brand" onclick="{! c.createCase}" style="border-color:#6244bb;background-color:#6244bb;">Travel</button> -->
+                                    <div class="slds-button-group" role="group">
+                                        <button class="slds-button slds-button_brand" disabled="true" style="border-color:#6244bb;background-color:#6244bb;" >Travel</button>
+                                        <div class="slds-dropdown-trigger slds-button--last">
+                                            <button class="slds-button slds-button--icon-border-filled slds-button_icon-inverse">
+                                                <lightning:icon iconName="utility:down" size="x-small" alternativeText="symbol Objectives"/>
+                                                <span class="slds-assistive-text">More Actions</span>
+                                            </button>
+                                            <div class="slds-dropdown slds-dropdown--left slds-text-heading--label slds-dropdown--menu">
+                                                <ul class="slds-dropdown__list" role="menu">
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="travPre" aura:id="travPre" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Pre-Travel</a></li>
+                                                    <li href="#" class="slds-dropdown__item"><a href="#" name="travPost" aura:id="travPost" class="slds-truncate" role="menuitem" onclick="{! c.createCase}">Post-Travel</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <footer class="slds-card__footer" style="padding:0.5rem;background:#f5f5f5">
+                                    Create a <b>Pre-Travel</b> or <b>Post-Travel</b> case                            
+                                </footer>
+                            </article>                    
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</aura:component>

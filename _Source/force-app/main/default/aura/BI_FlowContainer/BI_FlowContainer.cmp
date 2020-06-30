@@ -1,0 +1,75 @@
+<!--
+Purpose:
+==============================================================
+Host a screenFlow on a lightning record page in order to ensure
+information displayed on the flow screen remains current and in sync
+with the record when changes are made to a record. Also ensures record remains in 
+sync with changes that are made to the flow 
+======================================================
+======================================================
+History
+=====================
+VERSION  DATE              DETAIL            
+1.0     08/22/2019         BI RELEASE August 2019 Lead Management Enhancements 
+***********************************************************************/ 
+-->
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+    <!--DESIGN ATTRIBUTE DECLARATION -->
+
+    <aura:attribute name="flowName" type="String" description="Flow API name"/>
+
+    <!--ATTRIBUTES FOR LIGHTNING DATA SERVICES USE -->
+
+    <aura:attribute name="recordId" type="String" description="The record Id for the record the flow is on - will be provided by force:hasRecordId "/>
+    <aura:attribute name="record" type="Object" description="The record object - managed by force:recordData component."/>
+    <aura:attribute name="simpleRecord" type="Object" description="The simplified record view - managed by force:recordData component."/>
+	<aura:attribute name="recordError" type="String" description="Error message bound to force:recordData - managed by force:recordData component"/>
+
+    <!-- for the recordUpdated event  -->
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.simpleRecord}"
+                      recordUpdated="{!c.handleRecordUpdated}"
+                      mode="VIEW"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card >
+
+        <aura:if isTrue="{!not(empty(v.recordError))}">
+
+            <div class="recordError">
+                <ui:message title="Error" severity="error" closable="true">
+                    {!v.recordError}
+                </ui:message>
+            </div>
+
+            <aura:set attribute="else">
+
+                <aura:if isTrue="{!not(empty(v.flowName))}">
+
+                    <span aura:id="flowContainer"></span>
+
+                    <aura:set attribute="else">
+
+                        <div class="recordError">
+                            <ui:message title="Warning" severity="warning" closable="true">
+                                Please specify a Flow Name.
+                            </ui:message>
+                        </div>
+
+                    </aura:set>
+
+                </aura:if>
+
+            </aura:set>
+
+        </aura:if>
+
+    </lightning:card>
+
+</aura:component>

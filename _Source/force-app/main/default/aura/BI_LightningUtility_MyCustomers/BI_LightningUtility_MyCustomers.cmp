@@ -1,0 +1,71 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" access="global" >
+    <article class="slds-card" style="border-color:#FFFFFF;background-color:#FFFFFF;">
+        <header class="slds-page-header" role="banner" style="border-color:#6244bb;background-color:#6244bb;">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <!-- HEADING AREA -->
+                    <p class="slds-text-title--caps slds-line-height--reset slds-text-color_inverse">Centralized navigation for all Customer related records</p>
+                    <h1 class="slds-page-header__title slds-truncate slds-text-color_inverse" title="Companies and People">Companies and People</h1>
+                    <!-- / HEADING AREA -->
+                </div>           
+            </div> 
+        </header>
+        <div class="slds-card__body slds-p-left_small slds-p-right_small">
+            <div class="Leads">
+                <article class="slds-tile slds-media slds-border_bottom slds-media " style="background:#FFFFFF;">
+                    <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                        <span class="slds-icon_container slds-icon-custom-78" title="Leads">
+                            <lightning:icon iconName="standard:lead" size="large" alternativeText="symbol Objectives"/>
+                        </span>
+                    </div>
+                    <div class="slds-media__body slds-p-top_medium">
+                        <h1 class="slds-truncate" title="Leads" onclick="{!c.navLeads}"><a href="javascript:void(0);">Leads</a></h1>
+                        <div class="slds-tile__detail slds-text-body_medium">
+                            <dl class="slds-list_horizontal slds-wrap">
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Leads represents a unqualified opportunity i.e. a potential new customer</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="Accounts">
+        <article class="slds-tile slds-media slds-border_bottom slds-theme_shade">
+            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                <span class="slds-icon_container slds-icon-custom-61" title="Accounts">
+                    <lightning:icon iconName="standard:account" size="large" alternativeText="symbol Objectives"/>
+                </span>
+            </div>
+            <div class="slds-media__body slds-p-top_medium">
+                <h1 class="slds-truncate" title="Accounts" onclick="{!c.navAccounts}"><a href="javascript:void(0);">Accounts</a></h1>
+                <div class="slds-tile__detail slds-text-body_medium">
+                    <dl class="slds-list_horizontal slds-wrap">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Accounts represent an organization, agency, partner, airport, or any other establishment we have a business relationship with</dd>
+                    </dl>
+                </div>
+            </div>
+        </article>
+    </div>
+            <div class="Contacts">
+        <article class="slds-tile slds-media slds-border_bottom slds-theme_shade" style="background:#FFFFFF;">
+            <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+                <span class="slds-icon_container slds-icon-custom-64" title="Contacts">
+                    <lightning:icon iconName="standard:contact" size="large" alternativeText="symbol Objectives"/>
+                </span>
+            </div>
+            <div class="slds-media__body slds-p-top_medium">
+                <h1 class="slds-truncate" title="Contacts" onclick="{!c.navContacts}"><a href="javascript:void(0);">Contacts</a></h1>
+                <div class="slds-tile__detail slds-text-body_medium">
+                    <dl class="slds-list_horizontal slds-wrap">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Definition and Additional Information">Decription:</dt>
+                        <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Contacts represent the people that work at the accounts we have a business relationship with</dd>
+                    </dl>
+                </div>
+            </div>
+        </article>
+    </div>
+    
+        </div>
+    </article>
+</aura:component>

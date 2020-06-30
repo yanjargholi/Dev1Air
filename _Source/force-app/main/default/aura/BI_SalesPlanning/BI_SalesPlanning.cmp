@@ -1,0 +1,183 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" access="global" >
+    <article class="slds-card">
+
+        <div class="slds-page-header" role="banner">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <!-- HEADING AREA -->
+              <p class="slds-text-title--caps slds-line-height--reset">Centralized navigation for Sales Planning at any level</p>
+                <h1 class="slds-page-header__title slds-truncate" title="United Sales Planning">United Sales Planning</h1>
+              <!-- / HEADING AREA -->
+            </div>           
+          </div> 
+        </div>
+     </article>
+  
+    
+    
+    
+    
+    <div class="org-plans">
+      <article class="slds-tile slds-media slds-border_bottom slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-68" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom68" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Org Plans" onclick="{!c.orgplans}"><a href="javascript:void(0);">Organizational Plans</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Level">Level:</dt>
+              <dd class="slds-item_detail slds-truncate" title="Description for first level">Vice President</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Second Level">Decription:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Used to capture and track a VP's high-level plan for his/her Sales Organization (ex. Americas, APAC, EMEAI), for a specific year</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    
+    <div class="div-plans">
+      <article class="slds-tile slds-media slds-border_bottom slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-61" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom61" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Div Plans" onclick="{!c.divplans}"><a href="javascript:void(0);">Divisional Plans</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Level">Level:</dt>
+              <dd class="slds-item_detail slds-truncate" title="Description for first level">Managing Director</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Second Level">Decription:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Used to capture and track a Managing Director's high-level plan and specific objectives for his/her Division, for a specific year</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    
+    <div class="Regional Plans">
+      <article class="slds-tile slds-media slds-border_bottom slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-64" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom64" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Reg Plans" onclick="{!c.regplans}"><a href="javascript:void(0);">Regional Plans</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Level">Level:</dt>
+                <dd class="slds-item_detail slds-truncate" title="Description for first level">Regional Sales Director / Country Manager</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Second Level">Decription:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Used to capture and track an RSD or Country Manager's high-level plan and specific objectives for his/her Region or Country, for a specific year</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    
+    <div class="Territory Plans">
+      <article class="slds-tile slds-media slds-border_bottom slds-media slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-78" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom78" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.terplans}"><a href="javascript:void(0);">Territory Plans</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Level">Level:</dt>
+                <dd class="slds-item_detail slds-truncate" title="Description for first level">Sales Manager / Account Manager</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Second Level">Decription:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Used to capture and track an SM or AM's high-level plan and specific objectives for his/her Territory, for a specific year</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    <div class="Account Plans">
+      <article class="slds-tile slds-media slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-85" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom85" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Territory Plans" onclick="{!c.acctplans}"><a href="javascript:void(0);">Account Plans</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Level">Level:</dt>
+                <dd class="slds-item_detail slds-truncate" title="Description for first level">Sales Manager / Account Manager</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Second Level">Decription:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Used to capture and track an SM or AM's Account plan and specific account objectives, for a specific year</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    <div class="slds-box slds-text-align_left slds-m-around_x-small slds-p-top_large slds-text-title_caps unitedTile slds-theme_shade">
+    	<h2><b>Administration</b></h2>
+    </div>
+    
+    <div class="Objective Categories">
+      <article class="slds-tile slds-media slds-theme_shade slds-border_bottom slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-67" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom67" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium slds-theme_shade">
+          <h1 class="slds-truncate" title="Objective Categories" onclick="{!c.objcats}"><a href="javascript:void(0);">Objective Categories</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Definition">Definition:</dt>
+                <dd class="slds-item_detail slds-truncate" title="Description for first level">Aligns objectives with each of the 4 Dimensions in the United Leadership Model.  Used to report objective progress and/or accomplishment</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Description">Examples:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Delivers Results, Thinks Strategically, Fosters Teamwork, Models Character</dd>
+            </dl> 
+
+          </div>
+        </div>
+      </article>
+	</div>
+    
+    <div class="Objective Types">
+      <article class="slds-tile slds-media slds-border_bottom slds-theme_shade">
+        <div class="slds-media__figure slds-p-left_medium slds-p-top_medium">
+            <span class="slds-icon_container slds-icon-custom-70" title="description of icon when needed">
+               <lightning:icon iconName="custom:custom70" size="large" alternativeText="symbol Objectives"/>
+              </span>
+          </div>
+        <div class="slds-media__body slds-p-top_medium">
+          <h1 class="slds-truncate" title="Objective Types" onclick="{!c.objtypes}"><a href="javascript:void(0);">Objective Types</a></h1>
+          <div class="slds-tile__detail slds-text-body_medium">
+            <dl class="slds-list_horizontal slds-wrap">
+              <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Definition">Definition:</dt>
+                <dd class="slds-item_detail slds-truncate" title="Description for first level">Aligns all objectives at Account Level, Territory, Region, or Division with the Annual Goals set by Sales Organization</dd>
+              <dt class="slds-item_label slds-text-color_weak slds-truncate slds-p-bottom_medium" title="Description">Examples:</dt>
+                <dd class="slds-item_detail slds-wrap slds-p-bottom_medium" title="Description for second label">Achieve Assigned $IP Share Premium, Account Retention, Market Initiatives (Win New York)</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+	</div>
+    	
+			
+
+			
+
+
+
+
+</aura:component>

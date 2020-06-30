@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="headerText" label="Header Text" 
+                      description="The text you want to appear" />
+</design:component>

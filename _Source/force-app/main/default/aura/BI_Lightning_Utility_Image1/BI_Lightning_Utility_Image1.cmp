@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <!-- Design attribute variable -->
+    <aura:attribute name="StaticResource" type="String" default=".BI_UI_APP_Banner_Sales_Support"/>
+    
+    <figure class="slds-image slds-image--card">
+   
+    <img src="{!$Resource.BI_UI_APP_Banner_Sales_Support}"/> 
+  
+</figure>
+    
+</aura:component>

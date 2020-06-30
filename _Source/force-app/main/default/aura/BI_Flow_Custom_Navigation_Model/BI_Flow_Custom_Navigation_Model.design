@@ -1,0 +1,24 @@
+<design:component>
+    
+    <design:attribute name="buttonLabel" label="Button One Label" 
+                      description="What the label of the 1st button should be" />
+    <design:attribute name="buttonNavigation" label="Button One Navigation" 
+                      description="Valid options include BACk, NEXT, FINISH" />
+    <design:attribute name="buttonLabel2" label="Button Two Label" 
+                      description="What the label of the 2nd button should be" />
+    <design:attribute name="buttonNavigation2" label="Button Two Navigation" 
+                      description="Valid options include BACk, NEXT, FINISH" />
+    <design:attribute name="showDescription" label="Text Above Button(s)" 
+                      description="Enter any string to show to above the buttons. If field left blank, no description will show" />
+    <design:attribute name="buttonfloat" label="Float/Align button(s) location" 
+                      description="Valid options to enter include slds-float_left, slds-float_right, slds-align_absolute-center" />  
+    <design:attribute name="toastText" label="Toast Text" 
+                      description="What the toast message should say when the flow window closes" />  
+    <design:attribute name="toastType" label="Toast Type" 
+                      description="Variable storing the type of toast you want to display. Valid values include success, warning, error. Input variable with quatation marks" />    
+    <design:attribute name="toastButton" label="Fire Toast on Button" 
+                      description="Valid options to enter include 1 or 2. Denotes the button that will fire the toast" />
+    <design:attribute name="buttonClickFlag" label="Button Clicked Flag" 
+                      description="Variable storing the button that was clicked. Will be auto set to either One or Two" />
+    
+</design:component>

@@ -1,0 +1,101 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global" controller="BI_UserProjectsHandler">
+    
+    <ltng:require styles="{!$Resource.SLDS221 + '/assets/styles/salesforce-lightning-design-system.css'}"/>
+    <ltng:require styles="{!$Resource.BI_GlobalStyle}" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    
+    <!--<aura:registerEvent name="refreshChildComponent" type="c:BI_GetComponent"/> -->
+    
+    <aura:attribute name="listLiew" type="BI_Project__c[]" ></aura:attribute>
+    <aura:attribute name="arrowDirection" type="string" default="arrowup" description="Use for change arrow sign direction on header based on click"/>
+    <aura:attribute name="isAsc" type="boolean" default="true" description="boolean flag for pass sorting condition to apex class"/> 
+    <aura:attribute name="selectedTabsoft" type="string" default="Name" description="Use for show/hide arraow sign on header based on conditions"/>
+    
+    <article class="slds-card, slds-card_boundary forceRelatedListCardDesktop">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-account" title="Participant's Projects">
+                        <lightning:icon iconName="custom:custom14" size="small" alternativeText="symbol Objectives"/>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <a class="slds-card__header-link baseCard__header-title-container">
+                            <aura:if isTrue="{!v.listLiew.length == 25}">
+                                <span class="slds-text-heading_small">Open Projects ({!v.listLiew.length}+)</span>
+                            </aura:if>
+                            <aura:if isTrue="{!v.listLiew.length != 25}">
+                                <span class="slds-text-heading_small">Open Projects ({!v.listLiew.length})
+                                    
+                                </span>
+                            </aura:if>
+                        </a>
+                    </h2>
+                    
+                </div>
+            </header>
+        </div>
+        
+        <div class="slds-no-flex">
+            <div class="actionsContainer">
+            </div>
+        </div>
+        <div class="slds-card__body">
+            <table class="forceRecordLayout slds-table slds-no-row-hover slds-table_cell-buffer slds-table_fixed-layout uiVirtualDataGrid--default uiVirtualDataGrid slds-table_bordered ">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th class="initialSortAsc" scope="col" style="" title="Project Name">
+                            Project Name
+                            <span class="assistiveText"></span>
+                        </th>
+                        <th class="initialSortAsc" scope="col" title="Status">
+                            Status
+                            <span class="assistiveText"></span>
+                        </th>
+                        <th class="initialSortAsc" scope="col" title="Comments">
+                            Comments
+                            <span class="assistiveText"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.listLiew}" var="BI_Project__c" indexVar="index">
+                        <tr class="slds-hint-parent">
+                            <td>
+                                <a>
+                                    <div class="slds-truncate" id='{!BI_Project__c.Id}' onclick = "{!c.navigateToObjective}" title="{!BI_Project__c.Id}">{!BI_Project__c.Name}</div>
+                                </a>
+                            </td>
+                            <td>
+                                <span class="uiOutputTextArea">{!BI_Project__c.BI_Project_Status__c}</span>
+                                <!--<div class="slds-truncate"  title="{!BI_Project__c.BI_Project_Status__c}">{!BI_Project__c.BI_Project_Status__c}</div> -->
+                            </td>
+                            <td>
+								<div class="slds-grid">
+                                    <div class="slds-grid slds-has-flexi-truncate">
+                                        <div class="slds-truncate">
+                                    		{!BI_Project__c.BI_Comments__c}
+                                		</div> 
+                                    </div>
+                                </div>                               
+                                 
+                            </td>
+                            
+                        </tr>
+                        
+                        
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-card__footer">
+            <span class="view-all-label">
+                <div class="slds-text-body_small">* Table displayes up to 25 Open participant projects. Use the 'Participant Projects' link on the Details tab to View additional open or completed projects *
+                </div>
+            </span>
+        </div>
+    </article>
+</aura:component>

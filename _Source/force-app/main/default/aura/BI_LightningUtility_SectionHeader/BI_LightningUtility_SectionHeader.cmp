@@ -1,0 +1,9 @@
+<aura:component implements="lightning:availableForFlowScreens,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction" access="global">
+    <aura:attribute name="headerText" default="Heading Text" type="String" description="The Heading text you want to appear"/>   
+    <article class="slds-card">
+        
+        <div class="slds-card__header slds-section__title slds-top slds-theme_shade slds-grid" style="padding:0.5rem;background:#f3f2f2">                
+            {!v.headerText}
+        </div>
+    </article>	
+</aura:component>

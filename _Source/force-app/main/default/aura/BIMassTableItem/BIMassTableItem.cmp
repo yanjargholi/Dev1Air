@@ -1,0 +1,66 @@
+<aura:component controller="BI_ConversationTopicsHandler">
+    <aura:attribute name="priceItem" type="Object" default=""></aura:attribute>
+    <aura:attribute name="itemKey" type="Object" default=""></aura:attribute>
+    <aura:attribute name="test" type="String" default=""></aura:attribute>
+    <aura:attribute name="pickOptions" type="List" default="[]"></aura:attribute>
+    <aura:attribute name="selectedValue" type="String" default="Green"/>
+    <aura:attribute name="options" type="List" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <td>
+        <aura:if isTrue="{!v.itemKey.type != 'CURRENCY' 
+     &amp;&amp; v.itemKey.type != 'STRING'
+     &amp;&amp; V.itemKey.type != 'PICKLIST'
+     &amp;&amp; V.itemKey.type != 'MULTIPICKLIST'
+     &amp;&amp; V.itemKey.type != 'REFERENCE'
+     &amp;&amp; v.itemKey.type != 'TEXTAREA'
+     &amp;&amp; V.itemKey.type != 'PERCENT'
+     &amp;&amp; v.itemKey.type != 'CURRENCY'
+     &amp;&amp; v.itemKey.type != 'DATE'
+     &amp;&amp; v.itemKey.type != 'DATETIME'}">
+            <ui:inputText class="slds-input" value="{!  v.test}" updateOn="keyup" keyup="{!c.onKeyup}" />
+        </aura:if>
+        <aura:if isTrue="{! v.itemKey.type == 'CURRENCY'}">
+            <ui:inputCurrency class="slds-input" value="{!v.test}" updateOn="keyup" keyup="{!c.onKeyup}" />
+        </aura:if>
+        
+        <aura:if isTrue="{! v.itemKey.type == 'STRING'}">
+            <ui:inputText class="slds-input" value="{!  v.test}" updateOn="keyup" keyup="{!c.onKeyup}" />
+        </aura:if>
+
+        <aura:if isTrue="{! v.itemKey.type == 'PICKLIST'}">
+            <lightning:select name="mySelect" aura:id="mySelect" value="{!v.selectedValue}" onchange="{!c.onSelectChange}">
+            <aura:iteration items="{!v.options}" var="item">
+                <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+             </aura:iteration>
+            </lightning:select>
+        </aura:if>
+        
+        <aura:if isTrue="{! v.itemKey.type == 'MULTIPICKLIST'}">
+            <lightning:select name="mySelect" aura:id="mySelect" value="{!v.selectedValue}" onchange="{!c.onSelectChange}">
+            <aura:iteration items="{!v.options}" var="item">
+                <option text="{!item.label}" value="{!item.value}" selected="{!item.selected}"/>
+             </aura:iteration>
+            </lightning:select>
+        </aura:if>
+        
+        <aura:if isTrue="{! v.itemKey.type == 'TEXTAREA'}">
+            <aura:if isTrue="{!v.itemKey.apiName == 'BI_Comments__c'}"> 
+                <ui:inputTextArea class="slds-input height-text-area width-text-area" value="{!  v.test}" updateOn="keyup" keyup="{!
+
+c.onKeyup}" />
+                <aura:set attribute="else">
+                 <ui:inputTextArea class="slds-input height-text-area" value="{!  v.test}" updateOn="keyup" keyup="{!
+
+c.onKeyup}" />
+                </aura:set> 
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{! v.itemKey.type == 'PERCENT'}">
+            <ui:inputNumber class="slds-input height-text-area" value="{!  v.test}" updateOn="keyup" keyup="{!c.onKeyup}" />
+        </aura:if>
+        <aura:if isTrue="{! v.itemKey.type == 'DATETIME' || v.itemKey.type == 'DATE'}">
+            <ui:inputDate class="slds-input " value="{!v.test}" displayDatePicker="true" updateOn="keyup" />
+        </aura:if>
+    </td>
+</aura:component>

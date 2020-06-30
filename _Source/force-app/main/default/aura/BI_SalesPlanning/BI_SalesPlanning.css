@@ -1,0 +1,17 @@
+.THIS .unitedButton{
+   background-color: #2954a9;
+    border-color: #2954a9;
+   color: #fff;
+   width:  150px;
+}
+
+.THIS.word-wrap {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.THIS .unitedTile{
+   background-color: #2954a9;
+    border-color: #2954a9;
+   color: #fff;
+}

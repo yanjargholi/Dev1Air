@@ -1,0 +1,11 @@
+<design:component>
+     <design:attribute name="Button1_Label" label="Button One Label" 
+                      description="What the label of the 1st button should be" />
+    <design:attribute name="Button2_Label" label="Button Two Label" 
+                      description="What the label of the 2nd button should be" />
+    <design:attribute name="Button3_Label" label="Button Three Label" 
+                      description="What the label of the 3rd button should be" />
+    <design:attribute name="Button4_Label" label="Button Four Label" 
+                      description="What the label of the 4th button should be" />
+	
+</design:component>

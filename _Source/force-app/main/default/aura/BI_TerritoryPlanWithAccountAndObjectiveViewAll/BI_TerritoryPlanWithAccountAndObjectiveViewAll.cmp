@@ -1,0 +1,95 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global" controller="BI_TerritoryPlanWithAccountAndObjective">
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:attribute name="listLiew" type="Account[]" ></aura:attribute>
+     <aura:attribute name="arrowDirection" type="string" default="arrowup" description="Use for change arrow sign direction on header based on click"/>
+     <aura:attribute name="isAsc" type="boolean" default="true" description="boolean flag for pass sorting condition to apex class"/> 
+     <aura:attribute name="selectedTabsoft" type="string" default="Name" description="Use for show/hide arraow sign on header based on conditions"/>
+
+
+
+<article class="slds-card">       
+  <div class="slds-card__header slds-grid"> 
+
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-account" title="description of icon when needed">
+           <lightning:icon iconName="standard:account" size="large" alternativeText="symbol Objectives"/>
+
+          </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+           <span class="slds-text-heading_small">Accounts ({!v.listLiew.length})</span>            
+        </h2>        
+      </div>        
+          
+       <div class="btn-wrapper"> 
+         		 <button class="slds-button slds-button--brand slds-align--absolute-right slds-p-vertical--xx-small" type="button" onclick="{!c.close}">
+               		Back To My Territory Plan
+           		</button>    
+    		</div>     
+    </header>
+  </div>
+    
+    
+    
+    
+  <div class="slds-card__body">
+    <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+      <thead>
+        <tr class="slds-text-title_caps">
+          <th class="slds-is-sortable" scope="col" onclick="{!c.sortName}">
+            <a href="javascript:void(0);" class="slds-th__action slds-text-link--reset">
+            	<span class="slds-assistive-text">Sort</span>
+          		<span class="slds-truncate" title="Name">Account Name</span>  
+            	<aura:if isTrue="{! and(v.arrowDirection == 'arrowdown', v.selectedTabsoft == 'Name') }">&nbsp;  &#9660; </aura:if>  
+            	<aura:if isTrue="{! and(v.arrowDirection != 'arrowdown', v.selectedTabsoft == 'Name') }"> &nbsp;  &#9650; </aura:if>                        
+        	</a>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Abbreviated Account Name">Abbreviated Acc Name</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Record Type">Record Type</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Phone">Phone</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="City">City</div>
+          </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <aura:iteration items="{!v.listLiew}" var="account" indexVar="index">
+          <tr class="slds-hint-parent">
+            <td role="gridcell">
+              <a>
+                <div class="slds-truncate" id='{!account.Id}' onclick = "{!c.navigateToObjective}" title="{!account.Id}">{!account.Name}</div>
+              </a>
+            </td>
+          <td role="gridcell">
+            
+              <div class="slds-truncate" title="{!account.BI_Abbreviated_Account_Name__c}">{!account.BI_Abbreviated_Account_Name__c}</div>
+           
+          </td>
+          <td role="gridcell">
+            
+              <div class="slds-truncate"  title="{!account.RecordType.Name}">{!account.RecordType.Name}</div>
+            
+          </td>
+          <td role="gridcell">
+            <div class="slds-truncate" title="{!account.Phone}">{!account.Phone}</div>
+          </td>
+            <td role="gridcell">
+            <div class="slds-truncate" title="{!account.BillingCity}">{!account.BillingCity}</div>
+          </td>            
+        </tr>
+      </aura:iteration>
+      </tbody>
+    </table>
+  </div>
+ 
+</article>
+</aura:component>

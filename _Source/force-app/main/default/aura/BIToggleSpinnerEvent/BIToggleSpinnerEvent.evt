@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Delete Row Event">
+    <aura:attribute name="selectedObject" type="Object"/>
+    <!--  -->
+    <aura:attribute name="currentStatus" type="String"/>
+</aura:event>
