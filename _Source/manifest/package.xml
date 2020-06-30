@@ -13,6 +13,19 @@
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
+		<members>Case.Beverage Coupon Process</members>
+		<members>Case.Business Insight Release</members>
+		<members>Case.Business Insight Support</members>
+		<members>Case.Post-Travel</members>
+		<members>Case.Pre-Travel</members>
+		<members>Case.Product</members>
+		<members>Lead.Business Insight_BI</members>
+		<members>Opportunity.BI - Agency Contract</members>
+		<members>Opportunity.BI - Corporate Contract</members>
+		<members>Opportunity.BI - Tactical Incentive %28Corporate%29</members>
+		<name>BusinessProcess</name>
+	</types>
+	<types>
 		<members>Account.AccountId_18_Digit__c</members>
 		<members>Account.Account_Name_ID__c</members>
 		<members>Account.Active__c</members>
